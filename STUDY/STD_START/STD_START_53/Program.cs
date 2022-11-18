@@ -47,8 +47,9 @@ namespace STD_START_53
     class LapTop : Product, ILaptop, INetBook   //클래스 상속과 함꼐 인터페이스로부터 다중상속 가능
     {
         public void TurnOn() { }    //추상메서드와는 달리 override 예약어가 필요 없음
-                                    //인터페이스의 메서드를 자식 클래스에서 구현 할 때에는 반드시 public 
-                                    //안녕안녕
+                                    //인터페이스의 메서드를 자식 클래스에서 구현 할 때에는 반드시 public 제한자를 명시해야 한다
+                                    //또는  void ILaptop.TurnOn(){} 처럼 인터페이스 명을 직접 붙인다
+        void ILaptop.TurnOn() { }
     }
 
 
