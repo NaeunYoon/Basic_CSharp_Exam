@@ -48,8 +48,9 @@ namespace STD_START_53
     {
         public void TurnOn() { }    //추상메서드와는 달리 override 예약어가 필요 없음
                                     //인터페이스의 메서드를 자식 클래스에서 구현 할 때에는 반드시 public 제한자를 명시해야 한다
-                                    //또는  void ILaptop.TurnOn(){} 처럼 인터페이스 명을 직접 붙인다
-                                    //단축키~ 테스트ㅇ아다ㅏ다시 
+                                    //또는 void ILaptop.TurnOn(){} 처럼 인터페이스 명을 직접 붙인다
+                                    //
+                                    
         void ILaptop.TurnOn() { }
     }
 
@@ -57,8 +58,20 @@ namespace STD_START_53
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {   
+            //1번 방법으로 호출
+            LapTop lapTop = new LapTop();
+            lapTop.TurnOn();    
 
+            //2번 방법으로 호출 : 명시적으로 인터페이스의 멤버에 종속시킨다고 표시하는 것과 같다.
+                               //따라서 인터페이스로 형변환해야만 호출할 수 있다
+            
+            LapTop lapTop1 = new LapTop();  //오류발생
+            lapTop1.TurnOn();
+
+
+            ILaptop iLaptop = lapTop as ILaptop;
+            iLaptop.TurnOn();   //반드시 인터페이스로 형변환해서 호출
         }
     }
 }
