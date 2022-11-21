@@ -30,9 +30,9 @@ namespace STD_START_53
     }
     //------------------------------------------------------------------
 
-    class Product
+    abstract class Product
     {
-
+        public abstract void TurnOn();
     }
     interface ILaptop   //메서드 시그니처만을 포함하고 있는 인터페이스
     {
@@ -41,17 +41,24 @@ namespace STD_START_53
 
     interface INetBook  //비어있는 인터페이스 정의 가능
     {
-
+        void TurnOn();
     }
 
-    class LapTop : Product, ILaptop, INetBook   //클래스 상속과 함꼐 인터페이스로부터 다중상속 가능
+    class LapTop : Product, ILaptop, INetBook   //클래스 상속과 함께 인터페이스로부터 다중상속 가능
     {
-        public void TurnOn() { }    //추상메서드와는 달리 override 예약어가 필요 없음
+        //public void TurnOn() { Console.WriteLine("1: Turn On"); }    
+                                    //추상메서드와는 달리 override 예약어가 필요 없음
                                     //인터페이스의 메서드를 자식 클래스에서 구현 할 때에는 반드시 public 제한자를 명시해야 한다
                                     //또는 void ILaptop.TurnOn(){} 처럼 인터페이스 명을 직접 붙인다
-                                    //
+       
+        
+        override public void TurnOn() { }
+        
+        
+        void  ILaptop.TurnOn() { }
+        void INetBook.TurnOn() { }
                                     
-        void ILaptop.TurnOn() { }
+        //void ILaptop.TurnOn() { Console.WriteLine("2: Turn On"); }
     }
 
 
@@ -61,13 +68,13 @@ namespace STD_START_53
         {   
             //1번 방법으로 호출
             LapTop lapTop = new LapTop();
-            lapTop.TurnOn();    
+            //lapTop.TurnOn();    
 
             //2번 방법으로 호출 : 명시적으로 인터페이스의 멤버에 종속시킨다고 표시하는 것과 같다.
                                //따라서 인터페이스로 형변환해야만 호출할 수 있다
             
-            LapTop lapTop1 = new LapTop();  //오류발생
-            lapTop1.TurnOn();
+            //LapTop lapTop1 = new LapTop();  //오류발생
+            //lapTop1.TurnOn();
 
 
             ILaptop iLaptop = lapTop as ILaptop;

@@ -11,7 +11,7 @@ namespace STD_START_47
 
     class Target
     {
-        public void Do(GetResultDelegate getResult)
+        public void Do(GetResultDelegate getResult)//호출자..넵..
         {
             Console.WriteLine(getResult()); //콜백 메서드 호출
         }
@@ -25,8 +25,8 @@ namespace STD_START_47
         }
         public void Test()
         {
-            Target target = new Target();
-            target.Do(new GetResultDelegate(this.GetResult));
+            Target target = new Target();   
+            target.Do(new GetResultDelegate(this.GetResult));   
         }
     }
 

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace STD_START_50
 {
-
     class Person
     {
         public int Age;
