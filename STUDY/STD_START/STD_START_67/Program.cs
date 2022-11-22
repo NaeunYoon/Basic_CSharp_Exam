@@ -11,7 +11,6 @@ namespace STD_START_67
     {
         public int x;
         public int y;
-
     }
 
     internal class Program
@@ -26,9 +25,7 @@ namespace STD_START_67
             Change2(ref pt);    //메서드 호출 (ref사용)            
             {
             Console.WriteLine("pt.x =" + pt.x + " pt.y = "+pt.y);
-            }
-
-            
+            }  
         }
 
         static void Change1(Point pt)

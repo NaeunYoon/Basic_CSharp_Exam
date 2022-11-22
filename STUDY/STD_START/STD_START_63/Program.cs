@@ -12,7 +12,6 @@ namespace STD_START_63
               c# 컴파일러에 의해 자동으로 지원된다 ( 클래스의 경우에는 포함되지 않는다)
            4. 매개변수를 받는 생성자의 경우, 반드시 해당 코드 내에서 구조체의 모든 필드에 값을 할당해야 한다
   */
-
     struct Vector
     {
         public int X;
@@ -27,8 +26,6 @@ namespace STD_START_63
         {
             return "x : " + X + " y : " + Y;
         }
-
-
     }
     internal class Program
     {

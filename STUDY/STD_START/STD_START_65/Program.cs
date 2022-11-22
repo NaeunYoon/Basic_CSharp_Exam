@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,6 +39,49 @@ namespace STD_START_65
             Change(ref v1); //메서드 호출 시 ref 예약어 사용
             Console.WriteLine("v1 = x "+v1.x + " v1.y = " + v1.y);      //값이 바뀜
 
+            Console.WriteLine("Ref, Out, In\n");
+            int i = 1;
+            Run(i); //일반적인 전달방식 :값을 복사해서 전달함 (pass by value)
+                    //run과 main은 별도의 두 개의 메모리 영역을 갖는다 (복사)
+            Console.WriteLine(i);   //1
+
+            //-----------------------Ref (read, write)
+
+            int r = 2;
+            Run(i,ref r);   //pass by reference
+            Console.WriteLine(r);
+
+            //-----------------------Out (write)
+            int o;
+            Run(i,ref r, out o);//pass by reference
+            Console.WriteLine(o);   //100
+
+            //-----------------------In (read)
+            int q = 3;
+            Run(i, ref r, out o, in q);
+            Console.WriteLine(q);
+        }
+
+        static void Run(int i)
+        {
+            Console.WriteLine(i);   //pass by value
+            i += 100;
+            Console.WriteLine(i);   //101
+        }
+
+        static void Run(int i, ref int r)//pass by reference
+        {
+            r += 100;
+            Console.WriteLine(r);
+        }
+        static void Run(int i, ref int r, out int o)//pass by reference
+        {
+            o = 100;
+        }
+
+        static void Run(int i, ref int r, out int o, in int q)//pass by reference
+        {
+            o = 101;
         }
 
         static void Change(ref Vector vt)   //메서드 측에서도 해당 매개변수에 ref 예약어 사용
