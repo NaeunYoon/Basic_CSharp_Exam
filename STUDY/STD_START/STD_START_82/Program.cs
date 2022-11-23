@@ -39,6 +39,21 @@ namespace STD_START_82
             {
                 Console.WriteLine("실패");
             }
+
+            Console.WriteLine("다형성");
+
+            Parents parent = new Parents();
+            OnlyChild only = new OnlyChild();
+            parent.Family();
+            Parents parents = only;
+            parents.Family();
+
+            //참조형식
+
+            //값형식
+
+            
+
         }
 
         class ACLASS
@@ -49,5 +64,23 @@ namespace STD_START_82
         {
 
         }
+
+        class Parents
+        {
+            public virtual void Family()
+            {
+                Console.WriteLine("자수성가한 부모님");
+            }
+        }
+
+        class OnlyChild : Parents
+        {
+            public override void Family()
+            {
+                Console.WriteLine("의 고명딸");
+            }
+        }
+
+
     }
 }
