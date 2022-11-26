@@ -1,6 +1,8 @@
 ﻿using System.Collections.Concurrent;
+using System.Reflection.Emit;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 namespace AlgorithmTest
 {
@@ -263,7 +265,7 @@ namespace AlgorithmTest
             //if (antennaNum <= 2 && eyesNum <= 3)
             //{
             //    //sw.WriteLine("GrameMercurian");
-            //    Console.WriteLine("GrameMercurian");
+            //    Console.WriteLine("GraemeMercurian");
             //}
 
 
@@ -275,20 +277,22 @@ namespace AlgorithmTest
             //------------------------------can u add this?
 
 
-            //int cntt = Convert.ToInt32( Console.ReadLine());
+            //예제입력이 14 8 이런식으로 나올 때 작동하세 변경
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int cntt = int.Parse((sr.ReadLine()));
             //for (int i = 0; i < cntt; i++)
             //{
-            //    var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            //    var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
             //    //string? str = sr.ReadLine();
             //    //int count = int.Parse(str);
             //    string? str1 = sr.ReadLine();
-            //    int a = int.Parse(str1.Split(' ')[0]);
-            //    int b = int.Parse(str1.Split(' ')[1]);
+            //    long a = long.Parse(str1.Split(' ')[0]);
+            //    long b = long.Parse(str1.Split(' ')[1]);
             //    sw.WriteLine(a + b);
+            //}
             //    sw.Close();
             //    sr.Close();
-            //}
 
 
             //------------------------------------비행기 좌석
@@ -398,13 +402,13 @@ namespace AlgorithmTest
             //Console.WriteLine("|q p|   /}");
             //Console.WriteLine("( 0 )\"\"\"\\");
             //Console.WriteLine("|\"^\"`    |");
-            //Console.WriteLine("||_/=\\__|");
+            //Console.WriteLine("||_/=\\\\__|");
 
-//            Console.WriteLine(@"|\_/|
-//|q p|   /}
-//( 0 )"""\
-//| "" ^ ""`    |
-//|| _ /=\\__ | ");
+            //Console.WriteLine(@"|\_/|
+            //|q p|   /}
+            //( 0 )"""\
+            //| "" ^ ""`    |
+            //|| _ /=\\__ | ");
 
             //Console.WriteLine("강한친구 대한육군");
             //Console.WriteLine("강한친구 대한육군");
@@ -419,47 +423,37 @@ namespace AlgorithmTest
             //n3 = int.Parse(str.Split(' ')[2]);
             //if (n1 >= n2)
             //{
-            //    //Console.WriteLine("n1이 n2보다 크거나 같다");
             //    if (n1 >= n3)
             //    {
-            //        //Console.WriteLine("n1이 n3보다 크거나 같다");
             //        if (n2 >= n3)
             //        {
-            //            //Console.WriteLine("n1>n2>n3");
-            //            //Console.WriteLine(n2);
             //            sw.WriteLine(n2);
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine(n3);
             //        }
             //    }
             //    else if (n1 <= n3)
             //    {
-            //        //Console.WriteLine("n1가 n3보다 작거나 같다");
-            //        // Console.WriteLine("n3>n1>n2");
-            //        //Console.WriteLine(n1);
             //        sw.WriteLine(n1);
             //    }
             //}
             //else if (n1 <= n2)
             //{
-            //    //Console.WriteLine("n2가 n1보다 크거나 같다");
-            //    if (n2 <= n3)
-            //    {
-            //        //Console.WriteLine("n3>n3>n1");
-            //        //Console.WriteLine(n3);
-            //        sw.WriteLine(n3);
+            //    if (n2 <= n3) 
+            //    { 
+            //        sw.WriteLine(n2);
             //    }
             //    else if (n2 >= n3)
             //    {
-            //        //Console.WriteLine("n2가 n3보다 크다");
-            //        if (n3 > n1)
-            //        {
-            //            //Console.WriteLine("n2>n3>n1");
-            //            //Console.WriteLine(n3);
+
+            //        if (n3 > n1) 
+            //        { 
             //            sw.WriteLine(n3);
             //        }
             //        else
             //        {
-            //            // Console.WriteLine("n2>n1>n1");
-            //            //Console.WriteLine(n1);
             //            sw.WriteLine(n1);
             //        }
             //    }
@@ -543,25 +537,6 @@ namespace AlgorithmTest
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             // brain
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
@@ -597,40 +572,338 @@ namespace AlgorithmTest
 
             //------------------------------------숫자게임?
 
+            //int cnt=1;
             //while (true)
             //{
-            //    var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            //    var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            //    string? num = sr.ReadLine();
-            //    int n1 = int.Parse(num);
+            //    //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //    //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //    //string? num = sr.ReadLine();
+            //    //int n1 = int.Parse(num);
+
+            //    int n1 = int.Parse(Console.ReadLine());
+            //    int n2, n3, n4;
             //    if (n1 == 0)
             //    {
             //        break;
             //    }
             //    n1 = n1 * 3;
-            //    int n2, n3, n4;
+
             //    if (n1 % 2 == 0)
             //    {
             //        n2 = n1 / 2;
+            //        //string even = "even ";
+            //        n3 = n2 * 3;
+            //        n4 = n3 / 9;
+            //        //Console.WriteLine(even + n4);
+            //        Console.WriteLine($"{cnt++}. " + "even " + n4);
             //    }
-            //    else
+            //    else 
             //    {
             //        n2 = (n1 + 1) / 2;
+            //        //string odd = "odd ";
+            //        n3 = n2 * 3;
+            //        n4 = n3 / 9;
+            //        //Console.WriteLine(odd + n4);
+            //        Console.WriteLine($"{cnt++}. " + "odd " + n4);
             //    }
-            //    n3 = n2 * 3;
-            //    n4 = n3 / 9;
-            //    switch (n4 % 2)
-            //    {
-            //        case 0:
-            //            sw.WriteLine("odd " + n4);
-            //            break;
-            //        case 1:
-            //            sw.WriteLine("even " + n4);
-            //            break;
-            //    }
-            //    sr.Close();
-            //    sw.Close();
             //}
+            //n3 = n2 * 3;
+            //n4 = n3 / 9;
+            //switch (n4 % 2)
+            //{
+            //    case 0:
+            //        Console.WriteLine( + n4);
+            //        break;
+            //    case 1:
+            //        Console.WriteLine("odd " + n4);
+            //        break;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //연세대학교
+
+            //string eng = "YONSEI";
+            //string slogan = "Leading the Way to the Future";
+            //int num = int.Parse(Console.ReadLine());
+            //if(num == 0)
+            //{
+            //    Console.WriteLine(eng);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(slogan);
+            //}
+
+
+            //int K, D, A;
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? str = sr.ReadLine();
+            //K = int.Parse(str.Split('/')[0]);
+            //D = int.Parse(str.Split('/')[1]);
+            //A = int.Parse(str.Split('/')[2]);
+
+            //if (K + A < D || D == 0)
+            //{
+            //    Console.WriteLine("hasu");
+            //}else
+            //{
+            //    Console.WriteLine("gosu");
+            //}
+
+
+            //            Console.WriteLine(@"NFC West       W   L  T
+            //-----------------------
+            //Seattle        13  3  0
+            //San Francisco  12  4  0
+            //Arizona        10  6  0
+            //St. Louis      7   9  0
+
+            //NFC North      W   L  T
+            //-----------------------
+            //Green Bay      8   7  1
+            //Chicago        8   8  0
+            //Detroit        7   9  0
+            //Minnesota      5  10  1");
+
+            //Console.WriteLine("I'm Sexy");
+
+            //int num1 = int.Parse(Console.ReadLine());
+            //int num2 = int.Parse(Console.ReadLine());
+
+            //if(num1 >0 && num2 > 0)
+            //{
+            //    Console.WriteLine("1");
+            //}else if (num1 < 0 && num2 > 0)
+            //{
+            //    Console.WriteLine("2");
+            //}else if (num1 < 0 && num2 < 0)
+            //{
+            //    Console.WriteLine("3");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("4");
+            //}
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int cnt = int.Parse(sr.ReadLine());
+            //int num=0;
+            //int num2=0;
+
+            //for (int i = 1; i < cnt+1; i++)
+            //{
+
+            //    num = int.Parse(sr.ReadLine());
+
+            //    num2 = i * i;
+
+            //    sw.WriteLine(num2);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int cnt = int.Parse(sr.ReadLine());
+            //int num = 0;
+            //int num2 = 0;
+            //for (int i = 1; i < cnt + 1; i++)
+            //{
+            //    num = int.Parse(sr.ReadLine());
+
+            //    num2 += num;
+            //    sw.WriteLine(num2);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int cnt = int.Parse(sr.ReadLine());
+            //int sum1 = 0;
+            //int sum2 = 0;
+            //for (int i = 0; i < cnt; i++)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    if (num % 2 == 1)
+            //    {
+            //        for (int j = num; j > 0; j = j - 2)
+            //        {
+            //            sw.WriteLine(j);
+            //            sum1 += j;
+            //        }
+            //    }
+            //    sw.WriteLine(sum1);
+            //    sum1 = 0;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int cnt = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < cnt; i++)
+            //{
+            //    string? num = sr.ReadLine();
+
+            //    sw.WriteLine(Convert.ToInt32(num,10));
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+            //자음 모음
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int cnt = int.Parse(sr.ReadLine());
+            //char[] vowels = new char[] { 'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u' };
+            //int consonant = 0;
+            //int vowel = 0;
+            //for (int i = 0; i < cnt; i++)
+            //{
+            //    string? sentence = sr.ReadLine();
+            //    for (int j = 0; j < sentence.Length; j++)
+            //    {
+            //        if (sentence[j] != ' ')
+            //        {
+            //            bool isVowels = false;
+            //            for (int k = 0; k < vowels.Length; k++)
+            //            {
+            //                if (sentence[j] == vowels[k])
+            //                {
+            //                    isVowels=true;
+            //                    break;  
+            //                }
+            //            }
+            //            if (isVowels)
+            //            {
+            //                vowel++;
+            //            }
+            //            else
+            //            {
+            //            consonant++;
+            //            }
+            //        }
+            //    }
+            //    sw.WriteLine(consonant + " " + vowel);
+            //    consonant = 0;
+            //    vowel = 0;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //char[] vowels = new char[] { 'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u' };
+            //string str = "You a aabb";   // 총 갯수 = 10, str.length = 10, i=0부터 9까지
+
+            //int cnt모음 = 0;
+            //int cnt자음 = 0;
+            //int cnt공백 = 0;
+            //// 1. str안에 a가 몇 개있는지 어떻게 알 수 있나요?
+            //// 실제 모음과 자음의 갯수는 3, 5
+            //for (int i = 0; i < str.Length; i++)
+            //{
+            //    if (str[i] == 'a' || str[i] == 'e' || str[i]=='i' || 
+            //        str[i] == 'o'|| str[i] == 'u'&& str[i] != ' ')
+            //    {
+            //        cnt모음++;
+
+            //    }                
+            //    else
+            //    {
+            //        cnt자음++;
+            //    }
+            //}
+
+            //Console.WriteLine("모음"+cnt모음);
+            //Console.WriteLine("자음"+cnt자음);
+
+
+
+            //int n1, n2, cnt;
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? str = sr.ReadLine();
+            //n1 = int.Parse(str.Split(' ')[0]);
+            //n2 = int.Parse(str.Split(' ')[1]);
+            //cnt = 0;
+            //if (n1 < n2)
+            //{
+            //    for (int i = n1 + 1; i < n2; i++)
+            //    {
+            //        cnt++;
+            //    }
+            //    sw.WriteLine(cnt);
+            //    for (int i = n1 + 1; i < n2; i++)
+            //    {
+            //        sw.Write(i + " ");
+            //    }
+            //}
+            //else
+            //{
+            //    for (int i = n2 + 1; i < n1; i++)
+            //    {
+            //        cnt++;
+            //    }
+            //    sw.WriteLine(cnt);
+            //    for (int i = n2 + 1; i < n1; i++)
+            //    {
+            //        sw.Write(i+" ");
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //1.
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            int n1 = 0;//?
+            int cnt = 0;
+
+            //string num2 = sr.ReadLine();
+
+            int[] array = Array.ConvertAll(sr.ReadLine().Split(), int.Parse);
+            
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (array[i] == num)
+                {
+                    cnt++;
+                }
+            }
+            sw.WriteLine(cnt);
+
+            sr.Close();
+            sw.Close();
+
+            //2.
+            //string a = sr.ReadLine();
+            //sw.WriteLine((int)a[0]);
+            //sr.Close();
+            //sw.Close();
+
+            //3.
+            //string? str = sr.ReadLine();
+            //int n1 = int.Parse(str.Split(' ')[0]);
+            //int n2 = int.Parse(str.Split(' ')[1]);
+
+            //if (n1 > n2)
+            //{
+            //    sw.WriteLine(n1);
+            //}
+            //else
+            //{
+            //    sw.WriteLine(n2);
+            //}
+            //sr.Close();
+            //sw.Close();
+
 
 
 
@@ -639,3 +912,4 @@ namespace AlgorithmTest
         }
     }
 }
+
