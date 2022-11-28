@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using System.ComponentModel.DataAnnotations;
 using System.Reflection.Emit;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
@@ -858,29 +859,132 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
-            //1.
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int cnt = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < cnt; i++)
+            //{
+            //    int num = int.Parse( sr.ReadLine());
+            //    for (int j = 0; j < num; j++)
+            //    {
+            //        sw.Write("=");
+            //    }
+            //    sw.WriteLine(' ');
+            //}
+            //    sr.Close();
+            //    sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int cnt1 = 0;
+            //int cnt2 = 0;
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    string? ret = sr.ReadLine();
+
+            //    if (ret.Equals("W"))
+            //    {
+            //        cnt1++;
+
+            //    }
+            //}
+            //    if (cnt1 > 4)
+            //    {
+            //        sw.WriteLine(1);
+            //    }else if(cnt1 ==3 || cnt1==4)
+            //    {
+            //        sw.WriteLine(2);
+            //    }else if(cnt1 == 1 || cnt1 == 2)
+            //    {
+            //        sw.WriteLine(3);
+            //    }
+            //    else
+            //    {
+            //        sw.WriteLine(-1);
+            //    }
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string str = sr.ReadLine();
+            //sw.WriteLine(str.ToUpper());
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string str = sr.ReadLine();
+
+
+            //if (str == "baekjoon")
+            //{
+            //    sw.WriteLine(0);
+            //}
+            //else
+            //{
+            //    sw.WriteLine(1);
+            //}
+
+            ////------------------------------------------------
+            ////Random rand = new Random();
+            ////int a = rand.Next();
+            //////sw.WriteLine(a);
+            ////if (a % 2 == 0)
+            ////{
+            ////    sw.WriteLine(0);
+            ////}
+            ////else
+            ////{
+            ////    sw.WriteLine(1);
+            ////}
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            int n1 = 0;//?
-            int cnt = 0;
+            string? str = sr.ReadLine();
+            int num1 = int.Parse(str.Split()[0]);
+            int num2 = int.Parse(str.Split()[1]);
+            int tileNum = num1 * num2;
+            
+            sr.Close();
+            sw.Close();
+            
+           
+
+
+
+
+
+
+            //1.
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int n1 = 0;//?
+            //int cnt = 0;
 
             //string num2 = sr.ReadLine();
 
-            int[] array = Array.ConvertAll(sr.ReadLine().Split(), int.Parse);
-            
+            //int[] array = Array.ConvertAll(sr.ReadLine().Split(), int.Parse);
 
-            for (int i = 0; i < 5; i++)
-            {
-                if (array[i] == num)
-                {
-                    cnt++;
-                }
-            }
-            sw.WriteLine(cnt);
 
-            sr.Close();
-            sw.Close();
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    if (array[i] == num)
+            //    {
+            //        cnt++;
+            //    }
+            //}
+            //sw.WriteLine(cnt);
+
+            //sr.Close();
+            //sw.Close();
 
             //2.
             //string a = sr.ReadLine();
