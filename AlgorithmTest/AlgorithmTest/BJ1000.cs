@@ -1,9 +1,12 @@
 ﻿using System.Collections.Concurrent;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data;
 using System.Reflection.Emit;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace AlgorithmTest
 {
@@ -945,21 +948,49 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string? str = sr.ReadLine();
-            int num1 = int.Parse(str.Split()[0]);
-            int num2 = int.Parse(str.Split()[1]);
-            int tileNum = num1 * num2;
-            
-            sr.Close();
-            sw.Close();
-            
-           
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? str = sr.ReadLine();
+            //int num1 = int.Parse(str.Split()[0]);
+            //int num2 = int.Parse(str.Split()[1]);
+            //int tileNum = num1 * num2;
+
+            //sr.Close();
+            //sw.Close();
+
+            //Console.WriteLine("파이팅!!");
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+
+            //double n = 0;
+            //double k = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    n = int.Parse(sr.ReadLine());
+
+            //    k = Math.Pow(n,2);
+
+            //    sw.WriteLine(k);
+            //}
+            //sr.Close();
+            //sw.Close();
 
 
+            //StringBuilder sb = new StringBuilder();
 
+            //int T = int.Parse(Console.ReadLine());
 
+            //for (int i = 0; i < T; i++)
+            //{
+            //    int N = int.Parse(Console.ReadLine());
+            //    double k = Math.Pow(N, 2);
+
+            //    sb.AppendLine(k.ToString());
+            //}
+
+            //Console.Write(sb);
 
 
             //1.
@@ -1008,7 +1039,114 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
 
+
+            //int pwdNum = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < pwdNum; i++)
+            //{
+            //    string pwd = Console.ReadLine();
+
+            //    if(pwd.Length >=6 && pwd.Length <= 9)
+            //    {
+            //        Console.WriteLine("yes");
+            //    }
+            //    else 
+            //    {
+            //        Console.WriteLine("no"); 
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int num = int.Parse(sr.ReadLine());
+            //string longInt = "long int";
+            //string long_ = "long";
+            //if (num % 4 == 0)
+            //{
+            //    if(num == 4)
+            //    {
+            //        sw.WriteLine(longInt);
+            //    }
+            //    else
+            //    {
+            //        for (int i = 0; i < (num / 4) - 1; i++)
+            //        {
+            //            sw.Write(long_ + " ");
+            //        }
+            //            sw.WriteLine(longInt);
+            //    }   
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? num = sr.ReadLine();
+            //float a = float.Parse(num.Split(" ")[0]);
+            //float b = float.Parse(num.Split(" ")[1]);
+            //float ret = a * b / 100;
+            //float ret2 = a - ret;
+            //if (ret2>=100)
+            //{
+            //    sw.WriteLine(ret2);
+            //    sw.WriteLine("0");
+            //}
+            //else
+            //{
+            //    sw.WriteLine(ret2);
+            //    sw.WriteLine("1");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //            Console.WriteLine(@"         ,r'""7
+            //r`-_   ,'  ,/
+            // \. "". L_r'
+            //   `~\/
+            //      |
+            //      |");
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int big = int.Parse(sr.ReadLine());
+            //int small = int.Parse(sr.ReadLine());
+
+            //int a = big * 8;    //16
+            //int b = small * 3;  //15
+            //int c = a + b;    //31
+            //int d = c - 28;   //31-28 = 3
+            //sw.WriteLine(d);
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int sum = 0;
+            //while (true)
+            //{
+            //    int money = int.Parse(sr.ReadLine());
+
+            //    if(money == -1)
+            //    {
+            //        break;
+            //    }
+            //    sum += money;
+            //}
+            //    sw.WriteLine(sum);
+
+            //sr.Close();
+            //sw.Close();
+
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
 
 
 
