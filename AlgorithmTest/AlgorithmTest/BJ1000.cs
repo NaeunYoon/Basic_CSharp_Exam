@@ -1145,11 +1145,151 @@ namespace AlgorithmTest
             //sw.Close();
 
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? num = sr.ReadLine();
+            //int s = int.Parse(num.Split(" ")[0]);
+            //int a = int.Parse(num.Split(" ")[1]);
+            //int cnt = 0;
+            //if(a >= 2 && s >= 2)
+            //{
+            //    while (true)
+            //    {
+            //        cnt++;
+            //        a = a / 2;
+            //        s = s / 2;
+            //        Console.WriteLine(a);
+            //        Console.WriteLine(s);
+            //        if (a <= 0 || s <= 0)
+            //        {
+            //            break;
+            //        }
+            //    }
+            //    sw.WriteLine(cnt);
+            //}
+            //else
+            //{
+            //    sw.WriteLine(cnt);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //Console.WriteLine("The world says hello!");
 
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //double sum = 0;
 
+            //string number = sr.ReadLine();
+            //for (int i = 0; i < number.Length; i++)
+            //{
+            //    //int num = int.Parse(sr.ReadLine());
+            //    //sw.WriteLine(number.Length);    //5
+            //    sw.WriteLine(number[i]);    //1,2,3,4,5
+
+            //    sum += Int64.Parse(number[i]);
+
+            //    double ret = Math.Pow(number[i], 2);
+
+            //    sum += int.Parse(ret);
+
+            //    //double ret = Math.Pow(num, 5);
+            //    //sum += ret;
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //double sum = 0;
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    double ret = Math.Pow(num, 5);
+            //    sum += ret;
+            //}
+            //sw.Write(sum);
+            //sr.Close();
+            //sw.Close();
+
+            //// "1+2+3" 을 더하라!
+            //string temp = "1+2+3";
+
+            //string[] result = temp.Split('+');
+
+            //int sum = 0;
+            //for (int i = 0; i < result.Length; i++)
+            //{
+            //    sum += Int32.Parse(result[i]);
+            //}
+
+            //Console.WriteLine("결과 : {0} = {1}", temp, sum);
+            //Console.ReadKey();
+
+            //string num = Console.ReadLine();
+            //string[] ret = num.Split(" ");
+            //int sum1 = 0;
+            //double f = 0;
+            //for (int i = 0; i < ret.Length; i++)
+            //{
+
+            //    sum1 = int.Parse(ret[i]);
+            //    double sum2 = Math.Pow(sum1, 2);
+            //    f += sum2;
+            //}
+            //Console.WriteLine(f);
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string difficulty = sr.ReadLine();
+
+            //    string number1 = difficulty.Split()[0];
+            //    int number2 = int.Parse(difficulty.Split(" ")[1]);
+
+            //    sw.WriteLine(number1);
+            //    sw.WriteLine(number2);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int b = int.Parse(sr.ReadLine());
+            //int p = 5 * b - 400;
+            //if (p < 100)
+            //{
+            //    sw.WriteLine(p);
+            //    sw.WriteLine("1");
+            //}else if (p > 100)
+            //{
+            //    sw.WriteLine(p);
+            //    sw.WriteLine("-1");
+            //}else if (p == 100)
+            //{
+            //    sw.WriteLine(p);
+            //    sw.WriteLine("0");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    sw.WriteLine("SciComLove");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            Console.WriteLine("0");
 
         }
     }
