@@ -1,4 +1,6 @@
-﻿using System.Collections.Concurrent;
+﻿using Microsoft.VisualBasic.FileIO;
+using System;
+using System.Collections.Concurrent;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
@@ -6,14 +8,80 @@ using System.Reflection.Emit;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace AlgorithmTest
 {
+    #region 알바호출 this
+    class 알바호출
+    {
+        //1번 생성자
+       public 알바호출() :/*this("윤나은",29)*/ this("윤나은")
+        {
+            Console.WriteLine("1번 생성자 호출 (매개변수 0개)");
+        }
+        //2번 생성자
+        public 알바호출(string name) : this("윤나은",29)
+        {
+            Console.WriteLine("2번 생성자 호출 (매개변수 1개)");
+            Console.WriteLine(name);
+        }
+        public 알바호출(string name, int age)
+        {
+            Console.WriteLine("3번 생성자 호출 (매개변수 2개)");
+            Console.WriteLine(name);
+            Console.WriteLine(age);
+        }
+
+    }
+    #endregion
+
+    #region this 정적메서드
+    class Book
+    {
+        string title;   //인스턴스 필드
+        static int count;   //정적필드
+
+        public Book(string title)   //생성자
+        {
+            this.title = title; //인스턴스 필드 식별 가능
+            this.Open();    //인스턴스 메서드 식별 가능
+            Increment();    //정적 메서드 식별 가능
+        }
+
+        public void Open()
+        {
+            Console.WriteLine(this.title + "책열기");  //인스턴스 멤버 사용 가능
+            Console.WriteLine(count);   //정적 멤버 사용 가능
+        }
+        public void Close()
+        {
+            Console.WriteLine(this.title + "책덮기");
+        }
+        static void Increment()
+        {
+            count++;    //정적 필드 사용 가능
+                        //정적 메서드에는 this가 없으므로 인스턴스 멤버
+                        //사용 불가능
+            
+        }
+    }
+    #endregion
+
     internal class BJ1000
     {
         static void Main(string[] args)
         {
+            #region 알바호출 생성자
+            //알바호출 call1 = new 알바호출();
+            //알바호출 call2 = new 알바호출("윤나은");
+            //알바호출 call3 = new 알바호출("윤나은", 29);
+            #endregion
+            #region 어린왕자
+            //Book book = new Book("어린왕자");
+            #endregion
+
             //Console.WriteLine("1번문제");
             //string? str = Console.ReadLine();
             //int a = int.Parse(str.Split(' ')[0]);
@@ -1289,7 +1357,111 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
-            Console.WriteLine("0");
+            //Console.WriteLine("0");
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? six = sr.ReadLine();
+            //int fee = 0;
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    int num = int.Parse(six.Split(" ")[i]);
+
+            //    int tex = num * 5;
+            //    fee += tex;
+            //}
+            //sw.WriteLine(fee);
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int reward = int.Parse(sr.ReadLine());
+            //int firstcase = reward - (reward * 22 / 100);
+            //int secondcase = reward - (reward * 80 / 100);
+            //int thirdcase = secondcase * 22 / 100;
+            //int fourth = reward - thirdcase;
+            //sw.WriteLine(firstcase);
+            ////sw.WriteLine(secondcase);
+            ////sw.WriteLine(thirdcase);
+            //sw.WriteLine(fourth);
+            //sr.Close();
+            //sw.Close();
+
+            //흠..이거!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!될거같은데
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+
+            //string num2 = sr.ReadLine();
+            //int ret = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int a = int.Parse(num2.Split(" ")[i]);
+            //    ret+= a;
+            //}
+            //if (ret % 3 == 0)
+            //{
+            //    sw.WriteLine("yes");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("no");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr= new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int s = int.Parse(sr.ReadLine());
+            //int m = int.Parse(sr.ReadLine());
+            //int l = int.Parse(sr.ReadLine());
+            //int happy = 1 * s + 2 * m + 3 * l;
+            //if(happy >= 10)
+            //{
+            //    sw.WriteLine("happy");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("sad");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string size = sr.ReadLine();
+            //int wc = int.Parse(size.Split(" ")[0]);
+            //int hc = int.Parse(size.Split(" ")[1]);
+            //int ws = int.Parse(size.Split(" ")[2]);
+            //int hs = int.Parse(size.Split(" ")[3]);
+
+            //if(wc==hc && ws == hs)
+            //{
+            //    sw.WriteLine("1");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("0");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            string num = sr.ReadLine();
+            int a = int.Parse(num.Split(" ")[0]);
+            int b = int.Parse(num.Split(" ")[1]);
+
+            sw.Write(b - a+" ");
+            sw.Write(b);
+
+            sr.Close();
+            sw.Close();
+
 
         }
     }
