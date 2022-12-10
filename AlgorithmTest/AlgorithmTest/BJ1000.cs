@@ -17,12 +17,12 @@ namespace AlgorithmTest
     class 알바호출
     {
         //1번 생성자
-       public 알바호출() :/*this("윤나은",29)*/ this("윤나은")
+        public 알바호출() :/*this("윤나은",29)*/ this("윤나은")
         {
             Console.WriteLine("1번 생성자 호출 (매개변수 0개)");
         }
         //2번 생성자
-        public 알바호출(string name) : this("윤나은",29)
+        public 알바호출(string name) : this("윤나은", 29)
         {
             Console.WriteLine("2번 생성자 호출 (매개변수 1개)");
             Console.WriteLine(name);
@@ -64,7 +64,7 @@ namespace AlgorithmTest
             count++;    //정적 필드 사용 가능
                         //정적 메서드에는 this가 없으므로 인스턴스 멤버
                         //사용 불가능
-            
+
         }
     }
     #endregion
@@ -1450,20 +1450,153 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split(" ")[0]);
+            //int b = int.Parse(num.Split(" ")[1]);
+
+            //sw.Write(b - a+" ");
+            //sw.Write(b);
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int num = int.Parse(sr.ReadLine());
+            //string a = sr.ReadLine();
+
+            //int cnt = 0;
+            //int cntt = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+
+            //    //int b = int.Parse(a.Split()[i]);
+            //    if (a[i] == '2')
+            //    {
+            //        cnt++;
+            //    }
+            //    else if (a[i] == 'e')
+            //    {
+            //        cntt++;
+            //    }
+            //}
+            ////sw.WriteLine(cnt);  //2
+            ////sw.WriteLine(cntt); //e
+
+            //if (cnt == cntt)
+            //{
+            //    sw.WriteLine("yee");
+            //}
+            //else if (cntt > cnt)
+            //{
+            //    sw.WriteLine("e");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("2");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int score = int.Parse(sr.ReadLine());
+            //int except = 0;
+            //int cnt = 0;
+            //for (int i = 0; i < num-1; i++)
+            //{
+            //    except = int.Parse(sr.ReadLine());
+
+            //    if (except > score)
+            //    {
+            //        cnt++;
+            //    }
+            //    else if(except == score || score>except)
+            //    {
+
+            //    }
+            //}
+
+            //if (cnt >= 1)
+            //{
+            //    sw.WriteLine("N");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("S");
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string num = sr.ReadLine();
-            int a = int.Parse(num.Split(" ")[0]);
-            int b = int.Parse(num.Split(" ")[1]);
+            string? num = sr.ReadLine();
+            int soongsil = int.Parse(num.Split(" ")[0]);
+            int korea = int.Parse(num.Split(" ")[1]);
+            int hanyang = int.Parse(num.Split(" ")[2]);
 
-            sw.Write(b - a+" ");
-            sw.Write(b);
+            int sum = soongsil + korea + hanyang;
 
-            sr.Close();
-            sw.Close();
+            if (sum >= 100)
+            {
+                sw.WriteLine("OK");
+            }
 
-
+            if (sum < 100)
+            {
+                if (soongsil > korea)
+                {
+                    if (soongsil > hanyang)
+                    {
+                        if (korea > hanyang)
+                        {
+                            sw.WriteLine("Hanyang");
+                        }
+                        else
+                        {
+                            sw.WriteLine("Korea");
+                        }
+                    }
+                    else 
+                    {
+                        if (hanyang < korea)
+                        {
+                            sw.WriteLine("Hanyang");
+                        }
+                        else
+                        {
+                            sw.WriteLine("Korea");
+                        }
+                    }
+                }
+                else
+                {
+                    if (korea>hanyang)
+                    {
+                        if (soongsil > hanyang)
+                        {
+                            sw.WriteLine("Hanyang");
+                        }
+                        else
+                        {
+                            sw.WriteLine("Soongsil");
+                        }
+                    }
+                    else
+                    {
+                        sw.WriteLine("Soongsil");
+                    }
+                }
+                sr.Close();
+                sw.Close();
+            }
         }
     }
 }
+
 
