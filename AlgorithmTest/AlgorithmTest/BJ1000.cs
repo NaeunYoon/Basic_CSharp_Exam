@@ -1,9 +1,12 @@
-﻿using Microsoft.VisualBasic.FileIO;
+﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Collections.Concurrent;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Emit;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
@@ -68,6 +71,10 @@ namespace AlgorithmTest
         }
     }
     #endregion
+
+
+
+    
 
     internal class BJ1000
     {
@@ -1533,68 +1540,338 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string? num = sr.ReadLine();
-            int soongsil = int.Parse(num.Split(" ")[0]);
-            int korea = int.Parse(num.Split(" ")[1]);
-            int hanyang = int.Parse(num.Split(" ")[2]);
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? num = sr.ReadLine();
+            //int soongsil = int.Parse(num.Split(" ")[0]);
+            //int korea = int.Parse(num.Split(" ")[1]);
+            //int hanyang = int.Parse(num.Split(" ")[2]);
 
-            int sum = soongsil + korea + hanyang;
+            //int sum = soongsil + korea + hanyang;
 
-            if (sum >= 100)
-            {
-                sw.WriteLine("OK");
-            }
+            //if (sum >= 100)
+            //{
+            //    sw.WriteLine("OK");
+            //}
 
-            if (sum < 100)
-            {
-                if (soongsil > korea)
-                {
-                    if (soongsil > hanyang)
-                    {
-                        if (korea > hanyang)
-                        {
-                            sw.WriteLine("Hanyang");
-                        }
-                        else
-                        {
-                            sw.WriteLine("Korea");
-                        }
-                    }
-                    else 
-                    {
-                        if (hanyang < korea)
-                        {
-                            sw.WriteLine("Hanyang");
-                        }
-                        else
-                        {
-                            sw.WriteLine("Korea");
-                        }
-                    }
-                }
-                else
-                {
-                    if (korea>hanyang)
-                    {
-                        if (soongsil > hanyang)
-                        {
-                            sw.WriteLine("Hanyang");
-                        }
-                        else
-                        {
-                            sw.WriteLine("Soongsil");
-                        }
-                    }
-                    else
-                    {
-                        sw.WriteLine("Soongsil");
-                    }
-                }
-                sr.Close();
-                sw.Close();
-            }
+            //if (sum < 100)
+            //{
+            //    if (soongsil > korea)
+            //    {   //숭실이 고대보다 크고
+            //        if (soongsil > hanyang)
+            //        {//숭실이 한양보다도 큼. 그러면 여기서 고대 한양 값비교
+            //            if (korea > hanyang)
+            //            {
+            //                //고대가 한양보다 크다면?
+            //                sw.WriteLine("Hanyang");
+            //            }
+            //            else if(korea<hanyang)
+            //            {
+            //                sw.WriteLine("Korea");
+            //            }
+
+            //        }else if (soongsil<hanyang)
+            //        {
+            //            //숭실이 고대보다 크고, 한양은 숭실보다 큼
+            //            //한양>숭실>고대
+            //            sw.WriteLine("Korea");
+            //        }
+            //    }else if(soongsil < korea)
+            //    {
+            //        //숭실이 고대보다 작고,
+            //        if (soongsil < hanyang) //숭실이 한양보다도 작음
+            //        {
+            //            //숭실<고대
+            //            //숭실<한양
+            //            sw.WriteLine("Soongsil");
+            //        }else if (soongsil > hanyang)
+            //        {
+            //            //숭실<고대
+            //            //숭실>한양
+            //            sw.WriteLine("Hanyang");
+            //        }
+            //    }
+            //}
+
+            //    sr.Close();
+            //    sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //long qnum = long.Parse(sr.ReadLine());
+            //long inum = long.Parse(sr.ReadLine());
+            //long add;
+            //long mul;
+            //for (long i = 0; i < qnum; i++)
+            //{
+            //    for (long j = 0; j < inum; j++)
+            //    {
+            //        string answer1 = sr.ReadLine();
+            //        long a = long.Parse(answer1.Split(" ")[0]);
+            //        long b = long.Parse(answer1.Split(" ")[1]);
+            //        add = a + b;
+            //        mul = a * b;
+            //        sw.WriteLine(add + " " + mul);
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? energy = sr.ReadLine();
+            //double a = int.Parse(energy.Split(" ")[0]);
+            //double b = int.Parse(energy.Split(" ")[1]);
+            //if (a==b)
+            //{
+            //    sw.WriteLine("1");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("0");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //string? num = Console.ReadLine();
+            //long aa = long.Parse(num.Split(" ")[0]);
+            //long bb = long.Parse(num.Split(" ")[1]);
+            //if (aa == bb)
+            //{
+            //    Console.WriteLine("1");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("0");
+            //}
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            ////int apple1 = int.Parse(sr.ReadLine());
+            ////int apple2 = int.Parse(sr.ReadLine());
+            ////int apple3 = int.Parse(sr.ReadLine());
+            ////int banana1 = int.Parse(sr.ReadLine()); 
+            ////int banana2= int.Parse(sr.ReadLine());
+            ////int banana3 = int.Parse(sr.ReadLine());
+            ////--------------
+            //int a;
+            //int aaa=0;
+            //int b;
+            //int bbb = 0;
+            //int apple = 0;
+            //int banana = 0;
+
+            //int aa = 0;
+            //int bb = 0;
+            //for (int i = 3; i > 0; i--)
+            //{
+            //    a = int.Parse(sr.ReadLine());
+            //    aa =  a * i;
+            //    aaa += aa;
+            //}
+            //apple = aaa;
+            ////sw.WriteLine(apple);
+
+            //for (int i = 3; i > 0; i--)
+            //{
+            //    b = int.Parse(sr.ReadLine());
+            //    bb = b * i;
+            //    bbb += bb;
+            //}
+            //banana = bbb;
+            ////sw.WriteLine(banana);
+
+
+            //if (banana > apple)
+            //{
+            //    sw.WriteLine("B");
+            //}else if (banana < apple)
+            //{
+            //    sw.WriteLine("A");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("T");
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int year = int.Parse(sr.ReadLine());
+            //sw.WriteLine(year - 543);
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string? encoded = sr.ReadLine();
+            //    int a = int.Parse(encoded.Split(" ")[0]);
+            //    char b = char.Parse(encoded.Split(" ")[1]);
+            //    for (int j = 0; j < a; j++)
+            //    {
+            //        sw.Write(b);  
+            //    }
+            //    sw.WriteLine();
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string? brain = sr.ReadLine();
+            //    int a = int.Parse(brain.Split(" ")[0]);
+            //    int b = int.Parse(brain.Split(" ")[1]);
+            //    if (a >= b)
+            //    {
+            //        sw.WriteLine("MMM BRAINS");
+            //    }
+            //    else if(a < b || a==b)
+            //    {
+            //        sw.WriteLine("NO BRAINS");
+            //    }
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+            //Console.WriteLine("2022-12-15");
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+            //int c = int.Parse(num.Split()[2]);
+            //int d = int.Parse(num.Split()[3]);
+            //if (a - c>=2 && b - d>=2)
+            //{
+            //    sw.WriteLine("1");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("0");
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //double number = double.Parse(sr.ReadLine());
+            //double n1 = 0;
+            //double n2 = 0;
+            //int cnt = 0; ;
+            //for (double i = number; i > 0; i--)
+            //{
+            //    if (number % 2 == 0)
+            //    {
+            //        n1 = number / 2;
+            //        //sw.WriteLine(n1);
+            //        cnt++;
+            //    }
+            //    else
+            //    {
+            //        n2 = number + 1;
+            //        //sw.WriteLine(n2);
+            //        cnt++;
+            //    }
+            //    if (n1 == 1 || n2 == 1)
+            //    {
+            //        break;
+            //    }
+            //    number = number % 2 == 0 ? n1 : n2;
+            //}
+            //sw.WriteLine(cnt);
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string number = sr.ReadLine();
+            //    double a = Convert.ToInt64(number,2);
+            //    sw.WriteLine(a);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split(" ")[0]);
+            //int b = int.Parse(num.Split(" ")[1]);
+            //int c = int.Parse(num.Split(" ")[2]);
+            //int d = int.Parse(num.Split(" ")[3]);
+
+            //a *= 56;
+            //b *= 24;
+            //c *= 14;
+            //d *= 6;
+            //sw.WriteLine(a + b + c + d);
+            //sr.Close();
+            //sw.Close();
+
+            //DateTime today = TimeZoneInfo.ConvertTimeToUtc(DateTime.Now);
+            //int year = int.Parse(today.Year.ToString());
+            //int month = int.Parse(today.Month.ToString());
+            //int day = int.Parse(today.Day.ToString());  
+            //Console.WriteLine(year);
+            //Console.WriteLine(month);
+            //Console.WriteLine(day);
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = num; i >0; i--)
+            //{
+            //    sw.WriteLine(i);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int n1 = 0;
+            //int n2 = 0;
+
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int num2 = int.Parse(sr.ReadLine());
+
+            //    for (int j = 0; j < num2; j++)
+            //    {
+            //        n1 = num2 - (num2 - (i+1));
+            //        n2 = num2 - (i+1);
+            //    }
+            //    sw.Write("Pairs for " +num2+": ");
+            //    if (n1 == n2)
+            //    {
+            //        sw.WriteLine(" ");
+            //    }
+            //    else
+            //    {
+            //        sw.WriteLine(n2 + " " + n1);
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
         }
     }
 }
