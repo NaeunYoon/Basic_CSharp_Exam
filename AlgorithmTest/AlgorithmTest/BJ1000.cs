@@ -1872,6 +1872,18 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            string num = sr.ReadLine();
+            int a = int.Parse(num.Split(" ")[0]);
+            int b = int.Parse(num.Split(" ")[1]);
+            sw.WriteLine(a + b);
+            sr.Close();
+            sw.Close();
+
+
+
+
         }
     }
 }
