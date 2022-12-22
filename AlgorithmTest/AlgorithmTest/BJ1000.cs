@@ -1886,34 +1886,20 @@ namespace AlgorithmTest
             string? num = sr.ReadLine();
             double n = double.Parse(num.Split(" ")[0]);
             double m = double.Parse(num.Split(" ")[1]);
-            int cnt = 0;
             int cnt1 = 0;
             int cnt2 = 0;
-
-            if (n<2 || m <2)
-            {
-                cnt = 0;
-            }
-            else
-            {
-                for (int i = 0; i < n; i = i + 2)
-                {
-                    cnt1++;
-                }
-                for (int i = 0; i < m; i = i + 2)
-                {
-                    cnt2++;
-                }
-            }
 
             if (cnt1 > cnt2)
             {
                 sw.WriteLine(cnt2 / 2);
+            }else if (cnt1 < cnt2)
+            {
+                sw.WriteLine(cnt1 / 2);
+            }else if(cnt2 == cnt1)
+            {
+                sw.WriteLine(cnt1 / 2);
             }
 
-            sw.WriteLine(cnt1);
-            sw.WriteLine(cnt2);
-            // 값비교를 해서 접근해야 함 가장 작은거일 떄 큰 거일때 해서
             sr.Close();
             sw.Close();
 
