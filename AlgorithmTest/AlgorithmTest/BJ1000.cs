@@ -1881,27 +1881,175 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string? num = sr.ReadLine();
-            double n = double.Parse(num.Split(" ")[0]);
-            double m = double.Parse(num.Split(" ")[1]);
-            int cnt1 = 0;
-            int cnt2 = 0;
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? num = sr.ReadLine();
+            //long n = long.Parse(num.Split(" ")[0]);
+            //long m = long.Parse(num.Split(" ")[1]);
+            //if(n>=2 && m >=2)
+            //{
+            //    if (n > m)
+            //    {
+            //        sw.WriteLine(m / 2);
+            //    }else if (n < m)
+            //    {
+            //        sw.WriteLine(n / 2);
+            //    }else if(n == m)
+            //    {
+            //        sw.WriteLine(n / 2);
+            //    }
+            //}
+            //else
+            //{
+            //    sw.WriteLine("0");
+            //}
 
-            if (cnt1 > cnt2)
-            {
-                sw.WriteLine(cnt2 / 2);
-            }else if (cnt1 < cnt2)
-            {
-                sw.WriteLine(cnt1 / 2);
-            }else if(cnt2 == cnt1)
-            {
-                sw.WriteLine(cnt1 / 2);
-            }
+            //sr.Close();
+            //sw.Close();
 
-            sr.Close();
-            sw.Close();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? num = sr.ReadLine();
+            //double a = 0;
+            //double b = 0;
+
+            //foreach (var item in num)
+            //{
+            //    int number = (int)char.GetNumericValue(item);
+            //    a = Math.Pow(number, 5);
+            //    sw.WriteLine(a);
+            //    b += a;
+            //}
+            //sw.WriteLine(b);
+
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int number=0;
+            //string difficulty;
+
+            //for (int i = 0; i < num; i++)
+            //{
+            //   difficulty = sr.ReadLine();
+            //   number = int.Parse(difficulty.Split(" ")[1]);
+            //    if(number == 1)
+            //    {
+
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? number = sr.ReadLine();
+
+            //int five1 = (int)char.GetNumericValue(number[0]);
+            //int five2 = (int)char.GetNumericValue(number[1]);
+            //int five3 = (int)char.GetNumericValue(number[2]);
+            //if (five1 == 5 && five2==5 && five3 ==5)
+            //{
+            //    sw.WriteLine("YES");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("NO");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //double cnt = Math.Pow(num,2);
+
+            //sw.WriteLine(cnt-num);
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int number = int.Parse(sr.ReadLine());
+
+            //for (int i = 0; i < num; i++)
+            //{
+            //    for (int j = 0; j < number; j++)
+            //    {
+            //        string? numeric = sr.ReadLine();
+            //        int a = int.Parse(numeric.Split(" ")[0]);
+            //        int b = int.Parse(numeric.Split(" ")[1]);
+
+            //        long cnt1 = a + b;
+            //        long cnt2 = a * b;
+            //        sw.WriteLine(cnt1 + " " + cnt2);
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+            //int num = int.Parse(Console.ReadLine());
+            //int number = int.Parse(Console.ReadLine());
+            //string? numeric;
+            //long cnt1 = 0;
+            //long cnt2 = 0;
+            //int a = 0;
+            //int b = 0;
+
+            //for (int i = 0; i < num; i++)
+            //{
+            //    for (int j = 0; j < number; j++)
+            //    {
+            //        numeric = Console.ReadLine();
+            //        a = int.Parse(numeric.Split(" ")[0]);
+            //        b = int.Parse(numeric.Split(" ")[1]);
+
+            //        cnt1 = a + b;
+            //        cnt2 = a * b;
+            //        Console.WriteLine(cnt1 + " " + cnt2);
+            //    }
+            //}
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string three;
+            //int first, second, third=0;
+            //int a = 0;
+            //int b = 0;
+            //int c = 0;
+            //int cnt = (9 * 1) + (7 * 3) + (8 * 1) + (0 * 3) + (9 * 1) + (2 * 3) + (1 * 1) + (4 * 3) + (1 * 1) + (8 * 3);
+            ////sw.WriteLine(cnt);
+            ////for (int i = 0; i < 3; i++)
+            ////{
+            ////    three = sr.ReadLine();
+
+            ////    first = int.Parse(three.Split("\n")[0]);
+            ////    second = int.Parse(three.Split("\n")[0]);
+            ////    third = int.Parse(three.Split("\n")[0]);
+
+            ////    a = first * 3;
+            ////    b = second * 1;
+            ////    c = third * 3;
+            ////}
+            //int aa =int.Parse(sr.ReadLine());
+            //int bb =int.Parse(sr.ReadLine());
+            //int cc =int.Parse(sr.ReadLine());
+            //a = aa * 1;
+            //b = bb * 3;
+            //c = cc * 1;
+            //sw.Write("The 1-3-sum is ");
+            //sw.WriteLine(a + b + c + cnt);
+
+            //sr.Close();
+            //sw.Close();
+
 
 
 
