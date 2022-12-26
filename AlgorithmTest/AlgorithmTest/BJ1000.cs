@@ -2050,6 +2050,9 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
+            //마싯는거 머그러 ㄱ야지
+
+
 
 
 
