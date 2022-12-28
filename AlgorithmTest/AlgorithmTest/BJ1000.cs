@@ -2050,8 +2050,38 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
-            //마싯는거 머그러 ㄱ야지
-            //멜크
+            //Console.WriteLine(77);
+            //Console.WriteLine("whalebaby");
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? num = sr.ReadLine();
+            //int a = int.Parse(num.Split(" ")[0]);
+            //int b = int.Parse(num.Split(" ")[1]);
+            //int c = int.Parse(num.Split(" ")[2]);
+
+            //int[] data = { a, b, c};
+            //Array.Sort(data);
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    sw.Write(data[i]+" ");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            int numbers;
+            for (int i = 0; i < num; i++)
+            {
+                numbers = int.Parse(sr.ReadLine());
+
+            }
+            sw.WriteLine("Pairs for 2:") ;
+            
+            sr.Close();
+            sw.Close();
 
 
 
