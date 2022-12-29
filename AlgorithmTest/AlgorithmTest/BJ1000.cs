@@ -11,6 +11,7 @@ using System.Reflection.Emit;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -2069,19 +2070,39 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            int numbers;
-            for (int i = 0; i < num; i++)
-            {
-                numbers = int.Parse(sr.ReadLine());
 
-            }
-            sw.WriteLine("Pairs for 2:") ;
-            
-            sr.Close();
-            sw.Close();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int n = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < n; i++)
+            //{
+            //   int cnt = 0;
+            //   int num = int.Parse(sr.ReadLine());
+            //    sw.Write("Pairs for " + num + ": ");
+
+            //    for (int j = 1; j < num; j++)
+            //    {
+            //        for (int k = 1; k < num; k++)
+            //        {
+            //            if(j+k== num && j<k)
+            //            {
+            //                if (cnt == 0)
+            //                {
+            //                    cnt++;
+            //                    sw.Write(j + " " + k);
+            //                }
+            //                else
+            //                {
+            //                    sw.Write(", " + j + " " + k);
+            //                }
+            //            } 
+
+            //        }
+            //    }
+            // sw.WriteLine("");
+            //}
+            //sr.Close();
+            //sw.Close();
 
 
 
