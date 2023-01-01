@@ -14,6 +14,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
 using System.Text;
+using System.Xml;
 
 namespace AlgorithmTest
 {
@@ -2104,9 +2105,55 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? num = sr.ReadLine();
+            //long a = int.Parse(num.Split(" ")[0]);
+            //long b = int.Parse(num.Split(" ")[1]);
+            //long mul = a * b;
+            //long ret = mul / 2;
+            //sw.WriteLine(ret);
+            //sr.Close();
+            //sw.Close();
+            //======================================================================================
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? num = sr.ReadLine();
+            //int a = int.Parse(num.Split(" ")[0]);
+            //int b = int.Parse(num.Split(" ")[1]);
+            //int c = int.Parse(num.Split(" ")[2]);
+
+            //int d = int.Parse(num.Split(" ")[3]);
+            //int e = int.Parse(num.Split(" ")[4]);
+            //int f = int.Parse(num.Split(" ")[5]);
+
+            //int x = 1;
+            //int y = 1;
+            //int first = (a * x) + (b * y); 
+
+            //sr.Close();
+            //sw.Close();
+            //=======================================================
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            string? circle1 = sr.ReadLine();
+            string? circle2 = sr.ReadLine();
+
+            int x1 = int.Parse(circle1.Split(" ")[0]);
+            int y1 = int.Parse(circle1.Split(" ")[1]);
+            int r1 = int.Parse(circle1.Split(" ")[2]);
+            double ret1 = Math.Pow(r1, 2);
+
+            int x2 = int.Parse(circle2.Split(" ")[0]);
+            int y2 = int.Parse(circle2.Split(" ")[1]);
+            int r2 = int.Parse(circle2.Split(" ")[2]);
+            double ret2 = Math.Pow(r2, 2);
 
 
 
+            sr.Close();
+            sw.Close();
 
 
         }
