@@ -2135,25 +2135,39 @@ namespace AlgorithmTest
             //sw.Close();
             //=======================================================
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string? circle1 = sr.ReadLine();
-            string? circle2 = sr.ReadLine();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string? circle1 = sr.ReadLine();
+            //string? circle2 = sr.ReadLine();
 
-            int x1 = int.Parse(circle1.Split(" ")[0]);
-            int y1 = int.Parse(circle1.Split(" ")[1]);
-            int r1 = int.Parse(circle1.Split(" ")[2]);
-            double ret1 = Math.Pow(r1, 2);
+            //long x1 = long.Parse(circle1.Split(" ")[0]);
+            //long y1 = long.Parse(circle1.Split(" ")[1]);
+            //long r1 = long.Parse(circle1.Split(" ")[2]);
 
-            int x2 = int.Parse(circle2.Split(" ")[0]);
-            int y2 = int.Parse(circle2.Split(" ")[1]);
-            int r2 = int.Parse(circle2.Split(" ")[2]);
-            double ret2 = Math.Pow(r2, 2);
+            //long x2 = long.Parse(circle2.Split(" ")[0]);
+            //long y2 = long.Parse(circle2.Split(" ")[1]);
+            //long r2 = long.Parse(circle2.Split(" ")[2]);
+
+            //long ret1 = x1 - x2;
+            //long ret_1 = ret1 * ret1;
+            //long ret2 = y1 - y2;
+            //long ret_2 = ret2 * ret2;
+            //long ret3 = r1 + r2;
+            //long ret_3 = ret3 * ret3;
+
+            //if (ret_1 + ret_2 < ret_3)
+            //{
+            //    sw.WriteLine("Yes");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("No");
+            //}
+            //sr.Close();
+            //sw.Close();
 
 
 
-            sr.Close();
-            sw.Close();
 
 
         }
