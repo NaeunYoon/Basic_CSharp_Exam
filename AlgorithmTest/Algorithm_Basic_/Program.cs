@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Security;
 
 namespace Algorithm_Basic_
 {
@@ -280,6 +282,147 @@ namespace Algorithm_Basic_
             //    }
             //}
 
+            //sr.Close();
+            //sw.Close();
+
+            //문어
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            ////string[] chars = {"-",@"\","(","@","?",">","&","%" };
+
+            ////Dictionary<string, int> dictionary = new Dictionary<string, int>() 
+            ////{
+            ////    {"-",-1},{@"\",0},{"(",1},{"@",2},{"?",3},{">",4},{"&",5},{"%",6}
+            ////};
+            //sr.Close();
+            //sw.Close();
+
+            //도비의 영어공부
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int cnt = 0;
+            //string alphabet = null;
+            //string a = null;
+            //string b = null;
+            //string b_lower = null;
+            //while (true)
+            //{
+            //    alphabet = sr.ReadLine();
+            //    a = alphabet.Split()[0];
+            //    for (int i = 0; i < alphabet.Length-2; i++)
+            //    {
+            //        b = alphabet.Remove(0, 2);  //왜 이게 문제일까?
+            //        b_lower = b.ToLower();
+
+            //        if (b[i] == a[0] || b_lower[i] == a[0] )
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //    if (a[0].ToString() == "#")
+            //    {
+            //        break;
+            //    }
+
+            //    sw.WriteLine(a+" "+cnt);
+            //    cnt= 0;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //구구단
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 1; i <= 9 ; i++)
+            //{
+            //    sw.WriteLine(num + " * " + i + " = " + num * i);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //별찍기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    for (int j = 0; j <= i; j++)
+            //    {
+            //        sw.Write("*");
+            //    }
+            //    sw.WriteLine(" ");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //단어 길이 재기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int cnt = 0;
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    cnt++;
+            //}
+            //sw.WriteLine(cnt);
+            //sr.Close();
+            //sw.Close();
+
+            //대소문자 바꾸기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //string upper = text.ToUpper();
+            //string lower = text.ToLower();
+            //string rand = null;
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    if (text[i] == lower[i])
+            //    {
+            //        rand = text[i].ToString().ToUpper();
+            //    }
+            //    else
+            //    {
+            //        rand = text[i].ToString().ToLower();
+            //    }
+
+            //    sw.Write(rand);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //스네이크버드
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string first = sr.ReadLine();
+
+            //int number = int.Parse(first.Split()[0]);
+            //int snake_length = int.Parse(first.Split()[1]);
+            //string amount = sr.ReadLine();
+            //int a = 0;
+            //int[] arr = new int[number];
+
+            //for (int i = 0; i < number; i++)
+            //{
+            //    a = int.Parse(amount.Split()[i]);
+            //    arr[i] = a;
+            //}
+
+            //Array.Sort(arr);    //오름차순으로 정렬했음
+
+            //for (int i = 0; i < number; i++)
+            //{
+            //    if (snake_length >= arr[i])
+            //    {
+            //        snake_length++;
+            //    }
+            //}
+            //sw.WriteLine(snake_length);
             //sr.Close();
             //sw.Close();
 
