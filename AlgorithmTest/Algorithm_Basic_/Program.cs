@@ -426,6 +426,107 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //검증수
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+            //int c = int.Parse(num.Split()[2]);
+            //int d = int.Parse(num.Split()[3]);
+            //int e = int.Parse(num.Split()[4]);
+
+            //double aa = Math.Pow(a, 2);
+            //double bb = Math.Pow(b, 2);
+            //double cc = Math.Pow(c, 2);
+            //double dd = Math.Pow(d, 2);
+            //double ee = Math.Pow(e, 2);
+            //int ret = (int)(aa + bb + cc + dd + ee) % 10;
+            //sw.WriteLine(ret);
+            //sr.Close();
+            //sw.Close();
+
+            //유학금지
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //char[] cambridge = { 'C', 'A', 'M', 'B', 'R', 'I', 'D', 'G', 'E' };
+            //string text = sr.ReadLine();
+            //string ex = "";
+            //string tmp = "";
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    for (int j = 0; j < cambridge.Length; j++)
+            //    {
+            //        if (text[i].ToString() == cambridge[j].ToString())
+            //        {
+            //            //ex = text.Remove(i, 1);
+            //            ex = text[i].ToString();
+            //            sw.WriteLine("ex " + ex);
+            //        }
+
+            //    }
+            //}
+            ////sw.WriteLine(text);
+            ////sw.WriteLine(ex);
+            //sr.Close();
+            //sw.Close();
+
+            //점수계산
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num;
+            //int[] number = new int[8];
+            //int[] tmpnum = new int[5];
+            //int[] tmp = new int[8];
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    num = int.Parse(sr.ReadLine());
+            //    number[i] = num;    //잘 들어갔군
+            //}
+            //Array.Copy(number, tmp, 8); //들어간 초기값을 복사
+            //Array.Sort(number); //오름차순 정렬
+            //sw.WriteLine(number[7]+ number[6]+number[5]+number[4]+ number[3]);  //합
+
+            ////내가 쓸 수 있는거 : 원래 값 tmp 랑 오름차순인 number
+            ////근데 오름차순으로 비교하면 안되는게 원래 값이랑 number에 들어있는 값이랑 비교
+            ////결국엔 tmp index를 가져와야 한다는 건데..
+
+            ////for (int i = 0; i < tmpnum.Length; i++)
+            ////{
+            ////    for (int j = 7; j > 2; j--)
+            ////    {
+
+            ////        tmpnum[i] = number[j];
+            ////        //sw.WriteLine(tmpnum[i]);
+            ////    }
+            ////}
+
+            //tmpnum[0] = number[7];
+            //tmpnum[1] = number[6];
+            //tmpnum[2] = number[5];
+            //tmpnum[3] = number[4];
+            //tmpnum[4] = number[3];
+
+            ////for (int i = 0; i < tmpnum.Length; i++)
+            ////{
+            ////    sw.WriteLine( tmpnum[i]);
+            ////}
+
+            //for (int i = 0; i < tmp.Length; i++)
+            //{
+            //    for (int j = 0; j < tmpnum.Length; j++)
+            //    {
+            //        if (tmp[i].ToString() == tmpnum[j].ToString())
+            //        {
+            //            sw.Write(i+1+" ");
+            //        }
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //FBI
 
 
 
