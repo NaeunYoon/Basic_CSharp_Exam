@@ -527,6 +527,191 @@ namespace Algorithm_Basic_
             //sw.Close();
 
             //FBI
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string codeName;
+            //string[] code = new string[5];
+            //string a;
+            //string b;
+            //int cnt = 0;
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    codeName = sr.ReadLine();
+            //    code[i] = codeName; //배열에 할당함
+
+            //    if (code[i].ToString().Contains("FBI"))
+            //    {
+            //        sw.Write(i+1 +" ");
+            //    }
+            //}
+            //if (!code[0].ToString().Contains("FBI")
+            //        && !code[1].ToString().Contains("FBI")
+            //        && !code[2].ToString().Contains("FBI")
+            //        && !code[3].ToString().Contains("FBI")
+            //        && !code[4].ToString().Contains("FBI"))
+            //{
+            //    sw.WriteLine("HE GOT AWAY!");
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+            //나는요리사다
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string number = null;
+            //int[] grade = new int [20];
+            //int[,] grades = new int[5,4];
+            //int a = 0;
+            //int sum = 0;
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    number = sr.ReadLine();
+
+            //    for (int j = 0; j < 4; j++)
+            //    {
+            //        a = int.Parse(number.Split()[j]);
+            //        //grade[i] = a;
+            //        grades[i,j] = a;
+            //        sum += grades[i, j];
+            //    }
+            //        grade[i] = sum;
+            //        //sw.WriteLine(sum);
+            //        //sw.WriteLine(i+1);
+            //        sum = 0;
+
+            //}
+
+            ////sw.WriteLine(grade.Max());
+            //int index =Array.FindIndex(grade, i => i == grade.Max());   //처음써본 람다식
+            //sw.WriteLine(index+1+" "+grade.Max());
+
+            //sr.Close();
+            //sw.Close();
+
+            //R2
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+
+            //int number = b * 2;
+            //sw.WriteLine(number - a);
+            //sr.Close();
+            //sw.Close();
+
+            //성적
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string grade = sr.ReadLine();
+            //switch (grade)
+            //{
+            //    case "A+": sw.Write("4.3");
+            //        break;
+            //    case "A0":
+            //        sw.Write("4.0");
+            //        break;
+            //    case "A-":
+            //        sw.Write("3.7");
+            //        break;
+            //    case "B+": sw.Write("3.3");
+            //        break;
+            //    case "B0":
+            //        sw.Write("3.0");
+            //        break;
+            //    case "B-":
+            //        sw.Write("2.7");
+            //        break;
+            //    case "C+": sw.Write("2.3");
+            //        break;
+            //    case "C0":
+            //        sw.Write("2.0");
+            //        break;
+            //    case "C-":
+            //        sw.Write("1.7");
+            //        break;
+            //    case "D+": sw.Write("1.3");
+            //        break;
+            //    case "D0":
+            //        sw.Write("1.0");
+            //        break;
+            //    case "D-":
+            //        sw.Write("0.7");
+            //        break;
+            //    default: sw.Write("0.0");
+            //        break;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //꿍의 우주여행
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int testCase = int.Parse(sr.ReadLine());
+            //int cnt = 0;
+            //for (int i = 0; i < testCase; i++)
+            //{
+            //    string num = sr.ReadLine();
+            //    int a = int.Parse(num.Split()[0]);
+            //    int b = int.Parse(num.Split()[1]);
+            //    for (int j = 0; j < a; j++)
+            //    {
+            //        string number = sr.ReadLine();
+            //        double aa = int.Parse(number.Split()[0]);
+            //        double bb = int.Parse(number.Split()[1]);
+            //        double cc = int.Parse(number.Split()[2]);
+
+            //        if ( aa * (double)(bb / cc) >= b)
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //    sw.WriteLine(cnt);
+            //    cnt = 0;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //좋은놈 나쁜놈
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            
+            int num = int.Parse(sr.ReadLine());
+            int cnt_g = 0;
+            int cnt_b = 0;
+            for (int i = 0; i < num; i++)
+            {
+                string name = sr.ReadLine();
+                for (int j = 0; j < name.Length; j++)
+                {
+                    if (name[j].ToString().Contains("g")|| name[j].ToString().Contains("G"))
+                    {
+                        cnt_g++;
+                    }else if(name[j].ToString().Contains("b") || name[j].ToString().Contains("B"))
+                    {
+                        cnt_b++;
+                    }
+                }
+                sw.Write(name + " is");
+                if (cnt_b < cnt_g)
+                {
+                    sw.Write(" GOOD"+"\n");
+
+                }else if (cnt_b > cnt_g)
+                {
+                    sw.Write(" A BADDY" + "\n");
+                }
+                else if (cnt_b == cnt_g)
+                {
+                    sw.Write(" NEUTRAL" + "\n");
+                }
+                cnt_g = 0;
+                cnt_b = 0;
+            }
+            sr.Close();
+            sw.Close();
 
 
 

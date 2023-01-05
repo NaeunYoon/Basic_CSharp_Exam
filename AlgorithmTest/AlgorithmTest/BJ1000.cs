@@ -2166,7 +2166,19 @@ namespace AlgorithmTest
             //sr.Close();
             //sw.Close();
 
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            string codeName;
+            string a;
+            string b;
+            for (int i = 0; i < 5; i++)
+            {
+                codeName = sr.ReadLine();
+                a = codeName.Split("-")[0];
 
+            }
+            sr.Close();
+            sw.Close();
 
 
 
