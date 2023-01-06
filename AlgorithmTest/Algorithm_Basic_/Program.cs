@@ -808,9 +808,89 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //A+B
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string number;
+            //int a;
+            //int b;
+            //int sum;
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    number= sr.ReadLine();
+            //    a = int.Parse(number.Split()[0]);
+            //    b = int.Parse(number.Split()[1]);
+            //    sum = a + b;
+            //    sw.WriteLine("Case #"+i+": "+sum);
+            //}
+            
+            //sr.Close();
+            //sw.Close();
 
+            //상근이의 친구들
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num;
+            //int a;
+            //int b;
+            //int sum;
+            //while (true)
+            //{
+            //    num = sr.ReadLine();
+            //    a = int.Parse(num.Split()[0]);
+            //    b = int.Parse(num.Split()[1]);
+            //    sum = a + b;
+            //    if(a == 0 && b ==0)
+            //    {
+            //        break;
+            //    }
+            //    sw.WriteLine(sum);
+            //    sum = 0;
+            //}
+            //sr.Close();
+            //sw.Close();
 
+            //와이버스 부릉부릉
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+            //for (int i = 0; i < a; i++)
+            //{
+            //    string number = sr.ReadLine();
+            //    int aa = int.Parse(number.Split()[0]);
+            //    int bb = int.Parse(number.Split()[1]);
+            //}
+            //Console.WriteLine("비와이");
+            //sr.Close();
+            //sw.Close();
+
+            //모음의 개수
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput())); 
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            
+            string text = sr.ReadLine();
+            char[] chars = new char [5] { 'a', 'e', 'i', 'o', 'u' };
+            int cnt = 0;
+            for (int i = 0; i < text.Length; i++)
+            {
+                for (int j = 0; j < chars.Length; j++)
+                {
+                    if (text[i].ToString() == chars[j].ToString())
+                    {
+                        cnt++;
+                    }
+                }
+            }
+            sw.WriteLine(cnt);
+
+            sr.Close();
+            sw.Close();
 
 
         }
