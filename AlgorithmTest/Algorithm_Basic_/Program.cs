@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Security;
+using Microsoft.Win32;
 
 namespace Algorithm_Basic_
 {
@@ -675,47 +676,137 @@ namespace Algorithm_Basic_
             //sw.Close();
 
             //좋은놈 나쁜놈
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            
-            int num = int.Parse(sr.ReadLine());
-            int cnt_g = 0;
-            int cnt_b = 0;
-            for (int i = 0; i < num; i++)
-            {
-                string name = sr.ReadLine();
-                for (int j = 0; j < name.Length; j++)
-                {
-                    if (name[j].ToString().Contains("g")|| name[j].ToString().Contains("G"))
-                    {
-                        cnt_g++;
-                    }else if(name[j].ToString().Contains("b") || name[j].ToString().Contains("B"))
-                    {
-                        cnt_b++;
-                    }
-                }
-                sw.Write(name + " is");
-                if (cnt_b < cnt_g)
-                {
-                    sw.Write(" GOOD"+"\n");
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
 
-                }else if (cnt_b > cnt_g)
-                {
-                    sw.Write(" A BADDY" + "\n");
-                }
-                else if (cnt_b == cnt_g)
-                {
-                    sw.Write(" NEUTRAL" + "\n");
-                }
-                cnt_g = 0;
-                cnt_b = 0;
-            }
-            sr.Close();
-            sw.Close();
+            //int num = int.Parse(sr.ReadLine());
+            //int cnt_g = 0;
+            //int cnt_b = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string name = sr.ReadLine();
+            //    for (int j = 0; j < name.Length; j++)
+            //    {
+            //        if (name[j].ToString().Contains("g")|| name[j].ToString().Contains("G"))
+            //        {
+            //            cnt_g++;
+            //        }else if(name[j].ToString().Contains("b") || name[j].ToString().Contains("B"))
+            //        {
+            //            cnt_b++;
+            //        }
+            //    }
+            //    sw.Write(name + " is");
+            //    if (cnt_b < cnt_g)
+            //    {
+            //        sw.Write(" GOOD"+"\n");
+
+            //    }else if (cnt_b > cnt_g)
+            //    {
+            //        sw.Write(" A BADDY" + "\n");
+            //    }
+            //    else if (cnt_b == cnt_g)
+            //    {
+            //        sw.Write(" NEUTRAL" + "\n");
+            //    }
+            //    cnt_g = 0;
+            //    cnt_b = 0;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //게산기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            ////string[] sign = new string[5];
+            //int num1 = 0;
+            //int num2 = 0;
+            //string sign="";
+            //int ret = 0;
+            //num1 = int.Parse(sr.ReadLine());
+            //while (true)
+            //{
+            //    sign = sr.ReadLine();
+            //    if(sign == "=")
+            //    {
+            //        break;
+            //    }
+            //    num2= int.Parse(sr.ReadLine());
+            //    switch (sign)
+            //    {
+            //        case "+": num1+=num2;
+            //            break;
+
+            //        case "-":
+            //            num1 -= num2;
+            //            break;
+
+            //        case "*": num1 *= num2; 
+            //            break;
+
+            //        case "/": num1 /= num2;
+            //            break;
+            //    }
+            //}
+            //sw.WriteLine(num1);
+
+            //sr.Close();
+            //sw.Close();
+
+            //평균 중앙값 문제
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+
+            //sr.Close();
+            //sw.Close();
+
+            //나머지
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+            //int c = int.Parse(num.Split()[2]);
+            //if(a>=2 && a<=100000 && b >= 2 && b <= 100000 && c >= 2 && c <= 100000)
+            //{
+            //    sw.WriteLine((a+b)%c);
+            //    sw.WriteLine(((a%c)+(b%c))%c);
+            //    sw.WriteLine((a*b)%c);
+            //    sw.WriteLine(((a%c)*(b%c))%c);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //과제 안 내신 분?
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int[] number = new int[30];
+            ////for (int i = 0; i < 30; i++)
+            ////{
+            ////    number[i] = i+1;
+            ////    //sw.Write(number[i]);
+            ////}
+            //for (int i = 0; i < 30; i++)
+            //{
+            //    int a = int.Parse(sr.ReadLine());
+            //    number[i] = i + 1;
+            //    for (int j = 0; j < 30; j++)
+            //    {
+            //        if (a != number[j])
+            //        {
+            //            sw.WriteLine(number[j]);
+            //        }
+            //    }
+            //}
 
 
-
-
+            //sr.Close();
+            //sw.Close();
 
 
 
