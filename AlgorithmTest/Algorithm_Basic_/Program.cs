@@ -824,7 +824,7 @@ namespace Algorithm_Basic_
             //    sum = a + b;
             //    sw.WriteLine("Case #"+i+": "+sum);
             //}
-            
+
             //sr.Close();
             //sw.Close();
 
@@ -871,26 +871,85 @@ namespace Algorithm_Basic_
 
             //모음의 개수
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput())); 
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            
-            string text = sr.ReadLine();
-            char[] chars = new char [5] { 'a', 'e', 'i', 'o', 'u' };
-            int cnt = 0;
-            for (int i = 0; i < text.Length; i++)
-            {
-                for (int j = 0; j < chars.Length; j++)
-                {
-                    if (text[i].ToString() == chars[j].ToString())
-                    {
-                        cnt++;
-                    }
-                }
-            }
-            sw.WriteLine(cnt);
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput())); 
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
 
+            //string text = sr.ReadLine();
+            //char[] chars = new char [5] { 'a', 'e', 'i', 'o', 'u' };
+            //int cnt = 0;
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    for (int j = 0; j < chars.Length; j++)
+            //    {
+            //        if (text[i].ToString() == chars[j].ToString())
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //}
+            //sw.WriteLine(cnt);
+            //sr.Close();
+            //sw.Close();
+
+            //a+b
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string number = sr.ReadLine();
+            //    int a = int.Parse(number.Split()[0]);
+            //    int b = int.Parse(number.Split()[1]);
+            //    sw.WriteLine(a+b);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //치킨댄스를 추는 곰곰이를 본 임스
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int chicken = int.Parse(sr.ReadLine());
+            //string beverage = sr.ReadLine();
+            //int coke = int.Parse(beverage.Split()[0]);
+            //int beer = int.Parse(beverage.Split()[1]);
+            //int cnt = 0;
+            //for (int i = 0; i < coke/2; i++)
+            //{
+            //    cnt++;
+            //}
+            //for (int i = 0; i < beer; i++)
+            //{
+            //    cnt++;
+            //}
+            //if (cnt >= chicken)
+            //{
+            //    sw.WriteLine(chicken);
+            //}else if (cnt < chicken)
+            //{
+            //    sw.WriteLine(cnt);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            int sum = 0;
+            for (int i = 1; i <= num; i++)
+            {
+                string number = sr.ReadLine();
+                int a = int.Parse(number.Split()[0]);
+                int b = int.Parse(number.Split()[1]);
+                sum = a+b;
+                sw.WriteLine("Case #" + i + ": " + a+ " + " + b + " = " + sum);
+                sum = 0;
+            }
             sr.Close();
             sw.Close();
+
 
 
         }
