@@ -934,19 +934,73 @@ namespace Algorithm_Basic_
             //sw.Close();
 
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int sum = 0;
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    string number = sr.ReadLine();
+            //    int a = int.Parse(number.Split()[0]);
+            //    int b = int.Parse(number.Split()[1]);
+            //    sum = a+b;
+            //    sw.WriteLine("Case #" + i + ": " + a+ " + " + b + " = " + sum);
+            //    sum = 0;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //X보다 작은 수
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //uint a = UInt16.Parse(num.Split()[0]);
+            //uint b = UInt16.Parse(num.Split()[1]);
+            //string number = sr.ReadLine();
+            //for (int i = 0; i < a; i++)
+            //{
+            //    uint aa = UInt16.Parse(number.Split()[i]);
+
+            //    if(aa < b ) 
+            //    {
+            //        sw.Write(aa+" ");
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //폰노이만
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            int sum = 0;
-            for (int i = 1; i <= num; i++)
+            int number = int.Parse(sr.ReadLine());
+            int cnt = 0;
+            float aa = 0;
+            float bb = 0;
+            float ff = 0;
+            for (int i = 0; i < number; i++)
             {
-                string number = sr.ReadLine();
-                int a = int.Parse(number.Split()[0]);
-                int b = int.Parse(number.Split()[1]);
-                sum = a+b;
-                sw.WriteLine("Case #" + i + ": " + a+ " + " + b + " = " + sum);
-                sum = 0;
+                string str = sr.ReadLine(); 
+                float n = float.Parse(str.Split()[0]);
+                float d = float.Parse(str.Split()[1]);
+                float a = float.Parse(str.Split()[2]);
+                float b = float.Parse(str.Split()[3]);
+                float f = float.Parse(str.Split()[4]);
+                float ret = (float)d/(a + b) * f;
+                sw.WriteLine($"{n} {ret}");
+
+    
+
+
+
+
+
+
+                
+
             }
+            
             sr.Close();
             sw.Close();
 
