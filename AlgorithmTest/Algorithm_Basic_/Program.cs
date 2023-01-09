@@ -1187,17 +1187,116 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            int sum = 1;
-            for (int i = 1; i <= num; i++)
-            {
-                sum *= i;
-            }
-            sw.WriteLine(sum);
-            sr.Close();
-            sw.Close();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int sum = 1;
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    sum *= i;
+            //}
+            //sw.WriteLine(sum);
+            //sr.Close();
+            //sw.Close();
+
+            //홀수일까 짝수일까 : 값이 커서 정수로 못받는다
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int[] a = new int[num+1];
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    int number = int.Parse(text.Substring(text.Length - 1));
+            //    if (number % 2 == 0)
+            //    {
+            //        sw.WriteLine("even");
+            //    }
+            //    else
+            //    {
+            //        sw.WriteLine("odd");
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //다음 수
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //while (true)
+            //{
+            //    string num = sr.ReadLine();
+            //    string[] t = num.Split();
+            //    int a = int.Parse(t[0]);
+            //    int b = int.Parse(t[1]);
+            //    int c = int.Parse(t[2]);
+
+            //    if (a == 0 && b == 0 && c == 0)
+            //    {
+            //        break;
+            //    }
+
+            //    int ap1 = c - b;
+            //    int ap2 = b - a;
+            //    int gp1 = c / b;
+            //    int gp2 = b / a;
+
+            //    if(ap1 == ap2)
+            //    {
+            //        sw.WriteLine("AP "+ (c + ap1));
+            //    }
+            //    else if(gp1== gp2) 
+            //    {
+            //        sw.WriteLine("GP "+ (c * gp1));
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //TGN
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string money = sr.ReadLine();
+            //    string[] ad = money.Split();
+            //    long r = long.Parse(ad[0]);
+            //    long d = long.Parse(ad[1]);
+            //    long c = long.Parse(ad[2]);
+
+            //    if ((d - c) > r)
+            //    {
+            //        sw.WriteLine("advertise");
+            //    }else if ((d - c) == r)
+            //    {
+            //        sw.WriteLine("does not matter");
+            //    }
+            //    else
+            //    {
+            //        sw.WriteLine("do not advertise");
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //사칙연산
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+            //sw.WriteLine(a + b);
+            //sw.WriteLine(a - b);
+            //sw.WriteLine(a * b);
+            //sw.WriteLine(a / b);
+            //sw.WriteLine(a % b);
+            //sr.Close();
+            //sw.Close();
+
 
 
 
