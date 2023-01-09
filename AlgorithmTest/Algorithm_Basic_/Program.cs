@@ -972,35 +972,230 @@ namespace Algorithm_Basic_
 
             //폰노이만
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int number = int.Parse(sr.ReadLine());
-            int cnt = 0;
-            float aa = 0;
-            float bb = 0;
-            float ff = 0;
-            for (int i = 0; i < number; i++)
-            {
-                string str = sr.ReadLine(); 
-                float n = float.Parse(str.Split()[0]);
-                float d = float.Parse(str.Split()[1]);
-                float a = float.Parse(str.Split()[2]);
-                float b = float.Parse(str.Split()[3]);
-                float f = float.Parse(str.Split()[4]);
-                float ret = (float)d/(a + b) * f;
-                sw.WriteLine($"{n} {ret}");
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int number = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < number; i++)
+            //{
+            //    string str = sr.ReadLine(); 
+            //    float n = float.Parse(str.Split()[0]);
+            //    float d = float.Parse(str.Split()[1]);
+            //    float a = float.Parse(str.Split()[2]);
+            //    float b = float.Parse(str.Split()[3]);
+            //    float f = float.Parse(str.Split()[4]);
+            //    float ret = (float)d/(a + b) * f;
+            //    sw.WriteLine($"{n} {ret}");
+            //}
+            //sr.Close();
+            //sw.Close();
 
-    
+            //윷놀이
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int number = 0;
+            //int cnt = 0;
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    string num = sr.ReadLine();
 
+            //    for (int j = 0; j < 4; j++)
+            //    {
+            //        int a = int.Parse(num.Split()[j]);
+            //        if (number == a)
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //        switch (cnt)
+            //        {
+            //            case 0: sw.WriteLine("E");
+            //                break;
+            //            case 1:
+            //                sw.WriteLine("A");
+            //                break;
+            //            case 2:
+            //                sw.WriteLine("B");
+            //                break;
+            //            case 3:
+            //                sw.WriteLine("C");
+            //                break;
+            //            case 4:
+            //                sw.WriteLine("D");
+            //                break;
+            //        }
+            //    cnt= 0;
 
+            //}
+            //sr.Close();
+            //sw.Close();
 
+            //소수/팰린드롬
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
 
-
+            //for (int i = 1; i<=100; i++)
+            //{
+            //    num++;
                 
 
-            }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //나이계산하기
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //string num1 =sr.ReadLine();
+            //int a1 = int.Parse(num1.Split()[0]);
+            //int b1 = int.Parse(num1.Split()[1]);
+            //int c1 = int.Parse(num1.Split()[2]);
+
+            //string num2 = sr.ReadLine();
+            //int a2 = int.Parse(num1.Split()[0]);
+            //int b2 = int.Parse(num1.Split()[1]);
+            //int c2 = int.Parse(num1.Split()[2]);
+            ////만나이
+            //if (b1 < b2)
+            //{
+            //    sw.WriteLine(a2 - a1);
+            //}else if(b2 == b1)
+            //{
+            //    if (c2 <= c1)
+            //    {
+            //        sw.WriteLine(a2 - a1);
+            //    }
+            //    else
+            //    {
+            //        sw.WriteLine((a2-a1)-1);
+            //    }
+            //}
+            //else
+            //{
+            //    sw.WriteLine((a2 - a1) - 1);
+            //}
+            ////세는나이
+            //if()
+
+
+
+            //sr.Close();
+            //sw.Close();
+
+            //홀수
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int tmp=0;
+            //int cnt = 0;
+            //int count = 0;
+            //int[] number = new int[7];
+            //int[] number2;
             
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    number[i] = num;
+            //}
+
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    if (number[i] % 2 == 0)
+            //    {
+            //        cnt++;
+            //    }
+
+            //    if (cnt >= 7)
+            //    {
+            //        sw.WriteLine("-1");
+            //        break;
+            //    }
+            //}
+
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    if (number[i] % 2 == 1)
+            //    {
+            //        count++;
+            //    }
+            //}
+            //sw.WriteLine(count);
+            //number2= new int[count];
+
+            //for (int i = 0; i < 7; i++)
+            //{
+
+            //        if (number[i] % 2 == 1)
+            //        {
+            //            for (int j = 0; j < count; j++)
+            //            {
+            //                number2[j] = number[i];
+            //                sw.WriteLine(number2[j]);
+            //                //tmp += number[i];
+            //            }
+            //        }
+            //}
+
+            //sw.WriteLine(tmp);
+            //sw.WriteLine(number2.Min());
+
+
+
+
+
+
+            ////sw.WriteLine(min);
+
+
+
+            //sr.Close();
+            //sw.Close();
+
+            //검증수
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int[] number = new int[5];
+            //int tmp = 0;
+
+            //for (int i = 0; i < number.Length; i++)
+            //{
+            //    int a = int.Parse(num.Split()[i]);
+            //    number[i] = a*a;
+            //    tmp += number[i];
+            //}
+            //int ret = tmp % 10;
+            //sw.Write(ret);
+
+            //sr.Close();
+            //sw.Close();
+
+            //줄번호
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 1; i <= 5; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    sw.WriteLine(i+". "+text);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            int sum = 1;
+            for (int i = 1; i <= num; i++)
+            {
+                sum *= i;
+            }
+            sw.WriteLine(sum);
             sr.Close();
             sw.Close();
 
