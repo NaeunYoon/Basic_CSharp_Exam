@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Security;
 using Microsoft.Win32;
+using System.Globalization;
 
 namespace Algorithm_Basic_
 {
@@ -1297,6 +1298,125 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            
+            //int num = int.Parse(sr.ReadLine());
+            //while (true)
+            //{
+            //    int number = int.Parse(sr.ReadLine());
+            //    if (number == 0)
+            //    {
+            //        break;
+            //    }
+
+            //    if (number % num == 0)
+            //    {
+            //        sw.WriteLine($"{number} is a multiple of {num}.");
+            //    }
+            //    else
+            //    {
+            //        sw.WriteLine($"{number} is NOT a multiple of {num}.");
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //삼각형
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            
+            //int a = int.Parse(sr.ReadLine());
+            //int b = int.Parse(sr.ReadLine());
+            //int c = int.Parse(sr.ReadLine());
+
+            //int sum = a + b + c;
+
+            //if(sum != 180)
+            //{
+            //    sw.WriteLine("Error");
+            //}else if( sum == 180 && a!=b && b!=c&& a!=c) 
+            //{
+            //    sw.WriteLine("Scalene");
+            //}else if (a == 60 && b == 60 && c == 60)
+            //{
+            //    sw.WriteLine("Equilateral");
+            //}else if(sum == 180 && a == b || a == c || b == c)
+            //{
+            //    sw.WriteLine("Isosceles");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //가위바위보
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            int cnt = 0;
+            int count = 0;
+            for (int i = 0; i < num; i++)
+            {
+                int number = int.Parse(sr.ReadLine()) ;
+                for (int j = 0; j < number; j++)
+                {
+                    string test = sr.ReadLine();
+                    string[] t = test.Split();
+                    string p1 = t[0];
+                    string p2 = t[1];
+
+                    //P1이 주먹만 낼 경우
+                    if (p1 == "R" && p2 == "P")
+                    {
+                        count++;
+                        cnt--;
+                    }else if(p1== "R" && p2 == "S")
+                    {
+                        cnt++;
+                        count--;
+                    }
+                    //P1이 가위만 낼 경우
+                    if (p1 == "S" && p2 == "R")
+                    {
+                        count++;
+                        cnt--;
+                    }else if(p1== "S" && p2 == "P")
+                    {
+                        cnt++;
+                        count--;
+                    }
+                    //P1이 보자기만 낼 경우
+                    if (p1=="P"&&p2== "S") 
+                    { 
+                        count++;
+                        cnt--;
+                    }else if(p1== "P" && p2 == "R")
+                    {
+                        cnt++;
+                        count--;
+                    }
+
+
+
+                }
+                    if (cnt == count)
+                    {
+                        sw.WriteLine("TIE");
+                    }else if (cnt > count)
+                    {
+                        sw.WriteLine("Player 1");
+                    }
+                    else if(cnt<count) 
+                    {
+                        sw.WriteLine("Player 2");
+                    }
+
+                    count = 0;
+                    cnt= 0;
+            }
+            
+            sr.Close();
+            sw.Close();
 
 
 
