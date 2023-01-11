@@ -1350,70 +1350,87 @@ namespace Algorithm_Basic_
 
             //가위바위보
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int cnt = 0;
+            //int count = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int number = int.Parse(sr.ReadLine()) ;
+            //    for (int j = 0; j < number; j++)
+            //    {
+            //        string test = sr.ReadLine();
+            //        string[] t = test.Split();
+            //        string p1 = t[0];
+            //        string p2 = t[1];
+
+            //        //P1이 주먹만 낼 경우
+            //        if (p1 == "R" && p2 == "P")
+            //        {
+            //            count++;
+            //            cnt--;
+            //        }else if(p1== "R" && p2 == "S")
+            //        {
+            //            cnt++;
+            //            count--;
+            //        }
+            //        //P1이 가위만 낼 경우
+            //        if (p1 == "S" && p2 == "R")
+            //        {
+            //            count++;
+            //            cnt--;
+            //        }else if(p1== "S" && p2 == "P")
+            //        {
+            //            cnt++;
+            //            count--;
+            //        }
+            //        //P1이 보자기만 낼 경우
+            //        if (p1=="P"&&p2== "S") 
+            //        { 
+            //            count++;
+            //            cnt--;
+            //        }else if(p1== "P" && p2 == "R")
+            //        {
+            //            cnt++;
+            //            count--;
+            //        }
+
+            //    }
+            //        if (cnt == count)
+            //        {
+            //            sw.WriteLine("TIE");
+            //        }else if (cnt > count)
+            //        {
+            //            sw.WriteLine("Player 1");
+            //        }
+            //        else if(cnt<count) 
+            //        {
+            //            sw.WriteLine("Player 2");
+            //        }
+            //        count = 0;
+            //        cnt= 0;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //수빈이와 수열
+
+            var sr=new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw=new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
             int num = int.Parse(sr.ReadLine());
-            int cnt = 0;
-            int count = 0;
-            for (int i = 0; i < num; i++)
+            int e = 0;
+            string number = sr.ReadLine();
+            string[] t = number.Split();
+            for (int i = 1; i <= num; i++)
             {
-                int number = int.Parse(sr.ReadLine()) ;
-                for (int j = 0; j < number; j++)
-                {
-                    string test = sr.ReadLine();
-                    string[] t = test.Split();
-                    string p1 = t[0];
-                    string p2 = t[1];
-
-                    //P1이 주먹만 낼 경우
-                    if (p1 == "R" && p2 == "P")
-                    {
-                        count++;
-                        cnt--;
-                    }else if(p1== "R" && p2 == "S")
-                    {
-                        cnt++;
-                        count--;
-                    }
-                    //P1이 가위만 낼 경우
-                    if (p1 == "S" && p2 == "R")
-                    {
-                        count++;
-                        cnt--;
-                    }else if(p1== "S" && p2 == "P")
-                    {
-                        cnt++;
-                        count--;
-                    }
-                    //P1이 보자기만 낼 경우
-                    if (p1=="P"&&p2== "S") 
-                    { 
-                        count++;
-                        cnt--;
-                    }else if(p1== "P" && p2 == "R")
-                    {
-                        cnt++;
-                        count--;
-                    }
-
-
-
-                }
-                    if (cnt == count)
-                    {
-                        sw.WriteLine("TIE");
-                    }else if (cnt > count)
-                    {
-                        sw.WriteLine("Player 1");
-                    }
-                    else if(cnt<count) 
-                    {
-                        sw.WriteLine("Player 2");
-                    }
-
-                    count = 0;
-                    cnt= 0;
+                int a = int.Parse(t[i-1]);
+                e += a;
+                
+                
             }
+            
+
             
             sr.Close();
             sw.Close();
