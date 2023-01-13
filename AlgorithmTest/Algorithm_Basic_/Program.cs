@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Security;
 using Microsoft.Win32;
 using System.Globalization;
+using System.Net.Sockets;
 
 namespace Algorithm_Basic_
 {
@@ -1494,17 +1495,46 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            Console.WriteLine(@" _________
- \_     _/
-   \   /
-    | |
-   /   \
-  /     \
- |       |
-/---------\
-| \-/ \-/ |
-\---------/
- \_______/");
+//            Console.WriteLine(@" _________
+// \_     _/
+//   \   /
+//    | |
+//   /   \
+//  /     \
+// |       |
+///---------\
+//| \-/ \-/ |
+//\---------/
+// \_______/");
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string[] I_Array = new string[] { "i", "I" };
+            //string[] E_Array = new string[] { "e", "E" };
+            //string text = sr.ReadLine();
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    if (text[i].ToString() == I_Array[0])
+            //    {
+            //    }
+            //}
+            
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            int ret = 1;
+            for (int i = num; i > 0; i--)
+            {
+                ret *= i;
+            }
+           // sw.WriteLine(ret);
+            string c = ret.ToString();
+            sw.WriteLine(c[c.Length-1]);
+            sr.Close();
+            sw.Close();
 
 
 
