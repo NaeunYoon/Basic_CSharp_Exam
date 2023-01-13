@@ -1039,7 +1039,7 @@ namespace Algorithm_Basic_
             //for (int i = 1; i<=100; i++)
             //{
             //    num++;
-                
+
 
             //}
             //sr.Close();
@@ -1095,7 +1095,7 @@ namespace Algorithm_Basic_
             //int count = 0;
             //int[] number = new int[7];
             //int[] number2;
-            
+
             //for (int i = 0; i < 7; i++)
             //{
             //    int num = int.Parse(sr.ReadLine());
@@ -1300,7 +1300,7 @@ namespace Algorithm_Basic_
 
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            
+
             //int num = int.Parse(sr.ReadLine());
             //while (true)
             //{
@@ -1325,7 +1325,7 @@ namespace Algorithm_Basic_
             //삼각형
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            
+
             //int a = int.Parse(sr.ReadLine());
             //int b = int.Parse(sr.ReadLine());
             //int c = int.Parse(sr.ReadLine());
@@ -1416,24 +1416,97 @@ namespace Algorithm_Basic_
 
             //수빈이와 수열
 
-            var sr=new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw=new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            int e = 0;
-            string number = sr.ReadLine();
-            string[] t = number.Split();
-            for (int i = 1; i <= num; i++)
-            {
-                int a = int.Parse(t[i-1]);
-                e += a;
-                
-                
-            }
-            
+            //var sr=new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw=new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int e = 0;
+            //string number = sr.ReadLine();
+            //string[] t = number.Split();
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    int a = int.Parse(t[i-1]);
+            //    e += a;
 
-            
-            sr.Close();
-            sw.Close();
+
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string smile = ":-)";
+            //int cnt_s = 0;
+            //string sad = ":-(";
+            //int count_s = 0;
+            //int blank = 0;
+            //string text = sr.ReadLine();
+            //sr.Close();
+            //sw.Close();
+
+            //스트릿코딩파이터
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string score = sr.ReadLine();
+            //int num = 0;
+            //int number = 0;
+            //int times = int.Parse(sr.ReadLine());
+            //int[] team= new int[times];
+            //for (int i = 0; i < times; i++)
+            //{
+            //    for (int k = 0; k < 3; k++)
+            //    {
+            //        string difficulty = sr.ReadLine();
+
+            //        for (int j = 0; j < 3; j++)
+            //        {
+            //            int a = int.Parse(score.Split()[j]);
+            //            //sw.WriteLine("a" +a);
+            //            int aa = int.Parse(difficulty.Split()[j]);
+            //            //sw.WriteLine("aa "+aa);
+
+            //            num = aa * a;
+            //            sw.WriteLine("num " +num);
+            //            number += num;
+            //            sw.WriteLine("number "+number);
+            //        }
+            //    }
+            //    sw.WriteLine(number);
+            //    team[i]= number;
+            //    num = 0;
+            //}
+
+            ////sw.WriteLine(team.Max());
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    string num = sr.ReadLine();
+            //    int a = int.Parse(num.Split()[0]);
+            //    int b = int.Parse(num.Split()[1]);
+            //    sw.WriteLine(a + b);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            Console.WriteLine(@" _________
+ \_     _/
+   \   /
+    | |
+   /   \
+  /     \
+ |       |
+/---------\
+| \-/ \-/ |
+\---------/
+ \_______/");
+
+
 
 
 
