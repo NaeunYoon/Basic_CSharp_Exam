@@ -10,6 +10,7 @@ using System.Security;
 using Microsoft.Win32;
 using System.Globalization;
 using System.Net.Sockets;
+using System.IO.IsolatedStorage;
 
 namespace Algorithm_Basic_
 {
@@ -1495,17 +1496,17 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-//            Console.WriteLine(@" _________
-// \_     _/
-//   \   /
-//    | |
-//   /   \
-//  /     \
-// |       |
-///---------\
-//| \-/ \-/ |
-//\---------/
-// \_______/");
+            //            Console.WriteLine(@" _________
+            // \_     _/
+            //   \   /
+            //    | |
+            //   /   \
+            //  /     \
+            // |       |
+            ///---------\
+            //| \-/ \-/ |
+            //\---------/
+            // \_______/");
 
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
@@ -1518,26 +1519,52 @@ namespace Algorithm_Basic_
             //    {
             //    }
             //}
-            
+
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            int ret = 1;
-            for (int i = num; i > 0; i--)
-            {
-                ret *= i;
-            }
-           // sw.WriteLine(ret);
-            string c = ret.ToString();
-            sw.WriteLine(c[c.Length-1]);
-            sr.Close();
-            sw.Close();
+            // var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            // var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            // int num = int.Parse(sr.ReadLine());
+            // int ret = 1;
+            // for (int i = num; i > 0; i--)
+            // {
+            //     ret *= i;
+            // }
+            //// sw.WriteLine(ret);
+            // string c = ret.ToString();
+            // sw.WriteLine(c[c.Length-1]);
+            // sr.Close();
+            // sw.Close();
 
+            //럭비 클럽
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //while (true)
+            //{
+            //    string info = sr.ReadLine();
+            //    string[] t = info.Split();
+            //    string name = t[0];
+            //    int age = int.Parse(t[1]);
+            //    int weight = int.Parse(t[2]);
 
+            //    if( name =="#"&& age == 0 && weight == 0)
+            //    {
+            //        break;
+            //    }
+
+            //    if(age>17 || weight >= 80)
+            //    {
+            //        sw.WriteLine(name + " " + "Senior");
+            //    }
+            //    else
+            //    {
+            //        sw.WriteLine(name + " " + "Junior");
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
 
 
         }
