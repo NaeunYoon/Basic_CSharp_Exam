@@ -1566,6 +1566,69 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num =sr.ReadLine();
+            //long a = long.Parse(num.Split()[0]);
+            //long b = long.Parse(num.Split()[1]);
+            //long sum = 0;
+            //for (long i = a; i <= b; i++)
+            //{
+            //    sum += i;
+            //}
+            //sw.WriteLine(sum);
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int sum = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string square = sr.ReadLine();
+
+            //    int a = int.Parse(square.Split()[0]);
+            //    int b = int.Parse(square.Split()[1]);
+            //    int c = int.Parse(square.Split()[2]);
+
+            //    if (a == b && a==c && b==c)
+            //    {
+            //        sum = 10000 + (a * 1000);
+            //    }else if(a==b || a==c || b == c)
+            //    {
+            //        sum = 1000+()
+            //    }
+                
+            //}
+            
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            
+            //int a = int.Parse(sr.ReadLine());
+            //int b = int.Parse(sr.ReadLine());
+            //if (a != 01 && b != 01)
+            //{
+            //    sw.WriteLine(a + b);
+            //    sw.WriteLine(a - b);
+            //    sw.WriteLine(a * b);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            string num = sr.ReadLine();
+            long a = long.Parse(num.Split()[0]);
+            long b = long.Parse(num.Split()[1]);
+            long sum = a - b;
+            double aa = Math.Abs(sum);
+            sw.WriteLine(aa);
+            sr.Close();
+            sw.Close();
 
         }
     }
