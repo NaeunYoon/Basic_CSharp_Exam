@@ -1092,68 +1092,43 @@ namespace Algorithm_Basic_
 
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            //int tmp=0;
+            //int sum = 0;
             //int cnt = 0;
-            //int count = 0;
             //int[] number = new int[7];
-            //int[] number2;
-
+            //List<int> numberList = new List<int>();
+            //numberList.Clear();
+            ////7개의 숫자들을 배열에 담는다
             //for (int i = 0; i < 7; i++)
             //{
             //    int num = int.Parse(sr.ReadLine());
             //    number[i] = num;
             //}
-
+            ////짝수의 수를 구하기
             //for (int i = 0; i < 7; i++)
             //{
             //    if (number[i] % 2 == 0)
             //    {
             //        cnt++;
             //    }
-
-            //    if (cnt >= 7)
-            //    {
-            //        sw.WriteLine("-1");
-            //        break;
-            //    }
             //}
-
             //for (int i = 0; i < 7; i++)
             //{
             //    if (number[i] % 2 == 1)
             //    {
-            //        count++;
+            //        numberList.Add(number[i]);
+            //        sum += number[i];
             //    }
             //}
-            //sw.WriteLine(count);
-            //number2= new int[count];
-
-            //for (int i = 0; i < 7; i++)
+            //if (cnt >= 7)
             //{
-
-            //        if (number[i] % 2 == 1)
-            //        {
-            //            for (int j = 0; j < count; j++)
-            //            {
-            //                number2[j] = number[i];
-            //                sw.WriteLine(number2[j]);
-            //                //tmp += number[i];
-            //            }
-            //        }
+            //    sw.WriteLine("-1");
             //}
-
-            //sw.WriteLine(tmp);
-            //sw.WriteLine(number2.Min());
-
-
-
-
-
-
-            ////sw.WriteLine(min);
-
-
-
+            //else
+            //{
+            //    sw.WriteLine(sum);
+            //    sw.WriteLine(numberList.Min());
+            //}
+   
             //sr.Close();
             //sw.Close();
 
@@ -1599,15 +1574,15 @@ namespace Algorithm_Basic_
             //    {
             //        sum = 1000+()
             //    }
-                
+
             //}
-            
+
             //sr.Close();
             //sw.Close();
 
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            
+
             //int a = int.Parse(sr.ReadLine());
             //int b = int.Parse(sr.ReadLine());
             //if (a != 01 && b != 01)
@@ -1619,16 +1594,16 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string num = sr.ReadLine();
-            long a = long.Parse(num.Split()[0]);
-            long b = long.Parse(num.Split()[1]);
-            long sum = a - b;
-            double aa = Math.Abs(sum);
-            sw.WriteLine(aa);
-            sr.Close();
-            sw.Close();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //long a = long.Parse(num.Split()[0]);
+            //long b = long.Parse(num.Split()[1]);
+            //long sum = a - b;
+            //double aa = Math.Abs(sum);
+            //sw.WriteLine(aa);
+            //sr.Close();
+            //sw.Close();
 
         }
     }
