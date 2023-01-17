@@ -11,6 +11,7 @@ using Microsoft.Win32;
 using System.Globalization;
 using System.Net.Sockets;
 using System.IO.IsolatedStorage;
+using System.Net.Security;
 
 namespace Algorithm_Basic_
 {
@@ -1128,7 +1129,7 @@ namespace Algorithm_Basic_
             //    sw.WriteLine(sum);
             //    sw.WriteLine(numberList.Min());
             //}
-   
+
             //sr.Close();
             //sw.Close();
 
@@ -1604,6 +1605,274 @@ namespace Algorithm_Basic_
             //sw.WriteLine(aa);
             //sr.Close();
             //sw.Close();
+
+            //점수집계
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int[] standard = new int[5];
+
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string score = sr.ReadLine();
+            //    string[] scoreSplit = score.Split();
+            //    for (int j = 0; j < 5; j++)
+            //    {
+            //        int a = int.Parse(scoreSplit[j]);
+            //        standard[j] = a;
+            //    }
+
+            //    Array.Sort(standard);
+            //    int minus = standard[3] - standard[1];
+            //    if(minus >=4)
+            //    {
+            //        sw.WriteLine("KIN");
+            //    }
+            //    else
+            //    {
+            //        int plus = standard[1] + standard[2] + standard[3];
+            //        sw.WriteLine(plus);
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //첫글자를 대문자로
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    string left = text.Substring(1, text.Length-1);
+            //    string f = text.Substring(0, 1).ToUpper();
+            //    sw.WriteLine(f+left);
+            //    //string first = text[0].ToString().ToUpper();
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //나는 친구가 적다
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string[] number = new string[10] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+            //string text = sr.ReadLine();
+            //string[] tArr = new string[text.Length];
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    tArr[i] = text[i].ToString();
+            //    //sw.Write(tArr[i]);
+            //}
+            //string keyword = sr.ReadLine();
+            //string[] kArr = new string[keyword.Length];
+            //for (int i = 0; i < keyword.Length; i++)
+            //{
+            //    kArr[i] = keyword[i].ToString();
+            //    //sw.Write(kArr[i]);
+            //}
+
+            ////배열에 다 들어갔음
+            //string[] tmp = new string[tArr.Length];
+            //Array.Copy(tArr, tmp, tArr.Length);
+
+            //for (int i = 0; i < tmp.Length; i++)
+            //{
+            //    for (int j = 0; j < number.Length; j++)
+            //    {
+            //        if (tmp[i].ToString() == number[j])
+            //        {
+            //            text = text.Remove(i, 1);
+            //        }
+            //    }
+            //}
+            //sw.WriteLine(text);
+
+
+
+
+            //if (text.Contains(keyword))
+            //{
+            //    sw.WriteLine("1");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("0");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //개표
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+
+            //string p = sr.ReadLine();
+            //string[] ret = new string[num];
+            //int cnt = 0;
+            //int count = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    ret[i] = p[i].ToString();
+            //    if (ret[i] == "A")
+            //    {
+            //        cnt++;
+            //    }
+            //    else
+            //    {
+            //        count++;
+            //    }
+            //}
+
+            //if (cnt > count)
+            //{
+            //    sw.WriteLine("A");
+            //}else if (cnt < count)
+            //{
+            //    sw.WriteLine("B");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("Tie");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //남욱이의 닭장
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string chicken = sr.ReadLine();
+            //    //닭 다리의 수
+            //    int sumoflegs = int.Parse(chicken.Split()[0]);
+            //    //닭의 수
+            //    int sumofchicken = int.Parse(chicken.Split()[1]);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //블랙잭
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int count = int.Parse(num.Split()[0]);
+            //int number = int.Parse(num.Split()[1]);
+
+            //string numbers = sr.ReadLine();
+            //int[] intArr = new int[number];
+            //for (int i = 0; i < count; i++)
+            //{
+            //    int a = int.Parse(numbers.Split()[i]);
+            //    intArr[i] = a;
+            //}
+
+            //for (int i = 0; i < intArr.Length; i++)
+            //{
+
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //나무조각
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //string num = sr.ReadLine();
+            //string [] numT = num.Split();
+
+            //int[] intArr = new int[5];
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    int a = int.Parse(numT[i]);
+            //    intArr[i] = a;
+            //}
+
+            //while (true)
+            //{
+            //    if (intArr[0]==1 && intArr[1] == 2 && intArr[2] == 3 && intArr[3] == 4 && intArr[4] == 5)
+            //    {
+            //        break;
+            //    }
+
+            //    //조건1
+            //    if (intArr[0] >= intArr[1]) 
+            //    {
+            //        int tmp = intArr[0];
+            //        intArr[0] = intArr[1];
+            //        intArr[1] = tmp;
+            //        for (int i = 0; i < 5; i++)
+            //        {
+            //            sw.Write(intArr[i]+" ");
+            //        }
+            //        sw.WriteLine();
+            //    }
+
+            //    //조건2
+            //    if (intArr[1] >= intArr[2])
+            //    {
+            //        int tmp = intArr[1];
+            //        intArr[1] = intArr[2];
+            //        intArr[2] = tmp;
+            //        for (int i = 0; i < 5; i++)
+            //        {
+            //            sw.Write(intArr[i] + " ");
+            //        }
+            //        sw.WriteLine();
+            //    }
+            //    //조건3
+            //    if (intArr[2] >= intArr[3])
+            //    {
+            //        int tmp = intArr[2];
+            //        intArr[2] = intArr[3];
+            //        intArr[3] = tmp;
+            //        for (int i = 0; i < 5; i++)
+            //        {
+            //            sw.Write(intArr[i] + " ");
+            //        }
+            //        sw.WriteLine();
+            //    }
+
+            //    //조건4
+            //    if (intArr[3] >= intArr[4])
+            //    {
+            //        int tmp = intArr[3];
+            //        intArr[3] = intArr[4];
+            //        intArr[4] = tmp;
+            //        for (int i = 0; i < 5; i++)
+            //        {
+            //            sw.Write(intArr[i] + " ");
+            //        }
+            //        sw.WriteLine();
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //e 계산
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            sw.WriteLine("n e");
+            sw.WriteLine("- -----------");
+
+
+            for (int i = 0; i < 9; i++)
+            {
+
+            }
+            
+            sr.Close();
+            sw.Close();
+
+
+
 
         }
     }
