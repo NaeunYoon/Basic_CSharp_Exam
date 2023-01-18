@@ -1856,18 +1856,37 @@ namespace Algorithm_Basic_
 
             //e 계산
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //sw.WriteLine("n e");
+            //sw.WriteLine("- -----------");
+
+
+            //for (int i = 0; i < 9; i++)
+            //{
+
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+            //sw.WriteLine(a * b);
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-
-            sw.WriteLine("n e");
-            sw.WriteLine("- -----------");
-
-
-            for (int i = 0; i < 9; i++)
-            {
-
-            }
-            
+            string num = sr.ReadLine();
+            long a = long.Parse(num.Split()[0]);
+            long b = long.Parse(num.Split()[1]);
+            long c = long.Parse(num.Split()[2]);
+            sw.WriteLine(a + b + c);
             sr.Close();
             sw.Close();
 
