@@ -12,6 +12,7 @@ using System.Globalization;
 using System.Net.Sockets;
 using System.IO.IsolatedStorage;
 using System.Net.Security;
+using System.Net.Http.Headers;
 
 namespace Algorithm_Basic_
 {
@@ -1880,16 +1881,131 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string num = sr.ReadLine();
-            long a = long.Parse(num.Split()[0]);
-            long b = long.Parse(num.Split()[1]);
-            long c = long.Parse(num.Split()[2]);
-            sw.WriteLine(a + b + c);
-            sr.Close();
-            sw.Close();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            //long a = long.Parse(num.Split()[0]);
+            //long b = long.Parse(num.Split()[1]);
+            //long c = long.Parse(num.Split()[2]);
+            //sw.WriteLine(a + b + c);
+            //sr.Close();
+            //sw.Close();
 
+            //서버
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //string number = sr.ReadLine();
+            //int a = int.Parse(number.Split()[0]);
+            //int b = int.Parse(number.Split()[1]);
+            //string cnt = sr.ReadLine();
+            //int sum = 0;
+            //int count = 0;
+            //for (int i = 0; i < a; i++)
+            //{
+            //    int aa = int.Parse(cnt.Split()[i]);
+            //    sum += aa;
+            //    if (sum > b)
+            //    {
+            //        break;
+            //    }
+            //    count++;
+            //}
+            //sw.WriteLine(count);
+            //sr.Close();
+            //sw.Close();
+
+            //최댓값
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int[] numbers = new int[9];
+            //for (int i = 0; i < 9; i++)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    numbers[i] = num;
+            //}
+
+            //int max = numbers.Max();
+            //int index = Array.FindIndex(numbers, x => x == max);
+            //sw.WriteLine(max);
+            //sw.WriteLine(index+1);
+
+            //sr.Close();
+            //sw.Close();
+
+            //탄산음료
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string coke = sr.ReadLine();
+            //int e = int.Parse(coke.Split()[0]);
+            //int f = int.Parse(coke.Split()[1]);
+            //int c = int.Parse(coke.Split()[2]);
+            ////빈 병들의 합
+            //int emptyBottle = e + f;
+            ////sw.WriteLine(emptyBottle);
+            ////빈병을 c 로 나눔 => 새로운 새 콜라 탄생
+            //int reusableBottle = emptyBottle / c;
+            //int reusable = emptyBottle % c;
+            ////sw.WriteLine(reusableBottle);
+            ////카운트 셀 변수
+            //int cnt = 0;
+            ////초기 빈병을 c 로 나눈걸 따로 변수에 저장
+            //int tmp = reusableBottle+reusable;
+            //int temp = 0;
+            //while (true)
+            //{
+            //    //0 = 5 / 2
+            //    // temp = 2
+            //    temp = tmp / c;
+            //    //sw.WriteLine("temp "+temp);
+            //    //나머지수니까 1이 찍힘
+            //    int teemp = tmp % c;
+            //    //sw.WriteLine("teemp " + teemp);
+            //    cnt += temp;    //2저장//1저장
+            //   // sw.WriteLine("cnt " + cnt);
+            //    tmp = temp+teemp; //3
+            //    //sw.WriteLine("tmp "+tmp);
+            //    temp = 0;
+
+            //    if (tmp < c)
+            //    {
+            //        break;
+            //    }
+            //}
+            //sw.WriteLine(reusableBottle+cnt);
+            //sr.Close();
+            //sw.Close();
+
+            //
+
+            //나머지와 몫이 같은 수
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //long sum = 0;
+            //long cnt = 0;
+            //while (true)
+            //{
+            //    cnt++;
+            //    long number1 = cnt / num;
+            //    long number2 = cnt % num;
+            //    if (number1 == number2)
+            //    {
+            //        sum += cnt;
+            //    }
+            //    if (cnt >= 2_000_000)
+            //    {
+            //        break;
+            //    }
+            //}
+            //sw.WriteLine(sum);
+            
+            //sr.Close();
+            //sw.Close();
+
+            //ABC
 
 
 
