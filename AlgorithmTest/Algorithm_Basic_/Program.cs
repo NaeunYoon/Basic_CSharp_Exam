@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using System.Security;
 using Microsoft.Win32;
 using System.Globalization;
@@ -2001,12 +2001,101 @@ namespace Algorithm_Basic_
             //    }
             //}
             //sw.WriteLine(sum);
-            
+
             //sr.Close();
             //sw.Close();
 
-            //ABC
+            //엄청난 부자
 
+            ////var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            ////var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = Console.ReadLine();
+            //int [] number = new int[2];
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    number[i] = int.Parse(num.Split()[i]);    
+            //}
+            //long ret = number[0] / number[1];
+            //Console.WriteLine(ret);
+            //long left = number[0] % number[1];
+            //Console.WriteLine(left);
+            ////sr.Close();
+            ////sw.Close();
+            ///
+
+            //행렬덧셈
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+
+            //int[,] array = new int[a,b];
+            //for (int k = 0; k < 2; k++)
+            //{
+            //    for (int i = 0; i < a; i++)
+            //    {
+            //        string number = sr.ReadLine();
+            //        for (int j = 0; j < b; j++)
+            //        {
+            //            int aa = int.Parse(number.Split()[0]);
+            //            int bb = int.Parse(number.Split()[i + 1]);
+            //            array[i, j] = array[aa, bb];
+            //            sw.WriteLine(array[i, j]);
+            //        }
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //과제안내신분
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int[] number = new int[30];
+            //int[] numbers = new int[30];
+            //for (int i = 0; i < 28; i++)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    number[i] = num;
+            //}
+
+            ////정렬함
+            //Array.Sort(number);
+            ////sw.WriteLine("dddd"+number[3]);
+
+            //for (int i = 0; i <= 30; i++)
+            //{
+            //    if (number[i + 1] - number[i] != 1)
+            //    {
+            //        sw.WriteLine(number[i + 1] - number[i]);
+            //    }
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+            //열개씩 끊어 출력하기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            
+            //string text = sr.ReadLine();
+            //string[] arr = new string[text.Length];
+            //int cnt = 0;
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    arr[i] = text[i].ToString();
+            //    sw.Write(arr[i]);
+            //    cnt++;
+            //   if(cnt % 10 == 0)
+            //    {
+            //        sw.WriteLine("");
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+           
 
 
         }
