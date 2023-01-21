@@ -2078,7 +2078,7 @@ namespace Algorithm_Basic_
             //열개씩 끊어 출력하기
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            
+
             //string text = sr.ReadLine();
             //string[] arr = new string[text.Length];
             //int cnt = 0;
@@ -2095,8 +2095,164 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-           
+            //찍기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            ////문제수
+            //int num = int.Parse(sr.ReadLine());
+            ////답을 받아서
+            //string answer = sr.ReadLine();
+            ////배열로 저장
+            //string[] answer_ = new string[num];
+            ////답을 답 배열에 저장함
+            //for (int i = 0; i < num; i++)
+            //{
+            //    answer_[i] = answer[i].ToString();
+            //}
+            ////세 명의 리스트 만듬 (저장공간이 유연하기 때문에 > 메모리부담 큼)
+            //List<string> adrian_ = new List<string>();
+            //List<string> bruno_ = new List<string>();
+            //List<string> goran_ = new List<string>();
+            ////세 명의 답 배열
+            //string[] ABC = new string[] { "A", "B", "C"};
+            //string[] BABC = new string[] { "B", "A", "B", "C"};
+            //string[] CCAABB = new string[] { "C", "C", "A", "A","B","B"};
+            ////배열에 있는 값을 리스트에 루프로 돌려 넣어준다
+            //for (int i = 0; i < num; i++)
+            //{
+            //    for (int j = 0; j < ABC.Length; j++)
+            //    {
+            //        adrian_.Add(ABC[j]);
+            //    }
 
+            //    for (int h = 0; h < BABC.Length; h++)
+            //    {
+            //        bruno_.Add(BABC[h]);
+            //    }
+
+            //    for (int k = 0; k < CCAABB.Length; k++)
+            //    {
+            //        goran_.Add(CCAABB[k]);
+            //    }
+            //}
+            //int a_cnt = 0;
+            //int b_cnt = 0;
+            //int c_cnt = 0;
+
+            //for (int i = 0; i < num; i++)
+            //{
+            //    if (answer_[i] == adrian_[i])
+            //    {
+            //        a_cnt++;
+            //    }
+            //    if (answer_[i] == bruno_[i])
+            //    {
+            //        b_cnt++;
+            //    }
+            //    if (answer_[i] == goran_[i])
+            //    {
+            //        c_cnt++;
+            //    }
+            //}
+            //if(a_cnt>b_cnt && a_cnt>c_cnt)
+            //{
+            //    sw.WriteLine(a_cnt);
+            //    sw.WriteLine("Adrian");
+            //}
+            //if(b_cnt>a_cnt&& b_cnt>c_cnt)
+            //{
+            //    sw.WriteLine(b_cnt);
+            //    sw.WriteLine("Bruno");
+            //}
+            //if(c_cnt>a_cnt&&c_cnt>b_cnt)
+            //{
+            //    sw.WriteLine(c_cnt);
+            //    sw.WriteLine("Goran");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //추론
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //ulong num = ulong.Parse(sr.ReadLine());
+            //ulong[] arr = new ulong[num];
+            //for (ulong i = 0; i < num; i++)
+            //{
+            //    ulong aa = ulong.Parse(sr.ReadLine());
+            //    arr[i] = aa;
+            //}
+            //if (arr[1] - arr[0] == arr[2] - arr[1])
+            //{
+            //    ulong tmp = arr[1] - arr[0];
+            //    ulong temp = arr[num - 1] + tmp;
+            //    sw.WriteLine(temp);
+            //}
+            //if (arr[1] / arr[0] == arr[2] / arr[1])
+            //{
+            //    ulong tmp = arr[1] / arr[0];
+            //    ulong temp = arr[num - 1] * tmp;
+            //    sw.WriteLine(temp);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //Dictionary<string, int> dictionary = new Dictionary<string, int>();
+            //int num = int.Parse(sr.ReadLine());
+            //int[] arr = new int[num];
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string example = sr.ReadLine();
+
+            //    string name = example.Split()[0];
+            //    int difficulty = int.Parse(example.Split()[1]);
+            //    arr[i]=difficulty;
+            //    dictionary.Add(name, difficulty);
+            //}
+            //Array.Sort(arr);
+            //foreach (var item in dictionary)
+            //{
+            //    if (item.Value == arr[0])
+            //    {
+            //        Console.WriteLine(item.Key);
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //남욱이의 닭장
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            int cnt = 0;
+            int normal = 0;
+            int abnormal = 0;
+            for (int i = 0; i < num; i++)
+            {
+                string chicken = sr.ReadLine();
+                //닭다리수
+                int a = int.Parse(chicken.Split()[0]);
+                //닭의수
+                int b = int.Parse(chicken.Split()[1]);
+
+                //1. 일단 닭다리 수가 홀수인지 짝수인지 확인하고 짝수로 만들어준다
+                //2. 짝수로 만들었으면 홀수의 cnt를 1 증가시켜준다
+                //3. 만약 증가시킨 cnt + 와 다리를 2로 나눈 값이 b와 같다면 출력한다
+                //4. 만약 증가시킨 cnt 와 다리를 2로 나눈 값이 b와 다르다면?
+                //   cnt 를 2개 증가시키고 다리를 나눈 값을 하나 빼서 다시 확인한다
+                //이것은 연립방정식임
+                
+                
+
+
+            }
+
+
+            sr.Close();
+            sw.Close();
 
         }
     }
