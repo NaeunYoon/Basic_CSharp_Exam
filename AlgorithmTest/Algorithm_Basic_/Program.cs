@@ -13,6 +13,7 @@ using System.Net.Sockets;
 using System.IO.IsolatedStorage;
 using System.Net.Security;
 using System.Net.Http.Headers;
+using System.Xml.Linq;
 
 namespace Algorithm_Basic_
 {
@@ -2224,33 +2225,153 @@ namespace Algorithm_Basic_
             //sw.Close();
 
             //남욱이의 닭장
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int cnt = 0;
+            //int normal = 0;
+            //int abnormal = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string chicken = sr.ReadLine();
+            //    //닭다리수
+            //    int a = int.Parse(chicken.Split()[0]);
+            //    //닭의수
+            //    int b = int.Parse(chicken.Split()[1]);
+
+            //    //다리가 잘린 닭의 수 : 
+            //    //멀쩡한 닭의 수 :
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+            //지영공주님의 마법거울
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            ////각각의 인덱스를 num마다 잘라서 보관할 배열
+            //string[] change = new string[num];
+            ////1차원 배열로는 좌우반전이 안되니까 2차원 배열로 해야함 또는 리스트
+            ////각각의 요소를 담음
+            //char[,] secondArr = new char[num, num];
+            //char text = char.Parse(sr.ReadLine());
+
+            //for (int i = 0; i < num; i++)
+            //{
+            //    for (int j = 0; j < num; j++)
+            //    {
+            //        char aa = text;
+            //        secondArr[i, j] = aa;
+            //    }
+            //    sw.WriteLine("");
+            //}
+
+
+
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+
+            //    change[i] = text;
+            //}
+
+            //int ret = int.Parse(sr.ReadLine());
+
+            //if (ret == 1)
+            //{
+            //    for (int i = 0; i < num; i++)
+            //    {
+            //        sw.WriteLine(change[i]);
+            //    }
+            //}
+            //else if (ret == 2)
+            //{
+            //    for (int i = 0; i < num; i++)
+            //    {
+            //        change[i] = change[change.Length];
+            //    }
+            //}
+            //else if (ret == 3)
+            //{
+            //    Array.Reverse(change);
+            //    for (int i = 0; i < num; i++)
+            //    {
+            //        sw.WriteLine(change[i]);
+            //    }
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //if(num >= 90)
+            //{
+            //    sw.WriteLine("A");
+            //}else if(num >=80 && num < 90)
+            //{
+            //    sw.WriteLine("B");
+            //}else if (num >= 70 && num < 80)
+            //{
+            //    sw.WriteLine("C");
+            //}else if(num>=60 && num < 70)
+            //{
+            //    sw.WriteLine("D");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("F");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //while (true)
+            //{
+            //    string num = sr.ReadLine();
+            //    int a = int.Parse(num.Split()[0]);
+            //    int b = int.Parse(num.Split()[1]);
+            //    //if (a == 0 && b == 0)
+            //    //{
+            //    //    break;
+            //    //}
+            //    sw.WriteLine(a + b);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //while (true)
+            //{
+            //    try
+            //    {
+            //        string text = Console.ReadLine();
+            //        int a = Convert.ToInt32(text.Split()[0]);
+            //        int b = Convert.ToInt32(text.Split()[1]);
+            //        Console.WriteLine(a + b);
+
+            //    }
+            //    catch (Exception)
+            //    {
+
+            //        break;
+            //    }
+            //}
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
             int num = int.Parse(sr.ReadLine());
-            int cnt = 0;
-            int normal = 0;
-            int abnormal = 0;
             for (int i = 0; i < num; i++)
             {
-                string chicken = sr.ReadLine();
-                //닭다리수
-                int a = int.Parse(chicken.Split()[0]);
-                //닭의수
-                int b = int.Parse(chicken.Split()[1]);
-
-                //1. 일단 닭다리 수가 홀수인지 짝수인지 확인하고 짝수로 만들어준다
-                //2. 짝수로 만들었으면 홀수의 cnt를 1 증가시켜준다
-                //3. 만약 증가시킨 cnt + 와 다리를 2로 나눈 값이 b와 같다면 출력한다
-                //4. 만약 증가시킨 cnt 와 다리를 2로 나눈 값이 b와 다르다면?
-                //   cnt 를 2개 증가시키고 다리를 나눈 값을 하나 빼서 다시 확인한다
-                //이것은 연립방정식임
-                
-                
-
-
+                string text = sr.ReadLine();
+                int a = int.Parse(text.Split()[0]);
+                int b = int.Parse(text.Split()[1]);
+                sw.WriteLine(a+b);
             }
-
-
+            
             sr.Close();
             sw.Close();
 
