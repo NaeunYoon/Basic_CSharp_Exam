@@ -14,6 +14,7 @@ using System.IO.IsolatedStorage;
 using System.Net.Security;
 using System.Net.Http.Headers;
 using System.Xml.Linq;
+using System.Runtime.ExceptionServices;
 
 namespace Algorithm_Basic_
 {
@@ -2361,19 +2362,200 @@ namespace Algorithm_Basic_
             //    }
             //}
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    int a = int.Parse(text.Split()[0]);
+            //    int b = int.Parse(text.Split()[1]);
+            //    sw.WriteLine(a+b);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string text = sr.ReadLine();
+            //int [] arr = new int[num];
+            //int cnt = 0;
+            //int ask = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int a = int.Parse(text.Split()[i]);
+            //    if(a==ask)
+            //    {
+            //        cnt++;
+            //    }
+            //}
+            //sw.WriteLine(cnt);
+            //sr.Close();
+            //sw.Close();
+
+            //var sr= new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int[,] arr = new int[9,9];
+            //for (int i = 0; i < 9; i++)
+            //{
+            //    string num = sr.ReadLine();
+            //    for (int j = 0; j < 9; j++)
+            //    {
+            //        int a = int.Parse(num.Split()[j]);
+            //        arr[i, j] = a;
+            //    }
+            //}
+
+            //int max = arr.Cast<int>().Max();
+            //sw.WriteLine(max);
+            //for (int i = 0; i < 9; i++)
+            //{
+            //    for (int j = 0; j < 9; j++)
+            //    {
+            //        if (arr[i, j] == max)
+            //        {
+            //            sw.WriteLine((i+1)+" "+(j+1));
+            //        }
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+            //주사위게임
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int[] arr = new int[num];
+            //int [] max = new int[num];
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string number = sr.ReadLine();
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        int a = int.Parse(number.Split()[j]);
+            //        arr[j] = a;
+            //    }
+            //    if (arr[0] == arr[1] && arr[1] == arr[2] && arr[0] == arr[2])
+            //    {
+            //        max[i] =10000 + (arr[0] * 1000);
+            //    }
+            //    if (arr[0] == arr[1] && arr[0] != arr[2])
+            //    {
+            //        max[i] = 1000 + (arr[0] * 100);
+            //    }else if (arr[0] == arr[2] && arr[0] != arr[1])
+            //    {
+            //        max[i] = 1000 + (arr[0] * 100);
+            //    }
+            //    else if (arr[1] == arr[2] && arr[1] != arr[0])
+            //    {
+            //        max[i] = 1000 + (arr[0] * 100);
+            //    }
+            //    if (arr[0] != arr[1] && arr[0] != arr[2] && arr[1] != arr[2])
+            //    {
+            //        int maximum = arr.Max(x => x);
+            //        max[i] = maximum * 100;
+            //    }
+            //}
+            //sw.WriteLine(max.Max(x => x));
+            //sr.Close();
+            //sw.Close();
+
+            //바구니뒤집기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string num = sr.ReadLine();
+            ////바구니갯수
+            //int a = int.Parse(num.Split()[0]);
+            //int[] basket= new int[a];
+            //int[] tmp = new int[2];
+            ////몇 번 바꿀건지
+            //int b = int.Parse(num.Split()[1]);
+            //for (int i = 0; i < b; i++)
+            //{
+            //    string change = sr.ReadLine();
+            //    for (int j = 0; j < 2; j++)
+            //    {
+            //        int aa = int.Parse(change.Split()[i]);
+            //        tmp[j] = aa;
+            //    }
+
+
+
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //지각
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int cnt = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int a = int.Parse(sr.ReadLine());
+            //    for (int j = 1; j < a; j++)
+            //    {
+            //        double time = Math.Pow(j, 2);
+            //        sw.WriteLine("t "+time);
+            //        if(time+cnt>=a)
+            //        {
+            //            break;
+            //        }
+            //        cnt++;
+            //        sw.WriteLine("cnt " + cnt);
+            //    }
+            //    sw.WriteLine(cnt);
+            //    cnt = 0;
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //3대측정
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            for (int i = 0; i < num; i++)
-            {
-                string text = sr.ReadLine();
-                int a = int.Parse(text.Split()[0]);
-                int b = int.Parse(text.Split()[1]);
-                sw.WriteLine(a+b);
-            }
+            string standard = sr.ReadLine();
+            int times = int.Parse(standard.Split()[0]);
+            int sum = int.Parse(standard.Split()[1]);
+            int individual = int.Parse(standard.Split()[2]);
+            int[] print = new int[3];
+            int cnt = 0;
+            int total = 0;
+            List<int> list = new List<int>();
             
+
+            for (int i = 0; i < times; i++)
+            {
+                string teams = sr.ReadLine();
+                for (int j = 0; j < 3; j++)
+                {
+                    int score = int.Parse(teams.Split()[i]);
+                    print[i] = score;
+                    total += print[i];
+                }
+                for (int k = 0; k < 1; k++)
+                {
+                    if (total>sum)
+                    {
+                        if (print[k]>individual&& print[k+1] > individual&& print[k+2] > individual)
+                        {
+                            cnt++;
+                            list.Add(print[k]);
+                            list.Add(print[k+1]);
+                            list.Add(print[k+2]);
+                        }
+                    }
+
+                }
+            }
+            sw.WriteLine(cnt);
+            for (int i = 0; i < cnt*3; i++)
+            {
+                sw.Write(list[i]+" ");
+            }
+
             sr.Close();
             sw.Close();
+
 
         }
     }
