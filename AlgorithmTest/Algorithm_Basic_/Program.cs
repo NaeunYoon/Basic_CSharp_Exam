@@ -2511,47 +2511,56 @@ namespace Algorithm_Basic_
             //sw.Close();
 
             //3대측정
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string standard = sr.ReadLine();
+            //int times = int.Parse(standard.Split()[0]);
+            //int sum = int.Parse(standard.Split()[1]);
+            //int individual = int.Parse(standard.Split()[2]);
+
+            //int[] print = new int[3];
+            //int cnt = 0;
+            //int total = 0;
+            //List<int> list = new List<int>();
+            
+            //for (int i = 0; i < times; i++)
+            //{
+            //    string teams = sr.ReadLine();
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        int score = int.Parse(teams.Split()[j]);
+            //        print[j] = score;
+            //        total += print[j];
+            //    }
+            //    //sw.WriteLine(total);
+
+            //    if (total >= sum && 
+            //        print[0] >= individual && 
+            //        print[1] >= individual && 
+            //        print[2] >= individual)
+            //    {
+            //        cnt++;
+            //        list.Add(print[0]);
+            //        list.Add(print[1]);
+            //        list.Add(print[2]);
+            //    }
+            //    total = 0;
+            //}
+
+            //sw.WriteLine(cnt);
+            //for (int i = 0; i < cnt*3; i++)
+            //{
+            //    sw.Write(list[i]+" ");
+            //}
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string standard = sr.ReadLine();
-            int times = int.Parse(standard.Split()[0]);
-            int sum = int.Parse(standard.Split()[1]);
-            int individual = int.Parse(standard.Split()[2]);
-            int[] print = new int[3];
-            int cnt = 0;
-            int total = 0;
-            List<int> list = new List<int>();
-            
-
-            for (int i = 0; i < times; i++)
-            {
-                string teams = sr.ReadLine();
-                for (int j = 0; j < 3; j++)
-                {
-                    int score = int.Parse(teams.Split()[i]);
-                    print[i] = score;
-                    total += print[i];
-                }
-                for (int k = 0; k < 1; k++)
-                {
-                    if (total>sum)
-                    {
-                        if (print[k]>individual&& print[k+1] > individual&& print[k+2] > individual)
-                        {
-                            cnt++;
-                            list.Add(print[k]);
-                            list.Add(print[k+1]);
-                            list.Add(print[k+2]);
-                        }
-                    }
-
-                }
-            }
-            sw.WriteLine(cnt);
-            for (int i = 0; i < cnt*3; i++)
-            {
-                sw.Write(list[i]+" ");
-            }
+            string str = sr.ReadLine();
+            sw.WriteLine(":fan::fan::fan:");
+            sw.WriteLine(":fan::"+str+"::fan:");
+            sw.WriteLine(":fan::fan::fan:");
 
             sr.Close();
             sw.Close();
