@@ -15,6 +15,7 @@ using System.Net.Security;
 using System.Net.Http.Headers;
 using System.Xml.Linq;
 using System.Runtime.ExceptionServices;
+using System.Web;
 
 namespace Algorithm_Basic_
 {
@@ -2522,7 +2523,7 @@ namespace Algorithm_Basic_
             //int cnt = 0;
             //int total = 0;
             //List<int> list = new List<int>();
-            
+
             //for (int i = 0; i < times; i++)
             //{
             //    string teams = sr.ReadLine();
@@ -2555,13 +2556,161 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string str = sr.ReadLine();
+            //sw.WriteLine(":fan::fan::fan:");
+            //sw.WriteLine(":fan::"+str+"::fan:");
+            //sw.WriteLine(":fan::fan::fan:");
+            //sr.Close();
+            //sw.Close();
+
+            //명장남정훈
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string people = sr.ReadLine();
+            //int left = int.Parse(people.Split()[0]);
+            //int right = int.Parse(people.Split()[1]);
+            //int both = int.Parse(people.Split()[2]);
+            //int minus = 0;
+            //int ret = 0;
+            //if(left==right)
+            //{
+            //    int div = both / 2;
+            //    sw.WriteLine((left + div)+(right+div));
+            //}else if(left<right)
+            //{
+            //    minus = right - left;
+            //    if(minus > both) 
+            //    {
+            //        left += both;
+            //        if(left>right)
+            //        {
+            //            sw.WriteLine(right*2);
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine(left*2);
+            //        }
+            //    }else if(minus < both) 
+            //    {
+            //        left += minus;
+            //        both -= minus;
+            //        ret = both / 2;
+            //        sw.WriteLine((left + ret) + (right + ret));
+            //    }
+            //}else if(left>right)
+            //{
+            //    minus = left- right;
+            //    if (minus > both)
+            //    {
+            //        right += both;
+            //        if (left < right)
+            //        {
+            //            sw.WriteLine(left*2);
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine(right*2);
+            //        }
+            //    }
+            //    else if (minus < both)
+            //    {
+            //        right += minus;
+            //        both -= minus;
+            //        ret = both / 2;
+            //        sw.WriteLine((left + ret) + (right + ret));
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //팬그램
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string[] alphabet = new string[] { "a","b","c","d","e","f","g",
+            //                                   "h","i","j","k","l","m","n",
+            //                                    "o","p","q","r","s","t","u",
+            //                                    "v","w","x","y","z"};
+            //int cnt = 0;
+            //int count = 0;
+            //string text = null;
+            //while (true)
+            //{
+            //    text = sr.ReadLine();
+            //    if(text=="*")
+            //    {
+            //        break;
+            //    }
+
+            //    for (int i = 0; i < alphabet.Length; i++)
+            //    {
+            //        for (int j = 0; j < text.Length; j++)
+            //        {
+            //            if (alphabet[i].ToString() == text[j].ToString() || text[j].ToString()== " ")
+            //            {
+            //                cnt++;
+            //            }
+            //            else
+            //            {
+            //                count++;
+            //            }
+            //        }
+            //    }
+            //    if (cnt >= text.Length)
+            //    {
+            //        sw.WriteLine("Y");
+            //    }
+            //    else
+            //    {
+            //        sw.WriteLine("N");
+            //    }
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+            //과제 안내신 분?
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            ////전체 학생 수를 담는 배열
+            //int[] student = new int[30];
+            ////출석한 학생 수를 담는 배열
+            //int[] exist = new int[28];
+
+            //for (int i = 0; i < 30; i++)
+            //{
+            //    student[i] = i + 1;
+            //}
+            //for (int i = 0; i < 28; i++)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    exist[i] = num;
+            //}
+            //Array.Sort(exist);
+            //for (int i = 0; i < exist.Length; i++)
+            //{
+            //    for (int j = 0; j < student.Length; j++)
+            //    {
+            //        if (!exist.ToString().Contains(student[j].ToString()))
+            //        {
+            //            sw.WriteLine(student[j]);
+            //        }
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string str = sr.ReadLine();
-            sw.WriteLine(":fan::fan::fan:");
-            sw.WriteLine(":fan::"+str+"::fan:");
-            sw.WriteLine(":fan::fan::fan:");
-
+            int num = int.Parse(sr.ReadLine());
+            for (int i = 0; i < num; i++)
+            {
+                string text = sr.ReadLine();
+                sw.Write(text[0]);
+                sw.WriteLine(text[text.Length-1]);
+            }
+            
             sr.Close();
             sw.Close();
 
