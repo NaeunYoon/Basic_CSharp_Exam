@@ -2671,38 +2671,38 @@ namespace Algorithm_Basic_
             //sw.Close();
 
             //과제 안내신 분?
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
             //전체 학생 수를 담는 배열
-            int[] student = new int[30];
-            for (int i = 0; i < 30; i++)
-            {
-                student[i] = i + 1;
-            }
+            //int[] student = new int[30];
+            //for (int i = 0; i < 30; i++)
+            //{
+            //    student[i] = i + 1;
+            //}
             //출석한 학생 수를 담는 배열
-            int[] exist = new int[28];
-            for (int i = 0; i < 28; i++)
-            {
-                int num = int.Parse(sr.ReadLine());
-                exist[i] = num;
-                for (int j = 0; j < student.Length; j++)
-                {
-                    if (exist[i] == student[j])
-                    {
-                        student[j] = 0;
-                    }
-                }
-            }
-            Array.Sort(student);
-            for (int i = 0; i < student.Length; i++)
-            {
-                if (student[i] != 0)
-                {
-                    sw.WriteLine(student[i]);
-                }
-            }
-            sr.Close();
-            sw.Close();
+            //int[] exist = new int[28];
+            //for (int i = 0; i < 28; i++)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    exist[i] = num;
+            //    for (int j = 0; j < student.Length; j++)
+            //    {
+            //        if (exist[i] == student[j])
+            //        {
+            //            student[j] = 0;
+            //        }
+            //    }
+            //}
+            //Array.Sort(student);
+            //for (int i = 0; i < student.Length; i++)
+            //{
+            //    if (student[i] != 0)
+            //    {
+            //        sw.WriteLine(student[i]);
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
 
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
@@ -2716,6 +2716,19 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //공
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    sw.WriteLine(i+". "+text);
+            //}
+            //sr.Close();
+            //sw.Close();
 
         }
     }
