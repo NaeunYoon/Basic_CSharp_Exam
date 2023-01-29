@@ -2716,7 +2716,6 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            //공
 
 
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
@@ -2725,8 +2724,77 @@ namespace Algorithm_Basic_
             //for (int i = 1; i <= num; i++)
             //{
             //    string text = sr.ReadLine();
-            //    sw.WriteLine(i+". "+text);
+            //    sw.WriteLine(i + ". " + text);
             //}
+            //sr.Close();
+            //sw.Close();
+
+            //공
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int tmp = 0;
+            //int[] arr = new int[3] { 1, 0, 0 };
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string cup = sr.ReadLine();
+            //    int a =int.Parse(cup.Split()[0]);
+            //    int b = int.Parse(cup.Split()[1]);
+            //    //tmp를 이용해서 값을 swap 한다
+            //    tmp = arr[b-1];
+            //    arr[b-1] = arr[a-1];
+            //    arr[a-1] = tmp;
+            //}
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    if (arr[i] == 1)
+            //    {
+            //        int ret = Array.IndexOf(arr, 1);
+            //        sw.WriteLine(ret+1);
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //몇개고?
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //string sushi = sr.ReadLine();
+            //int a = int.Parse(sushi.Split()[0]);
+            //int b = int.Parse(sushi.Split()[1]);
+
+            ////아침
+            //if (a <= 11)
+            //{
+            //    Console.WriteLine("280");
+            //}
+            //else if (a >= 12 && a <= 16 && b == 1)
+            //{
+            //    Console.WriteLine("280");
+            //}
+            //else if(a >= 12 && a <= 16 && b == 0)
+            //{
+            //    Console.WriteLine("320");
+            //}else if (a > 16)
+            //{
+            //    Console.WriteLine("280");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //이상한 기호
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            
+            //string num = sr.ReadLine();
+            //int a = int.Parse(num.Split()[0]);
+            //int b = int.Parse(num.Split()[1]);
+            //double math_a = Math.Pow(a, 2);
+            //double math_b = Math.Pow(b, 2);
+            //sw.WriteLine(math_a - math_b);
             //sr.Close();
             //sw.Close();
 
