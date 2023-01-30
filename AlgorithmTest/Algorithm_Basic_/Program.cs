@@ -2788,7 +2788,7 @@ namespace Algorithm_Basic_
             //이상한 기호
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            
+
             //string num = sr.ReadLine();
             //int a = int.Parse(num.Split()[0]);
             //int b = int.Parse(num.Split()[1]);
@@ -2797,6 +2797,54 @@ namespace Algorithm_Basic_
             //sw.WriteLine(math_a - math_b);
             //sr.Close();
             //sw.Close();
+
+            //문어 숫자
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            Dictionary<string, int> octopus = new Dictionary<string, int>()
+            {
+                {"-", 0},{@"\",1},{"(", 2},{"@", 3},{"?", 4},{">", 5},{"&", 6},{"%", 7},{"/", -1}
+            };
+            double answer = 0;
+            int cnt = 0;
+            while (true)
+            {
+                string text = sr.ReadLine();
+                if (text == "#")
+                {
+                    break;
+                }
+                for (int i = text.Length - 1; i >= 0; i--)
+                {
+                    for (int j = 0; j < octopus.Count ; j++)
+                    {
+                        if (octopus.Keys.ToList()[j] == text[i].ToString())
+                        {
+                            //첫번째 문자열 원소
+                            //sw.WriteLine(text[i]);
+                            //문자열 원소의 밸류값을 가져와서 저장
+                            int tmp = octopus[text[i].ToString()];
+                            //sw.WriteLine("tmp "+tmp);
+                            //8진수 곱할건데 반대로 곱해야하는데 의문..
+                            double mul = Math.Pow(8, cnt);
+                            //sw.WriteLine(mul);
+                            //8진수와 원소의 밸류값을 곱함
+                            double ret = tmp * mul;
+                            //sw.WriteLine(ret);
+                            //곱함걸 계속 더함
+                            answer += ret;
+                            //카운트변수
+                            cnt++;
+                        }
+                    }
+                }
+                sw.WriteLine((int)answer);
+                cnt = 0;
+                answer= 0;
+            }
+
+            sr.Close();
+            sw.Close();
 
         }
     }
