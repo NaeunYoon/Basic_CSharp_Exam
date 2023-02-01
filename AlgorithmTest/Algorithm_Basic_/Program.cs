@@ -2949,34 +2949,34 @@ namespace Algorithm_Basic_
 
             //주차의 신
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            int[] arr;
-            int sum = 0;
-            for (int i = 0; i < num; i++)
-            {
-                int number = int.Parse(sr.ReadLine());
-                arr = new int[number];
-                string shops = sr.ReadLine();
-                for (int j = 0; j < number  ; j++)
-                {
-                    int a = int.Parse(shops.Split()[j]);
-                    arr[j] = a;
-                }
-                Array.Sort(arr);
-                for (int k = 0; k < arr.Length-1; k++)
-                {
-                    int kk = arr[k + 1] - arr[k];
-                    sum += kk;
-                }
-                int tmp = arr[arr.Length-1] - arr[0];
-                sw.WriteLine(tmp + sum);
-                sum = 0;
-                Array.Clear(arr,0,arr.Length);
-            }
-            sr.Close();
-            sw.Close();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int[] arr;
+            //int sum = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int number = int.Parse(sr.ReadLine());
+            //    arr = new int[number];
+            //    string shops = sr.ReadLine();
+            //    for (int j = 0; j < number  ; j++)
+            //    {
+            //        int a = int.Parse(shops.Split()[j]);
+            //        arr[j] = a;
+            //    }
+            //    Array.Sort(arr);
+            //    for (int k = 0; k < arr.Length-1; k++)
+            //    {
+            //        int kk = arr[k + 1] - arr[k];
+            //        sum += kk;
+            //    }
+            //    int tmp = arr[arr.Length-1] - arr[0];
+            //    sw.WriteLine(tmp + sum);
+            //    sum = 0;
+            //    Array.Clear(arr,0,arr.Length);
+            //}
+            //sr.Close();
+            //sw.Close();
 
 
 

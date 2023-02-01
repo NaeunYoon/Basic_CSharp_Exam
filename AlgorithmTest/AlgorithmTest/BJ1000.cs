@@ -2053,7 +2053,7 @@ namespace AlgorithmTest
             //sw.Close();
 
             //Console.WriteLine(77);
-            //Console.WriteLine("whalebaby");
+            //Console.WriteLine("");
 
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
