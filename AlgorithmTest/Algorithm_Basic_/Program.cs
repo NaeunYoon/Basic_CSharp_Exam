@@ -2873,8 +2873,108 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int R = int.Parse(text.Split()[0]);
+            //int C = int.Parse(text.Split()[1]);
+            //int ZR = int.Parse(text.Split()[2]);
+            //int ZC = int.Parse(text.Split()[3]);
+            ////이차원배열
+            //string[,] arr =new string[R,C];
+            //for (int i = 0; i < R; i++)
+            //{
+            //    string tx = sr.ReadLine();
+            //    for (int j = 0; j < C; j++)
+            //    {
+
+            //        //2차원 배열에 담기
+            //        arr[i, j] = tx[j].ToString();
+            //    }
+            //}
+
+            //int row = R * ZR;   //3 3행
+            //int col = C * ZC;   //6 6열짜리
+
+            //int bigger = ZR * ZC;
+
+            //for (int i = 0; i < R; i++)
+            //{
+            //    for (int j = 0; j < C; j++)
+            //    {
+            //        for (int k = 0; k < ZR; k++)
+            //        {
+            //            sw.Write(arr[i,j]);
+
+            //        }
+            //    }
+            //    sw.WriteLine("");
+            //}
+
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int[] arr = new int[3];
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    string triangle = sr.ReadLine();
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        int a = int.Parse(triangle.Split()[j]);
+            //        arr[j] = a;
+            //    }
+            //    Array.Sort(arr);
+            //    double aa = Math.Pow(arr[0], 2);
+            //    double bb = Math.Pow(arr[1], 2);
+            //    double cc = Math.Pow(arr[2], 2);
+
+            //    if ((aa + bb) == cc)
+            //    {
+            //        sw.WriteLine("Scenario #"+i+":");
+            //        sw.WriteLine("yes");
+            //    }
+            //    else
+            //    {
+            //        sw.WriteLine("Scenario #" + i + ":");
+            //        sw.WriteLine("no");
+            //    }
+            //    sw.WriteLine("");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //주차의 신
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            int[] arr;
+            int sum = 0;
+            for (int i = 0; i < num; i++)
+            {
+                int number = int.Parse(sr.ReadLine());
+                arr = new int[number];
+                string shops = sr.ReadLine();
+                for (int j = 0; j < number  ; j++)
+                {
+                    int a = int.Parse(shops.Split()[j]);
+                    arr[j] = a;
+                }
+                Array.Sort(arr);
+                for (int k = 0; k < arr.Length-1; k++)
+                {
+                    int kk = arr[k + 1] - arr[k];
+                    sum += kk;
+                }
+                int tmp = arr[arr.Length-1] - arr[0];
+                sw.WriteLine(tmp + sum);
+                sum = 0;
+                Array.Clear(arr,0,arr.Length);
+            }
             sr.Close();
             sw.Close();
 
