@@ -2978,6 +2978,46 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //숫자의 개수
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //ulong A = ulong.Parse(sr.ReadLine());
+            //ulong B = ulong.Parse(sr.ReadLine());
+            //ulong C = ulong.Parse(sr.ReadLine());
+            //ulong ret = A * B * C;
+            //string text = ret.ToString();
+            //int cnt = 0;
+            //int count = 0;
+            //int zero = 0;
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    cnt++;
+            //}
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    if (text[i].ToString() == "0") 
+            //    { 
+            //        zero++;
+            //    }
+            //}
+            //sw.WriteLine(zero);
+            
+            //for (int i = 1; i <= 9; i++)
+            //{
+            //    for (int j = 0; j < text.Length; j++)
+            //    {
+            //        if (text[j].ToString() == i.ToString())
+            //        {
+            //            count++;
+            //        }
+            //    }
+            //    sw.WriteLine(count);
+            //    count = 0;
+            //}
+            //sr.Close();
+            //sw.Close();
+
 
 
 
