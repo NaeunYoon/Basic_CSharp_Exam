@@ -3002,7 +3002,7 @@ namespace Algorithm_Basic_
             //    }
             //}
             //sw.WriteLine(zero);
-            
+
             //for (int i = 1; i <= 9; i++)
             //{
             //    for (int j = 0; j < text.Length; j++)
@@ -3018,7 +3018,131 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //일우는 야바위꾼
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            ////N : n개의 컵
+            //int N = int.Parse(text.Split()[0]);
+            ////X : x번쨰에 공을 숨김
+            //int X = int.Parse(text.Split()[1]);
+            ////K : k번 반복
+            //int K = int.Parse(text.Split()[2]);
+
+            ////먼저 N개의 컵 숫자를 배열에 넣어준다
+            //int[] cups = new int[N];
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    cups[i - 1] = i;
+            //}
+            //int cnt = 0;
+            //for (int i = 0; i < K; i++)
+            //{
+            //    string change = sr.ReadLine();
+
+            //    int a = int.Parse(change.Split()[0]);
+            //    int b = int.Parse(change.Split()[1]);
+
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        for (int k = 0; k < 3; k++)
+            //        {
+            //            if(a == cups[j] && b == cups[k])
+            //            {
+            //                sw.WriteLine("a "+cups[j]);
+            //                sw.WriteLine("b  " + cups[k]);
+
+            //                int tmp = cups[j];
+            //                cups[j] = cups[k]; ;
+            //                cups[k] = tmp;
+            //            }
+            //            //cnt++;
+            //        }
+            //        //cnt = 0;
+            //    }
+            //}
+            //int ret = 0;
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    if (cups[i] == X)
+            //    {
+            //        ret = Array.IndexOf(cups,X);
+            //    }
+            //}
+            //sw.WriteLine(ret+1);
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //while (true)
+            //{
+            //    string num = sr.ReadLine();
+            //    string[] t = num.Split();
+            //    int a = int.Parse(t[0]);
+            //    int b = int.Parse(t[1]);
+            //    int c = int.Parse(t[2]);
+
+            //    if (a == 0 && b == 0 && c == 0)
+            //    {
+            //        break;
+            //    }
+
+            //    long ap1 = c - b;
+            //    long ap2 = b - a;
+            //    long gp1 = c / b;
+            //    long gp2 = b / a;
+
+            //    if (ap1 == ap2)
+            //    {
+            //        sw.WriteLine("AP " + (c + ap1));
+            //    }
+            //    else if (gp1 == gp2)
+            //    {
+            //        sw.WriteLine("GP " + (c * gp1));
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            long middle = 0;
+            long mul = 0;
+            long add = 0;
+            while(true)
+            {
+                string num = sr.ReadLine();
+                long a = long.Parse(num.Split()[0]);
+                long b = long.Parse(num.Split()[1]);
+
+                if (a == 0 && b == 0)
+                {
+                    break;
+                }
+
+                if (a > b)
+                {
+                    middle = b;
+                }
+                else if(a < b)
+                {
+                    middle = a;
+                }
+                else
+                {
+                    middle = a;
+                }
+                mul = middle * 3;
+                add = a + b;
+                long ret = mul - add;
+                sw.WriteLine(ret);
+            }
+            sr.Close();
+            sw.Close();
 
 
         }
