@@ -3107,42 +3107,60 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
 
-            long middle = 0;
-            long mul = 0;
-            long add = 0;
-            while(true)
-            {
-                string num = sr.ReadLine();
-                long a = long.Parse(num.Split()[0]);
-                long b = long.Parse(num.Split()[1]);
+            //long middle = 0;
+            //long mul = 0;
+            //long add = 0;
+            //while(true)
+            //{
+            //    string num = sr.ReadLine();
+            //    long a = long.Parse(num.Split()[0]);
+            //    long b = long.Parse(num.Split()[1]);
 
-                if (a == 0 && b == 0)
-                {
-                    break;
-                }
+            //    if (a == 0 && b == 0)
+            //    {
+            //        break;
+            //    }
 
-                if (a > b)
-                {
-                    middle = b;
-                }
-                else if(a < b)
-                {
-                    middle = a;
-                }
-                else
-                {
-                    middle = a;
-                }
-                mul = middle * 3;
-                add = a + b;
-                long ret = mul - add;
-                sw.WriteLine(ret);
-            }
-            sr.Close();
-            sw.Close();
+            //    if (a > b)
+            //    {
+            //        middle = b;
+            //    }
+            //    else if(a < b)
+            //    {
+            //        middle = a;
+            //    }
+            //    else
+            //    {
+            //        middle = a;
+            //    }
+            //    mul = middle * 3;
+            //    add = a + b;
+            //    long ret = mul - add;
+            //    sw.WriteLine(ret);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //삼각무늬
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string triangle = sr.ReadLine();
+            //    int big = int.Parse(triangle.Split()[0]);
+            //    int small = int.Parse(triangle.Split()[1]);
+
+            //    float bigger = (float)big * big / 2;
+            //    float smaller = (float)small * small / 2;
+            //    float ret = bigger / smaller;
+            //    sw.WriteLine(ret);
+            //}
+            //sr.Close();
+            //sw.Close();
 
 
         }
