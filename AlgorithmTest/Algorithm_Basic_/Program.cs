@@ -3162,6 +3162,27 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //가뭄
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            string rain = sr.ReadLine();
+            float ab = float.Parse(rain.Split()[0]);
+            float ac = float.Parse(rain.Split()[1]);
+            float bc = float.Parse(rain.Split()[2]);
+
+            float A_section = ((ab / 2) + (ac / 2)) / 2f;
+            float B_section = ((ac / 2) + (bc / 2)) / 2f;
+            float C_section = ((ac / 2) + (bc / 2)) / 2f;
+
+            if(A_section/2 == B_section/2 && B_section / 2 == C_section /2)
+            {
+                sw.WriteLine("1");
+                sw.Write(A_section + " " + B_section + " " + C_section);
+            }
+
+            sr.Close();
+            sw.Close();
+
 
         }
     }
