@@ -18,6 +18,8 @@ using System.Runtime.ExceptionServices;
 using System.Web;
 using System.Data.SqlTypes;
 
+
+
 namespace Algorithm_Basic_
 {
     internal class Program
@@ -3163,26 +3165,118 @@ namespace Algorithm_Basic_
             //sw.Close();
 
             //가뭄
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string rain = sr.ReadLine();
+            //float ab = float.Parse(rain.Split()[0]);
+            //float ac = float.Parse(rain.Split()[1]);
+            //float bc = float.Parse(rain.Split()[2]);
+
+            //float A_section = ((ab / 2) + (ac / 2)) / 2f;
+            //float B_section = ((ac / 2) + (bc / 2)) / 2f;
+            //float C_section = ((ac / 2) + (bc / 2)) / 2f;
+
+            //if(A_section/2 == B_section/2 && B_section / 2 == C_section /2)
+            //{
+            //    sw.WriteLine("1");
+            //    sw.Write(A_section + " " + B_section + " " + C_section);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //while(true)
+            //{
+            //    string text = sr.ReadLine();
+            //    if(String.IsNullOrWhiteSpace(text))
+            //    {
+            //        break;
+            //    }
+            //    sw.WriteLine(text);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string txt  = sr.ReadLine();
+            //string[] text = new string[txt.Length+1];
+            //for (int i = 0; i < txt.Length; i++)
+            //{
+            //    text[i] = txt[i].ToString();
+            //    //sw.WriteLine(text[i]);
+            //}
+
+
+            //string[] alphabet = new string[] {"a","b","c","d","e","f","g","h","i","j","k","l","m","n",
+            //                                    "o","p","q","r","s","t","u","v","w","x","y","z"};
+            //for (int i = 0; i < alphabet.Length; i++)
+            //{
+            //    for (int j = 0; j < text.Length; j++)
+            //    {
+            //        if (text[j] == alphabet[i])
+            //        {
+            //            int arr = Array.IndexOf(text, alphabet[i]);
+
+            //            //int array = Array.FindIndex(text, x => x.Equals(alphabet[i]));
+            //            if (text[j] == text[j+1])
+            //            {
+            //                Array.Clear(text, j, 2);
+            //            }
+            //            sw.Write(arr);
+            //            //sw.Write(array);
+            //        }
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //while(true)
+            //{
+            //    string text = sr.ReadLine();
+            //    if(String.IsNullOrWhiteSpace(text))
+            //    {
+            //        break;
+            //    }
+            //    int a = int.Parse(text.Split()[0]);
+            //    int b = int.Parse(text.Split()[1]);
+            //    sw.WriteLine(a+b);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //행렬덧셈
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string rain = sr.ReadLine();
-            float ab = float.Parse(rain.Split()[0]);
-            float ac = float.Parse(rain.Split()[1]);
-            float bc = float.Parse(rain.Split()[2]);
+            string text = sr.ReadLine();
+            int a = int.Parse(text.Split()[0]);
+            int b = int.Parse(text.Split()[1]);
+            int [,] Aarr = new int[100, 100];
 
-            float A_section = ((ab / 2) + (ac / 2)) / 2f;
-            float B_section = ((ac / 2) + (bc / 2)) / 2f;
-            float C_section = ((ac / 2) + (bc / 2)) / 2f;
-
-            if(A_section/2 == B_section/2 && B_section / 2 == C_section /2)
+            for (int i = 0; i < a*2; i++)
             {
-                sw.WriteLine("1");
-                sw.Write(A_section + " " + B_section + " " + C_section);
+                string num = sr.ReadLine();
+                for (int j = 0; j < a; j++)
+                {
+                    int tmp = int.Parse(num.Split()[j]);
+                    Aarr[i, j] = tmp;
+                }
             }
-
+            int[,] Carr = new int[100, 100];
+            for (int i = 0; i < a; i++)
+            {
+                for (int j = 0; j < b; j++)
+                {
+                    Carr[i, j] = Aarr[i, j] + Aarr[i+a, j];
+                    sw.Write(Carr[i, j] + " ");
+                }
+                sw.WriteLine(" ");
+            }
             sr.Close();
             sw.Close();
-
 
         }
     }
