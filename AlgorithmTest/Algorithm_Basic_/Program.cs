@@ -17,8 +17,7 @@ using System.Xml.Linq;
 using System.Runtime.ExceptionServices;
 using System.Web;
 using System.Data.SqlTypes;
-
-
+using System.Deployment.Internal;
 
 namespace Algorithm_Basic_
 {
@@ -3249,34 +3248,85 @@ namespace Algorithm_Basic_
             //sw.Close();
 
             //행렬덧셈
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string text = sr.ReadLine();
-            int a = int.Parse(text.Split()[0]);
-            int b = int.Parse(text.Split()[1]);
-            int [,] Aarr = new int[100, 100];
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int a = int.Parse(text.Split()[0]);
+            //int b = int.Parse(text.Split()[1]);
+            //int[,] arr = new int[a*2,b];
+            //int u = 0;
+            //int l = 0;
 
-            for (int i = 0; i < a*2; i++)
-            {
-                string num = sr.ReadLine();
-                for (int j = 0; j < a; j++)
-                {
-                    int tmp = int.Parse(num.Split()[j]);
-                    Aarr[i, j] = tmp;
-                }
-            }
-            int[,] Carr = new int[100, 100];
-            for (int i = 0; i < a; i++)
-            {
-                for (int j = 0; j < b; j++)
-                {
-                    Carr[i, j] = Aarr[i, j] + Aarr[i+a, j];
-                    sw.Write(Carr[i, j] + " ");
-                }
-                sw.WriteLine(" ");
-            }
-            sr.Close();
-            sw.Close();
+            //for (int i = 0; i < a * 2; i++)
+            //{
+            //    string num = sr.ReadLine();
+            //    for (int j = 0; j < b; j++)
+            //    {
+            //        int temp = int.Parse(num.Split()[j]);
+            //        arr[i,j] = temp;
+            //    }
+            //}
+
+            //int[,] array = new int[100 * 2, 100 * 2];
+            //for (int i = 0; i < a; i++)
+            //{
+            //    for (int j = 0; j < b; j++)
+            //    {
+            //        array[i, j] = arr[i, j] + arr[i+a, j];
+            //        sw.Write(array[i, j] + " ");
+            //    }
+            //    sw.WriteLine("");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //알파벳찾기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //string[] input = new string [text.Length];
+            //string[] alphabet = new string[26] {"a","b","c","d","e","f","g","h","i","j","k", 
+            //                                    "l","m","n","o","p","q","r","s","t","u","v",
+            //                                    "w","x","y","z"};
+            //int cnt = 0;
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    input[i] = text[i].ToString();
+            //}
+
+            //for (int i = 0; i < alphabet.Length; i++)
+            //{
+            //    for (int j = 0; j < input.Length; j++)
+            //    {
+            //        //if (text[i].ToString().Contains(alphabet[j]))
+            //        //{
+            //        //    int ret = Array.IndexOf(alphabet, text[i].ToString());
+            //        //    sw.Write(ret+" ");
+            //        //}
+
+            //        if (input[j] == alphabet[i])
+            //        {
+
+            //            //int ret = Array.IndexOf(alphabet, input[i]);
+            //            sw.Write(j + " ");
+            //            cnt = 0;
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            cnt = 1;
+            //        }
+            //    }
+            //    if(cnt == 1)
+            //    {
+            //        sw.Write("-1 ");
+            //    }
+            //}
+
+            ////sw.Write(cnt);
+            //sr.Close();
+            //sw.Close();
+
 
         }
     }
