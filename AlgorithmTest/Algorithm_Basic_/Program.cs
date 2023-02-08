@@ -18,6 +18,7 @@ using System.Runtime.ExceptionServices;
 using System.Web;
 using System.Data.SqlTypes;
 using System.Deployment.Internal;
+using System.Runtime.InteropServices;
 
 namespace Algorithm_Basic_
 {
@@ -3326,6 +3327,124 @@ namespace Algorithm_Basic_
             ////sw.Write(cnt);
             //sr.Close();
             //sw.Close();
+
+            //문자열 반복
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    int a = int.Parse(text.Split()[0]);
+            //    string b = text.Split()[1];
+            //    for (int j = 0; j < b.Length; j++)
+            //    {
+            //        for (int k = 0; k < a; k++)
+            //        {
+            //            sw.Write(b[j]);
+            //        }
+            //    }
+            //    sw.WriteLine("");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //숫자의 합
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string number = sr.ReadLine();
+            //string[] arr = new string[number.Length];
+            //int sum = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    arr[i] = number[i].ToString();
+            //}
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    int a = int.Parse(arr[i]);
+            //    sum += a;
+            //}
+            //sw.WriteLine(sum);
+            //sr.Close();
+            //sw.Close();
+
+            //음계
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int[] arr = new int[8];
+            //int cnt = 0;
+            //int count = 0;
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    int temp = int.Parse(text.Split()[i]);
+            //    arr[i] = temp;
+            //}
+            //for (int i = 0; i < arr.Length-1; i++)
+            //{
+            //    if (arr[i] < arr[i+1])
+            //    {
+            //        cnt++;
+            //    }
+            //    else if (arr[i] > arr[i+1])
+            //    {
+            //        count++;
+            //    }
+            //}
+            //if(cnt >=7)
+            //{
+            //    sw.WriteLine("ascending");
+            //}
+            //else if( count >=7)
+            //{
+            //    sw.WriteLine("descending");
+            //}
+            //else if( cnt < 7 || count < 7)
+            //{
+            //    sw.WriteLine("mixed");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //ox 퀴즈
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            string[] symbol = new string[80 * num];
+            for (int i = 0; i < num; i++)
+            {
+                string OX = sr.ReadLine();
+                symbol[i] = OX;
+            }
+
+
+
+
+            //sr.Close();
+            //sw.Close();
+
+            //최소, 최대
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string number = sr.ReadLine();
+            //string[] s = number.Split();
+            //int[] arr = new int[num];
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int a = int.Parse(s[i]);
+            //    arr[i] = a;
+            //}
+            //Array.Sort(arr);
+            //sw.WriteLine(arr[0] + " " + arr[arr.Length-1]);
+            //sr.Close();
+            //sw.Close();
+
 
 
         }
