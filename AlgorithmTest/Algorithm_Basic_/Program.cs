@@ -3412,18 +3412,15 @@ namespace Algorithm_Basic_
 
             //ox 퀴즈
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            string[] symbol = new string[80 * num];
-            for (int i = 0; i < num; i++)
-            {
-                string OX = sr.ReadLine();
-                symbol[i] = OX;
-            }
-
-
-
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string[] symbol = new string[80 * num];
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string OX = sr.ReadLine();
+            //    symbol[i] = OX;
+            //}
 
             //sr.Close();
             //sw.Close();
@@ -3442,6 +3439,56 @@ namespace Algorithm_Basic_
             //}
             //Array.Sort(arr);
             //sw.WriteLine(arr[0] + " " + arr[arr.Length-1]);
+            //sr.Close();
+            //sw.Close();
+
+            //나머지
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int[] arr = new int[10];
+            //int cnt = 0;
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    int ret = num % 42;
+            //    arr[i] = ret;
+            //}
+
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = i+1; j < arr.Length; j++)
+            //    {
+            //        if (arr[i] != arr[j])
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //}
+
+            //sw.WriteLine(cnt);
+            
+            //sr.Close();
+            //sw.Close();
+
+            //별찍기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string star = "*";
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    for (int j = 0; j < num-i; j++)
+            //    {
+            //        sw.Write(" ");
+            //    }
+            //    for (int k = 0; k < i; k++)
+            //    {
+            //        sw.Write(star);
+            //    }
+            //    sw.WriteLine();
+            //}
+            
             //sr.Close();
             //sw.Close();
 
