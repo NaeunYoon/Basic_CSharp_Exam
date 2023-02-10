@@ -3415,15 +3415,38 @@ namespace Algorithm_Basic_
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
             //int num = int.Parse(sr.ReadLine());
-            //string[] symbol = new string[80 * num];
+            //string[] symbol = new string[80];
+            //int cnt = 0;
+            //int sum = 0;
+
             //for (int i = 0; i < num; i++)
             //{
             //    string OX = sr.ReadLine();
-            //    symbol[i] = OX;
-            //}
+            //    for (int j = 0; j < OX.Length; j++)
+            //    {
+            //        symbol[j] = OX[j].ToString();
+            //    }
+            //    for (int k = 0; k < symbol.Length; k++)
+            //    {
+            //        if (symbol[k] == "O")
+            //        {
+            //            cnt++;
+            //            sum += cnt;
+            //        }
+            //        else
+            //        {
+            //            cnt = 0;
+            //        }
+            //        //sw.WriteLine(sum);
 
-            //sr.Close();
-            //sw.Close();
+            //    }
+            //    sw.WriteLine(sum);
+            //    Array.Clear(symbol,0,symbol.Length);
+            //    sum = 0;
+            //    cnt = 0;
+            //}
+            //    sr.Close();
+            //    sw.Close();
 
             //최소, 최대
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
@@ -3467,7 +3490,7 @@ namespace Algorithm_Basic_
             //}
 
             //sw.WriteLine(cnt);
-            
+
             //sr.Close();
             //sw.Close();
 
@@ -3488,12 +3511,38 @@ namespace Algorithm_Basic_
             //    }
             //    sw.WriteLine();
             //}
-            
+
+            //sr.Close();
+            //sw.Close();
+
+            //숫자의 개수
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int a = int.Parse(sr.ReadLine());
+            //int B = int.Parse(sr.ReadLine());
+            //int C = int.Parse(sr.ReadLine());
+            //int mul = a * B * C;
+            //string multiply = mul.ToString();
+            //int cnt = 0;
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    for (int j = 0; j < multiply.Length; j++)
+            //    {
+            //        if (multiply[j].ToString() == i.ToString())
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //    sw.WriteLine(cnt);
+            //    cnt = 0;
+            //}
             //sr.Close();
             //sw.Close();
 
 
 
+            }
         }
     }
-}
+
