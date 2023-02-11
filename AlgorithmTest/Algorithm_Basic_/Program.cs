@@ -3540,6 +3540,36 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //상수
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            string text = sr.ReadLine();
+            string a = text.Split()[0];
+            string b = text.Split()[1];
+
+            string[] Aarr = new string[a.Length];
+            string[] Barr = new string[b.Length];
+
+            for (int i = 0; i < 3; i++)
+            {
+                Aarr[i] = a[i].ToString();
+                Barr[i] = b[i].ToString();
+            }
+            Array.Reverse(Aarr);
+            Array.Reverse(Barr);
+            int Aret = int.Parse(Aarr[0] + Aarr[1] + Aarr[2]);
+            int Bret = int.Parse(Barr[0] + Barr[1] + Barr[2]);
+            if(Aret > Bret)
+            {
+                sw.WriteLine(Aret);
+            }
+            else
+            {
+                sw.WriteLine(Bret);
+            }
+            sr.Close();
+            sw.Close();
+
 
 
             }
