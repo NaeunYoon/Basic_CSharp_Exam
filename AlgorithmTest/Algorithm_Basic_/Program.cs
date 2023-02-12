@@ -3541,32 +3541,65 @@ namespace Algorithm_Basic_
             //sw.Close();
 
             //상수
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //string a = text.Split()[0];
+            //string b = text.Split()[1];
+
+            //string[] Aarr = new string[a.Length];
+            //string[] Barr = new string[b.Length];
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Aarr[i] = a[i].ToString();
+            //    Barr[i] = b[i].ToString();
+            //}
+            //Array.Reverse(Aarr);
+            //Array.Reverse(Barr);
+            //int Aret = int.Parse(Aarr[0] + Aarr[1] + Aarr[2]);
+            //int Bret = int.Parse(Barr[0] + Barr[1] + Barr[2]);
+            //if(Aret > Bret)
+            //{
+            //    sw.WriteLine(Aret);
+            //}
+            //else
+            //{
+            //    sw.WriteLine(Bret);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //나머지
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string text = sr.ReadLine();
-            string a = text.Split()[0];
-            string b = text.Split()[1];
-
-            string[] Aarr = new string[a.Length];
-            string[] Barr = new string[b.Length];
-
-            for (int i = 0; i < 3; i++)
+            int[] arr = new int[10];
+            for (int i = 0; i < 10; i++)
             {
-                Aarr[i] = a[i].ToString();
-                Barr[i] = b[i].ToString();
+                int a = int.Parse(sr.ReadLine());
+                int ret = a % 42;
+                arr[i] = ret;
+                //sw.WriteLine(arr[i]);
             }
-            Array.Reverse(Aarr);
-            Array.Reverse(Barr);
-            int Aret = int.Parse(Aarr[0] + Aarr[1] + Aarr[2]);
-            int Bret = int.Parse(Barr[0] + Barr[1] + Barr[2]);
-            if(Aret > Bret)
+            int cnt = 0;
+            int result = 0;
+            for (int i = 0; i < arr.Length; i++)
             {
-                sw.WriteLine(Aret);
+                for (int j = i+1; j < arr.Length; j++)
+                {
+                    if (arr[i] == arr[j])
+                    {
+                        cnt++;
+                    }
+                }
+                if(cnt == 0)
+                {
+                    result++;
+                }
+                cnt = 0;
             }
-            else
-            {
-                sw.WriteLine(Bret);
-            }
+            sw.WriteLine(result);
             sr.Close();
             sw.Close();
 
