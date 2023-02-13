@@ -3572,36 +3572,72 @@ namespace Algorithm_Basic_
 
             //나머지
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int[] arr = new int[10];
-            for (int i = 0; i < 10; i++)
-            {
-                int a = int.Parse(sr.ReadLine());
-                int ret = a % 42;
-                arr[i] = ret;
-                //sw.WriteLine(arr[i]);
-            }
-            int cnt = 0;
-            int result = 0;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                for (int j = i+1; j < arr.Length; j++)
-                {
-                    if (arr[i] == arr[j])
-                    {
-                        cnt++;
-                    }
-                }
-                if(cnt == 0)
-                {
-                    result++;
-                }
-                cnt = 0;
-            }
-            sw.WriteLine(result);
-            sr.Close();
-            sw.Close();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int[] arr = new int[10];
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    int a = int.Parse(sr.ReadLine());
+            //    int ret = a % 42;
+            //    arr[i] = ret;
+            //    //sw.WriteLine(arr[i]);
+            //}
+            //int cnt = 0;
+            //int result = 0;
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = i+1; j < arr.Length; j++)
+            //    {
+            //        if (arr[i] == arr[j])
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //    if(cnt == 0)
+            //    {
+            //        result++;
+            //    }
+            //    cnt = 0;
+            //}
+            //sw.WriteLine(result);
+            //sr.Close();
+            //sw.Close();
+
+            //단어공부
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //string[] tArr = new string[text.Length];  
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    tArr[i] = text[i].ToString();
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //평균
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string score = sr.ReadLine();
+            //float[] ret = new float[num];
+
+            //for (int i = 0; i < num; i++)
+            //{
+            //    float a = float.Parse(score.Split()[i]);
+            //    ret[i] = a;
+            //}
+            //Array.Sort(ret);
+            //float average = 0f;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    float result = (float)(ret[i] / ret[ret.Length - 1]) * 100f;
+            //    average += result;
+            //}
+            //sw.WriteLine(average/num);
+            //sr.Close();
+            //sw.Close();
 
 
 
