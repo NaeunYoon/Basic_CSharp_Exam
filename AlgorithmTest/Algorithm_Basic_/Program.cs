@@ -3607,14 +3607,42 @@ namespace Algorithm_Basic_
 
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //string[] alphabet = new string[]
+            //{
+            //    "a","A","b","B","c","C","d","D","e","E","f","F","g","G",
+            //    "h","H","i","I","j","J","k","K","l","L","m","M","n","N",
+            //    "o","O","p","P","q","Q","r","R","s","S","t","T","u","u",
+            //    "v","V","w","x","y","Y","z","Z",
+            //};
+
             //string text = sr.ReadLine();
-            //string[] tArr = new string[text.Length];  
+            //string[] tArr = new string[text.Length];
             //for (int i = 0; i < text.Length; i++)
             //{
             //    tArr[i] = text[i].ToString();
             //}
+            //string[] newArr = new string[tArr.Length];
+            //int cnt = 0;
+            //for (int i = 0; i < tArr.Length; i++)
+            //{
+            //    for (int j = 0; j < alphabet.Length; j++)
+            //    {
+            //        if (tArr[i] == alphabet[j])
+            //        {
+            //            newArr[i] = alphabet[j];
+            //        }
+            //    }
+            //}
+            //for (int i = 0; i < newArr.Length; i++)
+            //{
+            //    sw.WriteLine(newArr[i]);
+            //}
+
             //sr.Close();
             //sw.Close();
+
+
 
             //평균
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
@@ -3639,9 +3667,36 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //킹, 퀸, 룩, 비숍, 나이트, 폰
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            
+            //string text = sr.ReadLine();
+            //int[] intArr = new int[6];
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    int a = int.Parse(text.Split()[i]);
+            //    intArr[i] = a;
+            //    //sw.WriteLine(intArr[i]);
+            //}
+
+            //int King = 1;
+            //int Queen = 1;
+            //int Rook = 2;
+            //int Bishop = 2;
+            //int Knight = 2;
+            //int Pawn = 8;
+
+            //sw.WriteLine((King - (intArr[0])) + " " + (Queen - (intArr[1]))
+            //            +" "+ (Rook - (intArr[2])) + " " + (Bishop - (intArr[3])
+            //            + " " + (Knight - (intArr[4])) + " " + (Pawn - (intArr[5]))));
+            //sr.Close();
+            //sw.Close();
 
 
-            }
+
         }
+    }
     }
 
