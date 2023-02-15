@@ -3694,6 +3694,26 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //Share
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            
+            //while(true)
+            //{
+            //    string text = sr.ReadLine();
+            //    if(string.IsNullOrEmpty(text))
+            //    {
+            //        break;
+            //    }
+            //    long a = long.Parse(text.Split()[0]);
+            //    long b = long.Parse(text.Split()[1]);
+            //    long ret = b / (a+1);
+
+            //    sw.WriteLine(ret);
+            //}
+            //sr.Close();
+            //sw.Close();
+
 
 
         }
