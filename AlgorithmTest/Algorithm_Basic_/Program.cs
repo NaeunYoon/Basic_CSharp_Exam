@@ -3714,6 +3714,22 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //아!
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string jText = sr.ReadLine();
+            //string docter = sr.ReadLine();
+            //if(jText.Length-1 >= docter.Length-1)
+            //{
+            //    sw.WriteLine("go");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("no");
+            //}
+            //sr.Close();
+            //sw.Close();
+
 
 
         }
