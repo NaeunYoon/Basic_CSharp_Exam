@@ -3671,7 +3671,7 @@ namespace Algorithm_Basic_
 
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            
+
             //string text = sr.ReadLine();
             //int[] intArr = new int[6];
             //for (int i = 0; i < 6; i++)
@@ -3697,7 +3697,7 @@ namespace Algorithm_Basic_
             //Share
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            
+
             //while(true)
             //{
             //    string text = sr.ReadLine();
@@ -3726,6 +3726,33 @@ namespace Algorithm_Basic_
             //else
             //{
             //    sw.WriteLine("no");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int cnt = 0;
+            //int sum = 0;
+            //while(true)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    if(num == 0)
+            //    {
+            //        break; 
+            //    }
+            //    cnt = num;
+            //    while(true)
+            //    {
+            //        sum += cnt;
+            //        cnt--;
+            //        if(cnt == 0)
+            //        {
+            //            break;
+            //        }
+            //    }
+            //    sw.WriteLine(sum);
+            //    sum = 0;
             //}
             //sr.Close();
             //sw.Close();
