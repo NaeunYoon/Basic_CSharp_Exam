@@ -3757,19 +3757,25 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int[] dish = new int[3];
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    int num = int.Parse(sr.ReadLine());
+            //    dish[i] = num;
+            //}
+            //Array.Sort(dish);
+            //sw.WriteLine(dish[1]);
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int[] dish = new int[3];
-            for (int i = 0; i < 3; i++)
-            {
-                int num = int.Parse(sr.ReadLine());
-                dish[i] = num;
-            }
-            Array.Sort(dish);
-            sw.WriteLine(dish[1]);
+            string text = sr.ReadLine();
+            sw.WriteLine(text[2].ToString() + text[1].ToString() + text[0].ToString());
             sr.Close();
             sw.Close();
-
 
         }
     }
