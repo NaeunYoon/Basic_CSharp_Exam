@@ -3770,14 +3770,70 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //sw.WriteLine(text[2].ToString() + text[1].ToString() + text[0].ToString());
+            //sr.Close();
+            //sw.Close();
+
+            //단어공부
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //string text = sr.ReadLine();
+            //string[] tex = new string[text.Length];
+            //for (int i = 0; i< text.Length;i++) 
+            //{
+            //    tex[i] = text[i].ToString().ToLower();
+            //}
+
+            //int cnt = 0;
+            //List<int> list = new List<int>();
+            //for (int i = 0; i < tex.Length; i++)
+            //{
+            //    for (int j = 0; j < tex.Length; j++)
+            //    {
+            //        if (tex[i] == tex[j])
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //    list.Add(cnt);
+            //    cnt = 0;
+            //}
+            //int a = list.Max();
+            //int index = list.FindIndex(x=>x==a);
+            //int count = 0;
+            //for (int i = 0; i < list.Count; i++)
+            //{
+            //    if (list[i] == a)
+            //    {
+            //        count++;
+            //    }
+            //}
+            ////sw.WriteLine(count);
+            //if(count <= a)
+            //{
+            //    sw.WriteLine(tex[index].ToUpper());
+            //}
+            //else
+            //{
+            //    sw.WriteLine("?");
+            //}
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string text = sr.ReadLine();
-            sw.WriteLine(text[2].ToString() + text[1].ToString() + text[0].ToString());
+            int num = int.Parse(sr.ReadLine());
+            int a = (num + 1) * 2;
+            int b = (num + 1) * 3;
+            sw.WriteLine(a +" "+ b);
             sr.Close();
             sw.Close();
 
-        }
+    }
     }
     }
 
