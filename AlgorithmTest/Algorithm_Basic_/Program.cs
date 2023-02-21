@@ -3824,14 +3824,28 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int a = (num + 1) * 2;
+            //int b = (num + 1) * 3;
+            //sw.WriteLine(a +" "+ b);
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int total = int.Parse(sr.ReadLine());
             int num = int.Parse(sr.ReadLine());
-            int a = (num + 1) * 2;
-            int b = (num + 1) * 3;
-            sw.WriteLine(a +" "+ b);
+
+            int a = (total+num)/2;
+            int b = (total-num)/2;
+            sw.WriteLine(a);
+            sw.WriteLine(b);
             sr.Close();
             sw.Close();
+
+            Console.WriteLine("고려대학교");
 
     }
     }
