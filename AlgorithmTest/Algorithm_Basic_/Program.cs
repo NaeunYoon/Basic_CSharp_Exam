@@ -3997,6 +3997,61 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int[] intArr = new int[3];
+            //string[] stringArr = new string[3];
+
+            //string text1 = sr.ReadLine();
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    int a = int.Parse(text1.Split()[i]);
+            //    intArr[i] = a;
+            //}
+
+            //string text2 = sr.ReadLine();
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    string b = text2[i].ToString();
+            //    stringArr[i] = b;
+            //}
+            //Array.Sort(intArr);
+            //Array.Sort(stringArr);
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        if (text2[i].ToString() == stringArr[j])
+            //        {
+            //            sw.Write(intArr[j] + " ");
+            //        }
+            //    }
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            int cnt = 0;
+            int count = 1;
+            for (int i = 0; i < 2; i++)
+            {
+                int room = int.Parse(sr.ReadLine());
+                for (int j = 0; j < room; j++)
+                {
+                    
+
+                }
+            }
+            
+            sr.Close();
+            sw.Close();
+
+
 
     }
     }
