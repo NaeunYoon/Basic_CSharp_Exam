@@ -19,6 +19,7 @@ using System.Web;
 using System.Data.SqlTypes;
 using System.Deployment.Internal;
 using System.Runtime.InteropServices;
+using System.Numerics;
 
 namespace Algorithm_Basic_
 {
@@ -4033,23 +4034,61 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            int cnt = 0;
-            int count = 1;
-            for (int i = 0; i < 2; i++)
-            {
-                int room = int.Parse(sr.ReadLine());
-                for (int j = 0; j < room; j++)
-                {
-                    
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int cnt = 0;
+            //int count = 1;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int room = int.Parse(sr.ReadLine());
 
-                }
-            }
-            
-            sr.Close();
-            sw.Close();
+            //    for (int j = 0; j < room; j++)
+            //    {
+            //        while(true)
+            //        {
+            //            double mul = Math.Pow(count, 2);
+            //            count++;
+            //            if(mul>room)
+            //            {
+            //                break;
+            //            }
+            //            cnt++;
+            //        }
+            //    }
+            //    sw.WriteLine(cnt);
+
+            //}
+
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int times = 5;
+            //int cnt = 0;
+            //while(true)
+            //{
+            //    if(times<0||num==0)
+            //    {
+            //        break;
+            //    }
+            //    if (num >= times)
+            //    {
+            //        int a = num - times;
+            //        num = a;
+            //        //sw.WriteLine(num);
+            //        cnt++;
+            //    }
+            //    else
+            //    {
+            //        times--;
+            //    }
+            //}
+            //sw.WriteLine(cnt);
+            //sr.Close();
+            //sw.Close();
 
 
 
