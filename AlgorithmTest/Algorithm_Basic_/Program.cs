@@ -4091,8 +4091,130 @@ namespace Algorithm_Basic_
             //sw.Close();
 
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int smile = 0;
+            //int sad = 0;
 
-    }
+            //for (int i = 0; i < text.Length - 2; i++)
+            //{
+            //    if (text[i].ToString() == ":")
+            //    {
+            //        if (text[i+1].ToString() == "-" && text[i + 2].ToString() == ")")
+            //        {
+            //            smile++;
+            //            //sw.WriteLine("smile " + smile);
+            //        }
+            //        else if (text[i+1].ToString() == "-" && text[i + 2].ToString() == "(")
+            //        {
+            //            sad++;
+            //            //sw.WriteLine("sad " + sad);
+            //        }
+            //    }
+            //}
+            //if (smile == 0 && sad == 0)
+            //{
+            //    sw.WriteLine("none");
+            //}else if(smile>sad)
+            //{
+            //    sw.WriteLine("happy");
+            //}else if(smile<sad)
+            //{
+            //    sw.WriteLine("sad");
+            //}else if(smile==sad)
+            //{
+            //    sw.WriteLine("unsure");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string[] cambridge = new string[9] { "C", "A", "M", "B", "R", "I", "D", "G", "E" };
+            //string text = sr.ReadLine();
+            //string[] same = new string[text.Length];
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    for (int j = 0; j < cambridge.Length; j++)
+            //    {
+            //        if (text[i].ToString() == cambridge[j])
+            //        {
+            //            same[i] = cambridge[j];
+            //            string tmp = text.Replace(text[i],'x');
+            //            text = tmp;
+            //        }
+            //    }
+            //}
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    if (text[i].ToString()!="x")
+            //    {
+            //        sw.Write(text[i]);
+            //    }
+            //}
+            //sw.WriteLine(" ");
+            //sr.Close();
+            //sw.Close();
+
+            //단어공부
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int cnt = 0;
+            //string[] stringArr1 = new string[text.Length];
+            //string[] stringArr2 = new string[text.Length];
+            ////받은 문자열을 소문자로 바꿔준다
+            //for (int i = 0; i < text.Length; i++)
+            //{
+            //    stringArr1[i] = text[i].ToString().ToLower();
+            //    stringArr2[i] = text[i].ToString().ToLower();
+            //}
+            ////중복된 값을 없애고 배열에 담아준다
+            //string[] tmp = stringArr2.Distinct().ToArray();
+            //Dictionary<string, int> dic = new Dictionary<string, int>();
+            //for (int i = 0; i < tmp.Length; i++)
+            //{
+            //    for (int j = 0; j < stringArr1.Length; j++)
+            //    {
+            //        if (tmp[i] == stringArr1[j])
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //    dic.Add(tmp[i], cnt);
+            //    cnt = 0;
+            //}
+            //int max = dic.Values.Max();
+            //int count = 0;
+            //foreach (var item in dic)
+            //{
+            //    if (item.Value == max)
+            //    {
+            //        count++;
+            //    }
+            //}
+            //if (count > 1)
+            //{
+            //    sw.WriteLine("?");
+            //}
+            //else
+            //{
+            //    foreach (var item in dic)
+            //    {
+            //        if (item.Value == max)
+            //        {
+            //            sw.WriteLine(item.Key.ToUpper());
+            //        }
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
+
+        }
     }
     }
 
