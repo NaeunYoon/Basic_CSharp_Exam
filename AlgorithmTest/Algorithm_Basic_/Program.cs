@@ -4211,6 +4211,44 @@ namespace Algorithm_Basic_
             //}
             //sr.Close();
             //sw.Close();
+            
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int[] numbers = new int[num];
+            //int[] max = new int[num];
+            //string a = sr.ReadLine();
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    int b = int.Parse(a.Split()[i]);
+            //    numbers[i] = b;
+            //}
+            //int index = 0;
+            //int stop = 0;
+            //for (int i = 0; i < numbers.Length-1; i++)
+            //{
+            //    if (numbers[i] < numbers[i+1])
+            //    {
+            //        int ret = numbers[i + 1] - numbers[i];
+            //        index += ret;
+            //        max[stop] = index;
+            //        //sw.WriteLine(max[stop]);
+            //    }else if (numbers[i] >= numbers[i+1])
+            //    {
+                    
+            //        stop++;
+            //        index = 0;
+            //    }
+            //}
+            //int maximum = max.Max();
+            //sw.WriteLine(maximum);
+            //sr.Close();
+            //sw.Close();
+
+            //알람시계
+
+
+
 
 
 
