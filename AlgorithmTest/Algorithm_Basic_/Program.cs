@@ -4247,6 +4247,113 @@ namespace Algorithm_Basic_
 
             //알람시계
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int a = int.Parse(text.Split()[0]);
+            //int b = int.Parse(text.Split()[1]);
+
+            //b -= 45;
+            //if(b<0)
+            //{
+            //    b += 60;
+            //    a -= 1;
+            //    if(a<0)
+            //    {
+            //        a = 23;
+            //    }
+            //}
+            //sw.WriteLine(a + " " + b);
+            //sr.Close();
+            //sw.Close();
+
+            //수 정렬하기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int[] intArr = new int[num];
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int a = int.Parse(sr.ReadLine());
+            //    intArr[i] = a;
+            //}
+            //Array.Sort(intArr);
+            //for (int i = 0; i < intArr.Length; i++)
+            //{
+            //    sw.WriteLine(intArr[i]);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //소수찾기
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string text = sr.ReadLine();
+            //int[] s = new int[1000];
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int a = int.Parse(text.Split()[i]);
+            //    s[i] = a;
+            //}
+            //int ss = 0;
+            //int cnt = 0;
+            //for (int i = 2; i <= s.Length; i++)
+            //{
+            //    if (s[i-1] == 2)
+            //    {
+            //        cnt++;
+            //    }
+            //    else if (s[i-1]%i==1)
+            //    {
+            //        ss++;
+            //    }
+            //    if(ss==1)
+            //    {
+            //        cnt++;
+            //    }
+            //    ss = 0;
+            //}
+            //sw.WriteLine(cnt);
+           
+
+            //sr.Close();
+            //sw.Close();
+
+            //카드버리기
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //Queue<int> queue = new Queue<int>();
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    queue.Enqueue(i);
+            //}
+            
+            //while(true)
+            //{
+            //    if(queue.Count == 1)
+            //    {
+            //        break;
+            //    }
+            //     //sw.WriteLine(queue.Dequeue());
+            //     queue.Dequeue();
+
+            //     //sw.WriteLine(queue.Peek());
+            //     queue.Enqueue(queue.Peek());
+
+            //    //sw.WriteLine(queue.Dequeue());
+            //    queue.Dequeue();
+            //}
+            
+            //for (int i = 0;i < 1; i++)
+            //{
+            //    sw.WriteLine(queue.Dequeue());
+            //}
+            //sr.Close();
+            //sw.Close();
+
 
 
 
