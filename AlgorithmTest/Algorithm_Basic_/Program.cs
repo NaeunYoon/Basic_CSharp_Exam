@@ -4211,7 +4211,7 @@ namespace Algorithm_Basic_
             //}
             //sr.Close();
             //sw.Close();
-            
+
             //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
             //int num = int.Parse(sr.ReadLine());
@@ -4235,7 +4235,7 @@ namespace Algorithm_Basic_
             //        //sw.WriteLine(max[stop]);
             //    }else if (numbers[i] >= numbers[i+1])
             //    {
-                    
+
             //        stop++;
             //        index = 0;
             //    }
@@ -4316,7 +4316,7 @@ namespace Algorithm_Basic_
             //    ss = 0;
             //}
             //sw.WriteLine(cnt);
-           
+
 
             //sr.Close();
             //sw.Close();
@@ -4330,7 +4330,7 @@ namespace Algorithm_Basic_
             //{
             //    queue.Enqueue(i);
             //}
-            
+
             //while(true)
             //{
             //    if(queue.Count == 1)
@@ -4346,7 +4346,7 @@ namespace Algorithm_Basic_
             //    //sw.WriteLine(queue.Dequeue());
             //    queue.Dequeue();
             //}
-            
+
             //for (int i = 0;i < 1; i++)
             //{
             //    sw.WriteLine(queue.Dequeue());
@@ -4355,8 +4355,127 @@ namespace Algorithm_Basic_
             //sw.Close();
 
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int num = int.Parse(sr.ReadLine());
+            //int cnt = num;
+            //int number = 0;
+            //int five = 0;
+            //int three = 0;
+            //while(true)
+            //{
+            //    if(cnt<=0)
+            //    {
+            //        break;
+            //    }
+            //    if (cnt>5)
+            //    {
+            //        cnt -= 5;
+            //        number++;
+            //        five++;
+            //    }
+            //    else if (cnt % 3 == 0 || cnt > 3)
+            //    {
+            //        cnt -= 3;
+            //        number++;
+            //        three++;
+            //    }
+            //}
+
+            //if (cnt == 0)
+            //{
+            //    sw.WriteLine(number);
+            //}
+            //else
+            //{
+            //    sw.WriteLine("-1");
+            //}
 
 
+            //sr.Close();
+            //sw.Close();
+
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int n = int.Parse(text.Split()[0]);
+            //int k = int.Parse(text.Split()[1]);
+            //Queue<int> queue = new Queue<int>();
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    queue.Enqueue(i);
+            //}
+            //sw.Write("<");
+            //while(true)
+            //{
+            //    for (int i = 1; i < k; i++)
+            //    {
+            //        queue.Enqueue(queue.Peek());
+            //        queue.Dequeue();
+            //    }
+            //    sw.Write(queue.Dequeue());
+            //    if(queue.Count==0)
+            //    {
+            //        sw.Write(">");
+            //        break;
+            //    }
+            //    sw.Write(", ");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            Stack<int> stack = new Stack<int>();
+            Stack<int> stack_another = new Stack<int>();
+            int[] number = new int[num];
+            for (int i = 0; i < num; i++)
+            {
+                int a = int.Parse(sr.ReadLine());
+                number[i] = a;
+            }
+            Array.Reverse(number);
+            for (int i = 0; i < number.Length; i++)
+            {
+                stack.Push(number[i]);
+            }
+            while(true)
+            {
+                if(stack.Peek() != 0)
+                {
+                    stack_another.Push(stack.Peek());
+                    stack.Pop();
+                }else
+                if(stack.Peek() == 0)   
+                {
+                    if(stack_another.Count>=1)
+                    {
+                        stack_another.Pop();
+                    }
+                    stack.Pop();
+                }
+
+                if(stack.Count == 0)
+                {
+                    break;
+                }
+            }
+            int sum = 0;
+            foreach (var item in stack_another)
+            {
+                sum+=item;
+            }
+            foreach (var item in stack)
+            {
+                sum += item;
+            }
+            sw.WriteLine(sum);
+            sr.Close();
+            sw.Close();
 
 
         }
