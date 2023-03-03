@@ -4427,53 +4427,163 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //Stack<int> stack = new Stack<int>();
+            //Stack<int> stack_another = new Stack<int>();
+            //int[] number = new int[num];
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int a = int.Parse(sr.ReadLine());
+            //    number[i] = a;
+            //}
+            //Array.Reverse(number);
+            //for (int i = 0; i < number.Length; i++)
+            //{
+            //    stack.Push(number[i]);
+            //}
+            //while(true)
+            //{
+            //    if(stack.Peek() != 0)
+            //    {
+            //        stack_another.Push(stack.Peek());
+            //        stack.Pop();
+            //    }else
+            //    if(stack.Peek() == 0)   
+            //    {
+            //        if(stack_another.Count>=1)
+            //        {
+            //            stack_another.Pop();
+            //        }
+            //        stack.Pop();
+            //    }
+
+            //    if(stack.Count == 0)
+            //    {
+            //        break;
+            //    }
+            //}
+            //int sum = 0;
+            //foreach (var item in stack_another)
+            //{
+            //    sum+=item;
+            //}
+            //foreach (var item in stack)
+            //{
+            //    sum += item;
+            //}
+            //sw.WriteLine(sum);
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //while (true)
+            //{
+            //    Stack<string> stack = new Stack<string>();
+            //    Stack<string> stack_another = new Stack<string>();
+            //    Stack<string> stack_other = new Stack<string>();
+
+            //    int one = 0;
+            //    int two = 0;
+            //    string text = sr.ReadLine();
+            //    if(text ==".")
+            //    {
+            //        break;
+            //    }
+            //    for (int i = 0; i < text.Length; i++)
+            //    {
+            //        if (text[i].ToString() == "(" || text[i].ToString() == "[")
+            //        {
+            //            one++;
+            //            stack.Push(text[i].ToString());
+            //        }
+            //        else if(text[i].ToString() == ")" || text[i].ToString() == "]")
+            //        {
+            //            two++;
+            //            stack_other.Push(text[i].ToString());
+            //        }
+            //    }
+            //    while(true)
+            //    {
+            //        if(stack_other.Count==0)
+            //        {
+            //            break;
+            //        }
+            //        stack_another.Push(stack_other.Peek());
+            //        stack_other.Pop();
+            //    }
+            //    sw.WriteLine(one);
+            //    sw.WriteLine(two);
+            //    sw.WriteLine(stack.Count);
+            //    sw.WriteLine(stack_other.Count);
+            //    int ret = one + two;
+            //    //두개의 합이 홀수이면서 대칭이 아닌 것을 먼저 거른다
+            //    if(ret%2!=0 || one != two)
+            //    {
+            //        sw.WriteLine("no");
+            //    }
+            //    else
+            //    {
+            //        //두개의 합이 짝수이면서 대칭이다
+            //        //대칭인 경우도 )( 이렇게 대칭인 경우가 있음
+            //        while (true)
+            //        {
+            //            if (stack.Count == 0)
+            //            {
+            //                sw.WriteLine("yes");
+            //                break;
+            //            }
+
+            //            if (stack.Peek() == "(" && stack_another.Peek() == ")")
+            //            {
+            //                sw.WriteLine("([ " + stack.Count + ", " + stack_another.Count);
+            //                stack.Pop();
+            //                stack_another.Pop();
+            //            }
+            //            else if (stack.Peek() == "[" && stack_another.Peek() == "]")
+            //            {
+            //                sw.WriteLine(")] " + stack.Count + ", " + stack_another.Count);
+            //                stack.Pop();
+            //                stack_another.Pop();
+            //            }
+            //        }
+            //    }
+            //    one = 0;
+            //    two = 0;
+
+            //    stack.Clear();
+            //    stack_another.Clear();
+            //    stack_other.Clear();
+            //}
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int price = int.Parse(sr.ReadLine());
             int num = int.Parse(sr.ReadLine());
-            Stack<int> stack = new Stack<int>();
-            Stack<int> stack_another = new Stack<int>();
-            int[] number = new int[num];
+            int cnt = 0;
             for (int i = 0; i < num; i++)
             {
-                int a = int.Parse(sr.ReadLine());
-                number[i] = a;
-            }
-            Array.Reverse(number);
-            for (int i = 0; i < number.Length; i++)
-            {
-                stack.Push(number[i]);
-            }
-            while(true)
-            {
-                if(stack.Peek() != 0)
-                {
-                    stack_another.Push(stack.Peek());
-                    stack.Pop();
-                }else
-                if(stack.Peek() == 0)   
-                {
-                    if(stack_another.Count>=1)
-                    {
-                        stack_another.Pop();
-                    }
-                    stack.Pop();
-                }
+                string a = sr.ReadLine();
 
-                if(stack.Count == 0)
-                {
-                    break;
-                }
+                int aa = int.Parse(a.Split()[0]);
+                int bb = int.Parse(a.Split()[1]);
+                int ret = aa * bb;
+
+                cnt += ret;
             }
-            int sum = 0;
-            foreach (var item in stack_another)
+
+            if(cnt==price)
             {
-                sum+=item;
+                sw.WriteLine("Yes");
             }
-            foreach (var item in stack)
+            else
             {
-                sum += item;
+                sw.WriteLine("No");
             }
-            sw.WriteLine(sum);
             sr.Close();
             sw.Close();
 
