@@ -4560,35 +4560,203 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int price = int.Parse(sr.ReadLine());
-            int num = int.Parse(sr.ReadLine());
-            int cnt = 0;
-            for (int i = 0; i < num; i++)
-            {
-                string a = sr.ReadLine();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int price = int.Parse(sr.ReadLine());
+            //int num = int.Parse(sr.ReadLine());
+            //int cnt = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string a = sr.ReadLine();
 
-                int aa = int.Parse(a.Split()[0]);
-                int bb = int.Parse(a.Split()[1]);
-                int ret = aa * bb;
+            //    int aa = int.Parse(a.Split()[0]);
+            //    int bb = int.Parse(a.Split()[1]);
+            //    int ret = aa * bb;
 
-                cnt += ret;
-            }
+            //    cnt += ret;
+            //}
+            //if(cnt==price)
+            //{
+            //    sw.WriteLine("Yes");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("No");
+            //}
+            //sr.Close();
+            //sw.Close();
 
-            if(cnt==price)
-            {
-                sw.WriteLine("Yes");
-            }
-            else
-            {
-                sw.WriteLine("No");
-            }
-            sr.Close();
-            sw.Close();
+            //통계학
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int[] intArr = new int[num];
+            //int sum = 0;
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int a = int.Parse(sr.ReadLine());
+            //    sum += a;
+            //    intArr[i] = a;
+            //}
+            //double one = (double)sum / num;
+            //int average = num / 2;
+            //Array.Sort(intArr);
+            //int two = intArr[average];
+            //int four = intArr[intArr.Length - 1] - intArr[0];
+
+            //int cnt = 0;
+            //int[] recentValue = new int[num]; 
+            //for (int i = 0; i < intArr.Length; i++)
+            //{
+            //    for (int j = 0; j < intArr.Length; j++)
+            //    {
+            //        if (intArr[i] == intArr[j])
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //    recentValue[i] = cnt;
+            //    cnt = 0;
+            //}
+            //if(num == 1)
+            //{
+            //    sw.WriteLine(intArr[0]);
+            //    sw.WriteLine(intArr[0]);
+            //    sw.WriteLine(intArr[0]);
+            //    sw.WriteLine("0");
+            //}
+            //else
+            //{
+            //    //산술평균
+            //    if(one<0)
+            //    {
+            //        double min = -one;
+            //        double rd1 = Math.Round(min);
+            //        sw.WriteLine(-rd1);
+            //    }
+            //    else
+            //    {
+            //        double rd3 = Math.Round(one);
+            //        sw.WriteLine(rd3);
+            //    }
+
+            //    //중앙값
+            //    sw.WriteLine(two);
+
+            //    //최빈값
+            //    int even = 0;
+            //    int max = recentValue.Max();
+            //    int store = 0;
+            //    int[] frequency = new int[num];
+            //    for (int i = 0; i < recentValue.Length; i++)
+            //    {
+            //        if (recentValue[i]==max)
+            //        {
+            //            even++;
+            //            frequency[i] = intArr[i];
+            //        }
+            //        else
+            //        {
+            //            frequency[i] = 4000;
+            //        }
+            //    }
+            //    if(even>=1)
+            //    {
+            //        Array.Sort(frequency);
+            //        int[] disArr = frequency.Distinct().ToArray();
+            //        if(disArr.Length<3)
+            //        {
+            //            sw.WriteLine(disArr[0]);
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine(disArr[0+1]);
+            //        }
+            //    }
+            //    else if(even==1)
+            //    {
+            //        store = Array.FindIndex(recentValue, x => x == max);
+            //        sw.WriteLine(intArr[store]);
+            //    }
+            //    //범위
+            //    sw.WriteLine(four);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //나이순 정렬
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //Dictionary<string, int> dic = new Dictionary<string, int>();
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    //value
+            //    int age = int.Parse(text.Split()[0]);
+            //    //key
+            //    string name = text.Split()[1];
+            //    dic.Add(name, age);
+            //    age = 0;
+            //    name = "";
+            //}
+            //var dicAsc = dic.OrderBy(x => x.Value);
+            //foreach (var item in dicAsc)
+            //{
+            //    sw.WriteLine(item.Value+" "+item.Key);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //팩토리얼 0의 갯수
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //long ret = 1;
+            //for (int i = num; i > 0 ; i--)
+            //{
+            //    ret *= i;
+            //}
+            //sw.WriteLine(ret);
+            //string str = ret.ToString();
+            //int cnt = 0;
+            //for (int i = str.Length-1; i >0; i--)
+            //{
+            //    if (str[i].ToString()=="0")
+            //    {
+            //        cnt++;
+            //    }else
+            //    {
+            //        break;
+            //    }
+            //}
+            //sw.WriteLine(cnt);
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string tmp = num.ToString();
+            //int[] intArr = new int[tmp.Length];
+            //for (int i = 0; i < tmp .Length; i++)
+            //{
+            //    intArr[i] = int.Parse(tmp[i].ToString());
+            //}
+            ////var dicAsc = dic.OrderBy(x => x.Value);
+            //Array.Sort(intArr);
+            //Array.Reverse(intArr);
+            //for (int i = 0; i < intArr.Length; i++)
+            //{
+            //    sw.Write(intArr[i]);
+            //}
+            //sr.Close();
+            //sw.Close();
 
 
+
+
+         }
         }
-    }
     }
 
