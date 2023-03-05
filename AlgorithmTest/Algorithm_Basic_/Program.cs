@@ -4753,6 +4753,82 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string[] order = new string[num];
+            ////int[] intArr = new int[10000];
+            //List<int> intList = new List<int>();
+            //Stack<int> stack = new Stack<int>();
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    if (text.Split()[0]=="push")
+            //    {
+            //        order[i] = text.Split()[0];
+            //        intList.Add(int.Parse(text.Split()[1]));
+            //    }
+            //    else
+            //    {
+            //        order[i] = text.Split()[0];
+            //    }
+            //}
+            //int cnt = 0;
+            //int listIndex = 0;
+            //while(true)
+            //{
+            //    if(cnt==num)
+            //    {
+            //        break;
+            //    }
+            //    if (order[cnt] == "push")
+            //    {
+            //        if(intList !=null)
+            //        {
+            //            stack.Push(intList[listIndex]);
+            //            listIndex++;
+            //        }
+            //        //아닐 경우엔 뭐 해야하는지 적어야 함
+            //    }else if (order[cnt] == "pop")
+            //    {
+            //        if(stack.Count !=0)
+            //        {
+            //            sw.WriteLine(stack.Peek());
+            //            stack.Pop();
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine("-1");
+            //        }
+            //    }else if (order[cnt] == "size")
+            //    {
+            //        sw.WriteLine(stack.Count);
+            //    }else if (order[cnt] =="empty")
+            //    {
+            //        if(stack.Count == 0)
+            //        {
+            //            sw.WriteLine("1");
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine("0");
+            //        }
+            //    }else if (order[cnt]=="top")
+            //    {
+            //        if(stack.Count !=0)
+            //        {
+            //            sw.WriteLine(stack.Peek());
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine("-1");
+            //        }
+            //    }
+            //    cnt++;
+            //}
+            //sr.Close();
+            //sw.Close();
+
 
 
 
