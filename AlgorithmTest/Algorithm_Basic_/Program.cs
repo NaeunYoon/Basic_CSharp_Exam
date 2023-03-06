@@ -20,6 +20,7 @@ using System.Data.SqlTypes;
 using System.Deployment.Internal;
 using System.Runtime.InteropServices;
 using System.Numerics;
+using System.Collections;
 
 namespace Algorithm_Basic_
 {
@@ -4829,6 +4830,87 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //List<int> intList = new List<int>();
+            //string[] strArr = new string[num];
+            //Queue<int> queue = new Queue<int>();
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    if (text.Split()[0] == "push")
+            //    {
+            //        intList.Add(int.Parse(text.Split()[1]));
+            //        strArr[i] = text.Split()[0];
+            //    }
+            //    else
+            //    {
+            //        strArr[i] = text.Split()[0];
+            //    }
+            //}
+            //int cnt = 0;
+            //int listIndex = 0;
+            //while(true)
+            //{
+            //    if(cnt==num)
+            //    {
+            //        break;
+            //    }
+
+            //    if (strArr[cnt] == "push")
+            //    {
+            //        queue.Enqueue(intList[listIndex]);
+            //        listIndex++;
+            //    }else if (strArr[cnt] == "pop")
+            //    {
+            //        if(queue.Count !=0)
+            //        {
+            //            sw.WriteLine(queue.Peek());
+            //            queue.Dequeue();
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine("-1");
+            //        }
+            //    }else if (strArr[cnt]=="size")
+            //    {
+            //        sw.WriteLine(queue.Count);
+            //    }else if (strArr[cnt] == "empty")
+            //    {
+            //        if(queue.Count == 0)
+            //        {
+            //            sw.WriteLine("1");
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine("0");
+            //        }
+            //    }else if (strArr[cnt] == "front")
+            //    {
+            //        if(queue.Count !=0)
+            //        {
+            //            sw.WriteLine(queue.Peek());
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine("-1");
+            //        }
+            //    }else if (strArr[cnt]=="back")
+            //    {
+            //        if(queue.Count !=0)
+            //        {
+            //            sw.WriteLine(queue.Last());
+            //        }
+            //        else
+            //        {
+            //            sw.WriteLine("-1");
+            //        }
+            //    }
+            //    cnt++;
+            //}
+            //sr.Close();
+            //sw.Close();
 
 
 
