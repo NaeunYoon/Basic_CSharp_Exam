@@ -4912,6 +4912,67 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //int[] intArr = new int[num];
+            //string[] strArr = new string[num];
+            //List<int> push_back = new List<int>();
+            //List<int> push_front = new List<int>();
+            //Queue<int> deque = new Queue<int>();
+
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    if(text == "push_back")
+            //    {
+            //        strArr[i] = text.Split()[0];
+            //        push_back.Add(int.Parse(text.Split()[1]));
+            //    }else if(text == "push_front")
+            //    {
+            //        strArr[i] = text.Split()[0];
+            //        push_front.Add(int.Parse(text.Split()[1]));
+            //    }
+            //    else
+            //    {
+            //        strArr[i] = text;
+            //    }
+            //}
+            //int cnt = 0;
+            //int push_back_index = 0;
+            //int push_front_index = 0;
+            //while (true)
+            //{
+            //    if(cnt==num)
+            //    {
+            //        break;
+            //    }
+
+            //    if (strArr[cnt] == "push_back")
+            //    {
+
+            //    }
+
+
+            //    cnt++;
+            //}
+
+
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int a = int.Parse(sr.ReadLine());
+            int sum = 0;
+            for (int i = 0; i < a; i++)
+            {
+                int aa = int.Parse(sr.ReadLine());
+                sum+= aa;
+            }
+            sw.WriteLine(sum);
+            sr.Close();
+            sw.Close();
 
 
          }
