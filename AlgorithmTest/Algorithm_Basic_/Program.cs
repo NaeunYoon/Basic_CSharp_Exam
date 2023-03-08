@@ -4961,18 +4961,86 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int a = int.Parse(sr.ReadLine());
-            int sum = 0;
-            for (int i = 0; i < a; i++)
-            {
-                int aa = int.Parse(sr.ReadLine());
-                sum+= aa;
-            }
-            sw.WriteLine(sum);
-            sr.Close();
-            sw.Close();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int a = int.Parse(sr.ReadLine());
+            //int sum = 0;
+            //for (int i = 0; i < a; i++)
+            //{
+            //    int aa = int.Parse(sr.ReadLine());
+            //    sum+= aa;
+            //}
+            //sw.WriteLine(sum);
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int a = int.Parse(text.Split()[0]);
+            //int b = int.Parse(text.Split()[1]);
+            //int[] basket = new int[a];
+            ////바구니에 공을 담는다 ( 1 부터 바구니 갯수만큼)
+            //for (int i = 0; i < basket.Length; i++)
+            //{
+            //    basket[i] = i + 1;
+            //}
+            ////b 만큼 반복한다
+
+            //int cnt = 0;
+            //for (int i = 0; i < b; i++)
+            //{
+            //    string repeat = sr.ReadLine();
+
+            //    int aa = int.Parse(repeat.Split()[0]);
+            //    int bb = int.Parse(repeat.Split()[1]);
+            //    cnt = bb - aa;
+            //    Array.Reverse(basket,aa-1,cnt+1);
+            //    cnt = 0;
+            //}
+            //for (int i = 0; i < basket.Length; i++)
+            //{
+            //    sw.Write(basket[i] + " ");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int sum  = int.Parse(sr.ReadLine());
+            //string chicken = sr.ReadLine();
+            //int a = int.Parse(chicken.Split()[0]);
+            //int b = int.Parse(chicken.Split()[1]);
+            //int c = int.Parse(chicken.Split()[2]);
+            //int aa, bb, cc = 0;
+            //if (a>sum)
+            //{
+            //    aa = sum;
+            //}
+            //else
+            //{
+            //    aa = a;
+            //}
+            //if (b > sum)
+            //{
+            //    bb = sum;
+            //}
+            //else
+            //{
+            //    bb = b;
+            //}
+            //if (c > sum)
+            //{
+            //    cc = sum;
+            //}
+            //else
+            //{
+            //    cc = c;
+            //}
+            //sw.WriteLine(aa + bb + cc);
+            //sr.Close();
+            //sw.Close();
+
 
 
          }
