@@ -5041,9 +5041,75 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //long a = long.Parse(text.Split()[0]);
+            //long b = long.Parse(text.Split()[1]);
+            //long c = long.Parse(text.Split()[2]);
+            //long cnt = 0;
+            //long count = 0;
+            //while (true)
+            //{
+            //    if(cnt>=c)
+            //    {
+            //        break;
+            //    }
+
+            //    cnt += a;
+            //    cnt -= b;
+
+            //    count++;
+            //}
+            //sw.WriteLine(count);
 
 
-         }
+            //sr.Close();
+            //sw.Close();
+
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int cnt = 0;
+            //while(true)
+            //{
+            //    string text = sr.ReadLine();
+            //    if(text == "0")
+            //    {
+            //        break;
+            //    }
+            //    cnt++;
+            //    sw.WriteLine("Case " + cnt + ": Sorting... done!");
+            //}
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int a = int.Parse(sr.ReadLine());
+            //int b = int.Parse(sr.ReadLine());
+            //sw.WriteLine(b - a);
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int a = int.Parse(sr.ReadLine());
+            //int ret = a % 21;
+            //sw.WriteLine(ret);
+            //sr.Close();
+            //sw.Close();
+
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            double ret = Math.Pow(num, 3);
+            sw.WriteLine(ret);
+            sr.Close();
+            sw.Close();
+
+
+        }
         }
     }
 
