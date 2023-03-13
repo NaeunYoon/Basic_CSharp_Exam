@@ -5102,9 +5102,12 @@ namespace Algorithm_Basic_
 
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num = int.Parse(sr.ReadLine());
-            double ret = Math.Pow(num, 3);
-            sw.WriteLine(ret);
+            int a = int.Parse(sr.ReadLine());
+            int b = int.Parse(sr.ReadLine());
+            sw.WriteLine(a * b);
+
+            
+
             sr.Close();
             sw.Close();
 
