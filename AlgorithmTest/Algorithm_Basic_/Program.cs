@@ -5100,31 +5100,33 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string[] strArr = new string[num];
+            //List<string> strList = new List<string>();
+            //for (int i = 0; i < num; i++)
+            //{
+            //    string text = sr.ReadLine();
+            //    strArr[i] = text;
+            //}
+            //Array.Sort(strArr);
+            //string[] removeDistinct = strArr.Distinct().ToArray();
+            //string [] orderBy = removeDistinct.OrderBy(x => x.Length).ToArray();
+
+            //for (int i = 0; i < orderBy.Length; i++)
+            //{
+            //    sw.WriteLine(orderBy[i]);
+            //}
+            //sr.Close();
+            //sw.Close();
+
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            string text = sr.ReadLine();
             int num = int.Parse(sr.ReadLine());
-            string[] strArr = new string[num];
-            List<string> strList = new List<string>();
-            for (int i = 0; i < num; i++)
-            {
-                string text = sr.ReadLine();
-                strArr[i] = text;
-            }
-            Array.Sort(strArr);
-            string[] removeDistinct = strArr.Distinct().ToArray();
-            string [] orderBy = removeDistinct.OrderBy(x => x.Length).ToArray();
-
-            for (int i = 0; i < orderBy.Length; i++)
-            {
-                sw.WriteLine(orderBy[i]);
-            }
-
-
-
-
-            
-
-
+            sw.WriteLine(text[num-1].ToString());
             sr.Close();
             sw.Close();
 
