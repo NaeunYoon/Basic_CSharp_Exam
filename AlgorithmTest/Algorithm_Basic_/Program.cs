@@ -5122,11 +5122,25 @@ namespace Algorithm_Basic_
             //sw.Close();
 
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int num = int.Parse(sr.ReadLine());
+            //sw.WriteLine(text[num-1].ToString());
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string text = sr.ReadLine();
-            int num = int.Parse(sr.ReadLine());
-            sw.WriteLine(text[num-1].ToString());
+            int num1 = int.Parse(sr.ReadLine());
+            string num2 = sr.ReadLine();
+            int a = int.Parse(num2[2].ToString());
+            int b = int.Parse(num2[1].ToString());
+            int c = int.Parse(num2[0].ToString());
+            sw.WriteLine(num1 * a);
+            sw.WriteLine(num1 * b);
+            sw.WriteLine(num1 * c);
+            sw.WriteLine(num1 * int.Parse(num2));
             sr.Close();
             sw.Close();
 
