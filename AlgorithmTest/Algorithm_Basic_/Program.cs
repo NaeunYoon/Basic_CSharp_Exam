@@ -5130,19 +5130,30 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num1 = int.Parse(sr.ReadLine());
+            //string num2 = sr.ReadLine();
+            //int a = int.Parse(num2[2].ToString());
+            //int b = int.Parse(num2[1].ToString());
+            //int c = int.Parse(num2[0].ToString());
+            //sw.WriteLine(num1 * a);
+            //sw.WriteLine(num1 * b);
+            //sw.WriteLine(num1 * c);
+            //sw.WriteLine(num1 * int.Parse(num2));
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int num1 = int.Parse(sr.ReadLine());
-            string num2 = sr.ReadLine();
-            int a = int.Parse(num2[2].ToString());
-            int b = int.Parse(num2[1].ToString());
-            int c = int.Parse(num2[0].ToString());
-            sw.WriteLine(num1 * a);
-            sw.WriteLine(num1 * b);
-            sw.WriteLine(num1 * c);
-            sw.WriteLine(num1 * int.Parse(num2));
+            string text = sr.ReadLine();
+            int a = int.Parse(text.Split()[0]);
+            int b = int.Parse(text.Split()[1]);
+            int c = int.Parse(text.Split()[2]);
+            sw.WriteLine(c / b+" "+c % b);
             sr.Close();
             sw.Close();
+
 
 
         }
