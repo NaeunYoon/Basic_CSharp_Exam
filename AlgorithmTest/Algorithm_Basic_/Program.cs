@@ -5144,13 +5144,27 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int a = int.Parse(text.Split()[0]);
+            //int b = int.Parse(text.Split()[1]);
+            //int c = int.Parse(text.Split()[2]);
+            //sw.WriteLine(c / b+" "+c % b);
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string text = sr.ReadLine();
-            int a = int.Parse(text.Split()[0]);
-            int b = int.Parse(text.Split()[1]);
-            int c = int.Parse(text.Split()[2]);
-            sw.WriteLine(c / b+" "+c % b);
+            int num = int.Parse(sr.ReadLine());
+            int[] intArr = new int[num];
+            for (int i = 0; i < num; i++)
+            {
+                int a = int.Parse(sr.ReadLine());
+                intArr[i] = a;
+                sw.WriteLine(intArr[i] + " " + intArr[i]);
+            }
+
             sr.Close();
             sw.Close();
 
