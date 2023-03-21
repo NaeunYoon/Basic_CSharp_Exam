@@ -5181,26 +5181,44 @@ namespace Algorithm_Basic_
             //sw.Close();
 
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string text = sr.ReadLine();
+            //int cnt = 0;
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    int a = int.Parse(text.Split()[i]);
+            //    if(a==0 || a==1)
+            //    {
+            //        cnt++;
+            //    }
+            //}
+
+            //if(cnt==8)
+            //{
+            //    sw.WriteLine("S");
+            //}
+            //else
+            //{
+            //    sw.WriteLine("F");
+            //}
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            string text = sr.ReadLine();
-            int cnt = 0;
-            for (int i = 0; i < 8; i++)
-            {
-                int a = int.Parse(text.Split()[i]);
-                if(a==0 || a==1)
-                {
-                    cnt++;
-                }
-            }
 
-            if(cnt==8)
+            int num = int.Parse(sr.ReadLine());
+            int[] number = new int[num];
+            for (int i = 0; i < num; i++)
             {
-                sw.WriteLine("S");
+                int a = int.Parse(sr.ReadLine());
+                number[i] = a;
             }
-            else
+            Array.Sort(number);
+            for (int i = 0; i < number.Length; i++)
             {
-                sw.WriteLine("F");
+                sw.WriteLine(number[i]);
             }
             sr.Close();
             sw.Close();
