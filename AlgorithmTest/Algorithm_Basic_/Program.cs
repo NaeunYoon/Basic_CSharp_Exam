@@ -5205,21 +5205,35 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+
+            //int num = int.Parse(sr.ReadLine());
+            //int[] number = new int[num];
+            //for (int i = 0; i < num; i++)
+            //{
+            //    int a = int.Parse(sr.ReadLine());
+            //    number[i] = a;
+            //}
+            //Array.Sort(number);
+            //for (int i = 0; i < number.Length; i++)
+            //{
+            //    sw.WriteLine(number[i]);
+            //}
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-
-            int num = int.Parse(sr.ReadLine());
-            int[] number = new int[num];
-            for (int i = 0; i < num; i++)
-            {
-                int a = int.Parse(sr.ReadLine());
-                number[i] = a;
-            }
-            Array.Sort(number);
-            for (int i = 0; i < number.Length; i++)
-            {
-                sw.WriteLine(number[i]);
-            }
+            string text = sr.ReadLine();
+            int a = int.Parse(text.Split()[0]);
+            int b = int.Parse(text.Split()[1]);
+            int c = int.Parse(text.Split()[2]);
+            int ret1 = a + 1;
+            int ret2 = b + 1;
+            int ret3 = ret1 * ret2;
+            int ret4 = ret3 / (c + 1);
+            sw.WriteLine(ret4 - 1);
             sr.Close();
             sw.Close();
 
