@@ -5244,14 +5244,55 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            int testCase = int.Parse(sr.ReadLine());
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int testCase = int.Parse(sr.ReadLine());
+            //int num = int.Parse(sr.ReadLine());
+            //int[] intArr = new int[num];
+            //int multiple = 1;
+            //int plus = 0;
+            //for (int i = 0; i < testCase; i++)
+            //{
+            //    for (int j = 0; j < num; j++)
+            //    {
+            //        string numbers = sr.ReadLine();
+            //        for (int k = 0; k < num; k++)
+            //        {
+            //            intArr[k] = int.Parse(numbers.Split()[k]);
+            //            plus += intArr[k];
+            //            multiple *= intArr[k];
+            //        }
+            //        sw.WriteLine(plus + " " + multiple);
+            //        plus = 0;
+            //        multiple = 1;
+            //    }
+            //}
+            //sr.Close();
+            //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //string text = sr.ReadLine();
+            //int[] intArr = new int[5];
+            //int cnt = 0;
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    int a = int.Parse(text.Split()[i]);
+            //    intArr[i] = a;
+            //}
 
+            //for (int i = 0; i < intArr.Length; i++)
+            //{
+            //    if (intArr[i]==num)
+            //    {
+            //        cnt++;
+            //    }
+            //}
+            //sw.WriteLine(cnt);
+            //sr.Close();
+            //sw.Close();
 
-            sr.Close();
-            sw.Close();
 
 
 
