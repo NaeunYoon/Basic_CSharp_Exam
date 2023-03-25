@@ -5293,10 +5293,16 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            sw.WriteLine("Avengers: Endgame");
+            sr.Close();
+            sw.Close();
+
 
 
 
         }
-        }
+    }
     }
 
