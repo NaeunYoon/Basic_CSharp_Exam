@@ -5293,11 +5293,31 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
-            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
-            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
-            sw.WriteLine("Avengers: Endgame");
-            sr.Close();
-            sw.Close();
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //sw.WriteLine("Avengers: Endgame");
+            //sr.Close();
+            //sw.Close();
+
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //string name = sr.ReadLine();
+
+            //if(name == "NLCS")
+            //{
+            //    sw.WriteLine("North London Collegiate School");
+            //}else if(name == "BHA")
+            //{
+            //    sw.WriteLine("Branksome Hall Asia");
+            //}else if(name == "KIS")
+            //{
+            //    sw.WriteLine("Korea International School");
+            //}else if(name == "SJA")
+            //{
+            //    sw.WriteLine("St. Johnsbury Academy");
+            //}
+            //sr.Close();
+            //sw.Close();
 
 
 
