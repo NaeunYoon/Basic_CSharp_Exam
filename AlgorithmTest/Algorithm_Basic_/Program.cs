@@ -5319,6 +5319,20 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            int num = int.Parse(sr.ReadLine());
+            for (int i = 0; i < num; i++)
+            {
+                for (int j = i-1; j < num-1; j++)
+                {
+                    sw.Write("*");
+                }
+                sw.WriteLine("");
+            }
+            sr.Close();
+            sw.Close();
+
 
 
 
