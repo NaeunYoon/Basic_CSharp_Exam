@@ -5319,16 +5319,49 @@ namespace Algorithm_Basic_
             //sr.Close();
             //sw.Close();
 
+            //var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
+            //var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
+            //int num = int.Parse(sr.ReadLine());
+            //for (int i = 0; i < num; i++)
+            //{
+            //    for (int j = i-1; j < num-1; j++)
+            //    {
+            //        sw.Write("*");
+            //    }
+            //    sw.WriteLine("");
+            //}
+            //sr.Close();
+            //sw.Close();
+
             var sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             var sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
             int num = int.Parse(sr.ReadLine());
+            int[] intArr = new int[num];
             for (int i = 0; i < num; i++)
             {
-                for (int j = i-1; j < num-1; j++)
+                int a = int.Parse(sr.ReadLine());
+                intArr[i] = a;
+            }
+            int zero = 0;
+            int one = 0;
+            for (int i = 0; i < intArr.Length; i++)
+            {
+                if (intArr[i]==0)
                 {
-                    sw.Write("*");
+                    zero++;
                 }
-                sw.WriteLine("");
+                else
+                {
+                    one++;
+                }
+            }
+            if (zero > one)
+            {
+                sw.WriteLine("Junhee is not cute!");
+            }
+            else
+            {
+                sw.WriteLine("Junhee is cute!");
             }
             sr.Close();
             sw.Close();
